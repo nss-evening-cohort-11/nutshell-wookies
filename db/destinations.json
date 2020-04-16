@@ -1,0 +1,145 @@
+{
+	"destination1": {
+		"name": "Sandwich Island",
+		"country": "Hawaii",
+		"latitude": "19.8968° N",
+		"longitude": "155.5828° W",
+		"imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/06/38/hawaii-1867849__480.jpg",
+		"alt": "photo in Hawaii",
+		"beenThere": "yes",
+		"timestamp": "01 / 01 / 1860",
+		"uid": ""
+	},
+	"destination2": {
+		"name": "East India",
+		"country": "India",
+		"latitude": "23° 12 ' 9.252'' N",
+		"longitude": "93° 5 ' 18.96'' E",
+		"imageUrl": "https://cdn.pixabay.com/photo/2015/03/20/12/36/ruins-682171__480.jpg",
+		"alt": "photo in India",
+		"beenThere": "yes",
+		"timestamp": "06 / 01 / 1860",
+		"uid": ""
+	},
+	"destination3": {
+		"name": "Torres Strait",
+		"country": "Australia",
+		"latitude": "39° 5 ' 15.8964'' N",
+		"longitude": "9° 15 ' 34.02'' W",
+		"imageUrl": "https://image.shutterstock.com/image-photo/friday-island-torres-straits-top-260nw-545275393.jpg",
+		"alt": "photo in Australia",
+		"beenThere": "yes",
+		"timestamp": "12 / 01 / 1860",
+		"uid": ""
+	},
+	"destination4": {
+		"name": "Vanikoro",
+		"country": "Solomon Islands",
+		"latitude": "22° 12 ' 55.944'' S",
+		"longitude": "166° 28 ' 58.008'' E",
+		"imageUrl": "https://image.shutterstock.com/image-photo/bamboo-hut-on-stilts-gizo-260nw-119904178.jpg",
+		"alt": "photo in Solomon Islands",
+		"beenThere": "yes",
+		"timestamp": "01 / 01 / 1861",
+		"uid": ""
+	},
+	"destination5": {
+		"name": "Antarctic Ice Barrier",
+		"country": "New Zealand",
+		"latitude": "44° 25 ' 26.9292'' S",
+		"longitude": "168° 20 ' 39.5412'' E",
+		"imageUrl": "https://cdn.pixabay.com/photo/2014/10/09/23/36/mountains-482689__480.jpg",
+		"alt": "photo in New Zealand",
+		"beenThere": "yes",
+		"timestamp": "03 / 01 / 1861",
+		"uid": ""
+	},
+	"destination6": {
+		"name": "Transatlantic Telegraph Cable",
+		"country": "Canada",
+		"latitude": "51° 54′ 0″ N",
+		"longitude": "10° 21′ 0″ W",
+		"imageUrl": "https://image.shutterstock.com/image-photo/patawan-island-small-tropical-white-260nw-1453175669.jpg",
+		"alt": "photo in Canada",
+		"beenThere": "yes",
+		"timestamp": "01 / 01 / 1862",
+		"uid": ""
+	},
+	"destination7": {
+		"name": "Norway",
+		"country": "Norway",
+		"latitude": "61° 01 '37.5' ' N",
+		"longitude": "9° 25 '32.3' ' E",
+		"imageUrl": "https://image.shutterstock.com/image-photo/aurora-borealis-over-hamnoy-norway-260nw-1504345343.jpg",
+		"alt": "photo in Norway",
+		"beenThere": "yes",
+		"timestamp": "03 / 01 / 1862",
+		"uid": ""
+	},
+	"destination8": {
+		"name": "Crete",
+		"country": "Greece",
+		"latitude": "35° 14 ' 24.4176'' N",
+		"longitude": "24° 48 ' 33.3684'' E",
+		"imageUrl": "https://image.shutterstock.com/image-photo/greece-crete-260nw-437801344.jpg",
+		"alt": "photo in Greece",
+		"beenThere": "yes",
+		"timestamp": "06 / 01 / 1862",
+		"uid": ""
+	},
+	"destination9": {
+		"name": "Vigo Bay",
+		"country": "Spain",
+		"latitude": "39° 26 ' 59.028'' N",
+		"longitude": "87° 20 ' 46.6476'' W",
+		"imageUrl": "https://image.shutterstock.com/image-photo/islas-cies-vigo-spain-estuarys-260nw-1478813897.jpg",
+		"alt": "photo in Spain",
+		"beenThere": "yes",
+		"timestamp": "08 / 01 / 1862",
+		"uid": ""
+	},
+	"destination10": {
+		"name": "Suez Canal",
+		"country": "Egypt",
+		"latitude": "30° 35 ' 37.0824'' N",
+		"longitude": "32° 26 ' 47.6448'' E",
+		"imageUrl": "https://image.shutterstock.com/image-photo/suez-canal-260nw-522531625.jpg",
+		"alt": "photo in Egypt",
+		"beenThere": "yes",
+		"timestamp": "10 / 01 / 1862",
+		"uid": ""
+	},
+	"destination11": {
+		"name": "Cape Horn",
+		"country": "Chile",
+		"latitude": "55.9833° S",
+		"longitude": "67.2667° W",
+		"imageUrl": "https://image.shutterstock.com/image-photo/landscape-view-cape-horn-headland-260nw-706444354.jpg",
+		"alt": "photo in Chile",
+		"beenThere": "yes",
+		"timestamp": "03 / 01 / 1863",
+		"uid": ""
+	},
+	"destination12": {
+		"name": "Atlantis",
+		"country": "Atlantis",
+		"latitude": "26° N",
+		"longitude": "18° W",
+		"imageUrl": "https://cdn.pixabay.com/photo/2017/06/17/20/32/atlantis-2413464__480.jpg",
+		"alt": "depiction of ruins in legendary Atlantis",
+		"beenThere": "yes",
+		"timestamp": "07 / 01 / 1863",
+		"uid": ""
+	},
+	"destination13": {
+		"name": "Japan",
+		"country": "Japan",
+		"latitude": "36.2048° N",
+		"longitude": "138.2529° E",
+		"imageUrl": "https://cdn.pixabay.com/photo/2017/01/13/08/08/tori-1976609__480.jpg",
+		"alt": "photo in Japan",
+		"beenThere": "yes",
+		"timestamp": "12 / 01 / 1864",
+		"uid": ""
+	}
+}
