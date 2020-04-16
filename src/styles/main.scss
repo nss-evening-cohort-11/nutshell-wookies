@@ -3,11 +3,15 @@
 @import '../styles/colors.scss';
 
 body {
-  background-color: $color5-dark-brown;
+  // background-color: $color5-dark-brown;
+  background-image: url('/src/images-wookies/rust.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .pageDisplay {
-  background-color: $color2-orange;
+  background-color: $color5-dark-brown;
   display: block;
   width: 90%;
   margin: auto;
@@ -15,11 +19,11 @@ body {
   margin-top: 20px;
   border-radius: 20px;
   padding: 10px;
-  background: (linear-gradient($color3-copper, scale-color($color3-copper, $lightness: 30%)));
+  background: (linear-gradient($color5-dark-brown, scale-color($color3-copper, $lightness: 30%)));
 }
 
 .headingDisplay {
-  background-color: $color4-medium-brown;
+  background-color: $color2-orange;
   color: $color6-ivory;
   border-radius: 20px;
   padding: 15px;
@@ -37,7 +41,7 @@ body {
 }
 
 .cardDisplay {
-  background-color: $color1-hunter-green;
+  background-color: $color2-orange;
   box-shadow: 3px 5px 5px $color3-copper;
   border-radius: 20px;
   padding: 15px;
