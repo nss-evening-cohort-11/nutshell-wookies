@@ -1,8 +1,8 @@
-
-let domstring = "",
+const envReadingMaker = (envReading) => {
+let domstring = "";
 <div class="row">
   <div class="col-sm-9">
-    Level 1: .col-sm-9
+    <img src = "${envReading."
     <div class="row">
     <div class="col-sm-9">
     Level 2: .col-sm-9
@@ -45,3 +45,4 @@ let domstring = "",
   </div>
 </div>
 </div>
+}
