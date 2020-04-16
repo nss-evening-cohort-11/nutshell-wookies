@@ -1,0 +1,11 @@
+{
+  "species1": {
+    "speciesId": "species1",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  }
+  }
