@@ -1,7 +1,23 @@
-@import "~bootstrap/scss/bootstrap";
-@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '../styles/colors.scss';
 
 body {
-  background-color: green;
+  background-color: $color5-dark-brown;
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.headingDisplay {
+  background-color: $color4-medium-brown;
+  color: $color6-ivory;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.cardDisplay {
+  background-color: $color1-hunter-green;
+  box-shadow: 3px 5px 5px $color2-orange;
 }
 
