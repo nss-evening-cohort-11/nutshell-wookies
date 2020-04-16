@@ -13,11 +13,7 @@
     "url": "git+https://github.com/nss-evening-cohort-11/nutshell-wookies.git"
   },
   "keywords": [],
-<<<<<<< HEAD
-  "author": "E11-Wookies",
-=======
   "author": "Anca, Michelle, Zac, John",
->>>>>>> fe0a33e87a4063ca1bad5f9dee93359783fdc1ca
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nss-evening-cohort-11/nutshell-wookies/issues"

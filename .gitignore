@@ -1,7 +1,6 @@
 .vscode/
 .DS_Store
 package-lock.json
-<<<<<<< HEAD
 node_modules/
 dist/
 build/
@@ -47,8 +46,6 @@ bower_components
 build/Release
 
 # Dependency directories
-=======
->>>>>>> fe0a33e87a4063ca1bad5f9dee93359783fdc1ca
 node_modules/
 dist/
 build/
