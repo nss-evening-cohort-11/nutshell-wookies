@@ -1,0 +1,11 @@
+{
+  "firebaseKeys":{
+   "apiKey": "",
+   "uthDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "",
+    "appId": ""
+  }
+}
