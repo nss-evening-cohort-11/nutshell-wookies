@@ -1,7 +1,7 @@
 const buildDestinationCard = (destination) => {
   let domString = '';
-  domString += '<div class="card cardDisplay" style="width: 18rem;">';
-  domString += `<img src="${destination.imageUrl}" class="card-img-top" alt="${destination.alt}">`;
+  domString += '<div class="card cardDisplay">';
+  domString += `<img src="${destination.imageUrl}" class="card-img-top cardImage" alt="${destination.alt}">`;
   domString += '<div class="card-body">';
   domString += `<h5 class="card-title">${destination.name}</h5>`;
   domString += '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card content.</p>';

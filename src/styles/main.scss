@@ -20,7 +20,8 @@ body {
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 10px;
-  background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, scale-color($color3-copper, $lightness: 30%), $color4-medium-brown, $color5-dark-brown));
+  background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, $color7-gold, $color4-medium-brown, $color5-dark-brown));
+  // background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, scale-color($color3-copper, $lightness: 30%), $color4-medium-brown, $color5-dark-brown));
 }
 
 .headingDisplay {
@@ -53,6 +54,10 @@ body {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.cardImage {
+  width: 100%;
 }
 
 .crudButtonImage {
