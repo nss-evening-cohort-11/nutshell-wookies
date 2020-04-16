@@ -20,4 +20,19 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getEnvironmentalData };
+const getSingleReading = (enviroId) => axios.get(`${baseUrl}/envReadings/${enviroId}.json`);
+
+const deleteReading = (enviroId) => axios.delete(`${baseUrl}/envReadings/${enviroId}.json`);
+
+const addReading = (newCow) => axios.post(`${baseUrl}/envReadings.json`, newCow);
+
+const updateReading = (enviroId, modifiedCow) => axios.put(`${baseUrl}/envReadings/${enviroId}.json`, modifiedCow);
+
+export default {
+  getEnvironmentalData,
+  getSingleReading,
+  deleteReading,
+  addReading,
+  updateReading,
+
+};
