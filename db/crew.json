@@ -1,0 +1,52 @@
+{
+  "crew1": {
+    "firstName": "Zachary",
+    "lastName": "Crumpton",
+    "age": "26",
+    "dateAboard": "06/09/2015",
+    "imgUrl": "Photo Url Here",
+    "title": "Supply Officer",
+    "isMale": true,
+    "description": "description goes here yada yada yada"
+  },
+  "crew2": {
+    "firstName": "Greg",
+    "lastName": "Korte",
+    "age": "37",
+    "dateAboard": "05/02/1994",
+    "imgUrl": "Photo Url Here",
+    "title": "Commanding Officer",
+    "isMale": true,
+    "description": "description goes here yada yada yada"
+  },
+  "crew3": {
+    "firstName": "Michele",
+    "lastName": "Rawlins",
+    "age": "21",
+    "dateAboard": "12/20/2007",
+    "imgUrl": "Photo Url Here",
+    "title": "Lead Engineer",
+    "isMale": false,
+    "description": "description goes here yada yada yada"
+  },
+  "crew4": {
+    "firstName": "Anca",
+    "lastName": "Simon",
+    "age": "21",
+    "dateAboard": "09/15/2016",
+    "imgUrl": "Photo Url Here",
+    "title": "Operations Officer",
+    "isMale": false,
+    "description": "description goes here yada yada yada"
+  },
+  "crew5": {
+    "firstName": "John",
+    "lastName": "Johnson",
+    "age": "45",
+    "dateAboard": "01/25/2000",
+    "imgUrl": "Photo Url Here",
+    "title": "Executive Officer",
+    "isMale": true,
+    "description": "description goes here yada yada yada"
+  }
+ }
