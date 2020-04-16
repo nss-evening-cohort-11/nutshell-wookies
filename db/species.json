@@ -7,5 +7,68 @@
     "description": "Huge fish with extremely large mouth.",
     "destinationId": "islandX",
     "imageUrl": "https"
+  },
+  "species2": {
+    "speciesId": "species2",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  },
+  "species3": {
+    "speciesId": "species3",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  },
+  "species4": {
+    "speciesId": "species4",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  },
+  "species5": {
+    "speciesId": "species5",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  },
+  "species6": {
+    "speciesId": "species6",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  },
+  "species7": {
+    "speciesId": "species7",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
+  },
+  "species8": {
+    "speciesId": "species8",
+    "type": "Grouper",
+    "depth": "50ft.",
+    "color": "purple/gray",
+    "description": "Huge fish with extremely large mouth.",
+    "destinationId": "islandX",
+    "imageUrl": "https"
   }
   }
