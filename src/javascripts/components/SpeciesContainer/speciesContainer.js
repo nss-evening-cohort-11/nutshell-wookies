@@ -11,7 +11,7 @@ const buildSpeciesContainer = () => {
   speciesData.getAllSpecies()
     .then((species) => {
       species.forEach((animal) => {
-        domString += speciesCard.buildSpeciesCard(animal);
+        domString += speciesCard.buildSingleSpeciesCard(animal);
       });
       domString += '</div>';
       utils.printToDom('species', domString);

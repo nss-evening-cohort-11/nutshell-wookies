@@ -1,5 +1,6 @@
 {
   "species1": {
+    "id": "species1",
     "type": "Blue Whale",
     "depth": "50ft.",
     "color": "blue/gray",
@@ -9,6 +10,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species2": {
+    "id": "species2",
     "type": "Bottle Nose Dolphin",
     "depth": "10ft.",
     "color": "gray/white",
@@ -18,6 +20,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species3": {
+    "id": "species3",
     "type": "Hammerhead Shark",
     "depth": "200ft.",
     "color": "gray/white",
@@ -27,6 +30,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species4": {
+    "id": "species4",
     "type": "Manta Ray",
     "depth": "300ft.",
     "color": "black/white",
@@ -36,6 +40,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species5": {
+    "id": "species5",
     "type": "Red",
     "depth": "100ft.",
     "color": "purple/gray",
@@ -45,6 +50,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species6": {
+    "id": "species6",
     "type": "Sperm Whale",
     "depth": "500ft.",
     "color": "gray",
@@ -54,6 +60,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species7": {
+    "id": "species7",
     "type": "Whale Shark",
     "depth": "50ft.",
     "color": "darkgray with white spots",
@@ -63,6 +70,7 @@
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
   "species8": {
+    "id": "species8",
     "type": "Squid",
     "depth": "150ft.",
     "color": "purple/white/gray",
