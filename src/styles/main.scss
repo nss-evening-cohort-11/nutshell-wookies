@@ -67,6 +67,10 @@ body {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .crudButtonImage {
   background-image: url('/src/images-wookies/button_background.png');
   background-color: $color3-copper;
