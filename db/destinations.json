@@ -6,7 +6,7 @@
 		"longitude": "155.5828° W",
 		"imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/06/38/hawaii-1867849__480.jpg",
 		"alt": "photo in Hawaii",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "01 / 01 / 1860",
 		"uid": ""
 	},
@@ -17,7 +17,7 @@
 		"longitude": "93° 5 ' 18.96'' E",
 		"imageUrl": "https://cdn.pixabay.com/photo/2015/03/20/12/36/ruins-682171__480.jpg",
 		"alt": "photo in India",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "06 / 01 / 1860",
 		"uid": ""
 	},
@@ -28,7 +28,7 @@
 		"longitude": "9° 15 ' 34.02'' W",
 		"imageUrl": "https://image.shutterstock.com/image-photo/friday-island-torres-straits-top-260nw-545275393.jpg",
 		"alt": "photo in Australia",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "12 / 01 / 1860",
 		"uid": ""
 	},
@@ -39,7 +39,7 @@
 		"longitude": "166° 28 ' 58.008'' E",
 		"imageUrl": "https://image.shutterstock.com/image-photo/bamboo-hut-on-stilts-gizo-260nw-119904178.jpg",
 		"alt": "photo in Solomon Islands",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "01 / 01 / 1861",
 		"uid": ""
 	},
@@ -50,7 +50,7 @@
 		"longitude": "168° 20 ' 39.5412'' E",
 		"imageUrl": "https://cdn.pixabay.com/photo/2014/10/09/23/36/mountains-482689__480.jpg",
 		"alt": "photo in New Zealand",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "03 / 01 / 1861",
 		"uid": ""
 	},
@@ -61,7 +61,7 @@
 		"longitude": "10° 21′ 0″ W",
 		"imageUrl": "https://image.shutterstock.com/image-photo/patawan-island-small-tropical-white-260nw-1453175669.jpg",
 		"alt": "photo in Canada",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "01 / 01 / 1862",
 		"uid": ""
 	},
@@ -72,7 +72,7 @@
 		"longitude": "9° 25 '32.3' ' E",
 		"imageUrl": "https://image.shutterstock.com/image-photo/aurora-borealis-over-hamnoy-norway-260nw-1504345343.jpg",
 		"alt": "photo in Norway",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "03 / 01 / 1862",
 		"uid": ""
 	},
@@ -83,7 +83,7 @@
 		"longitude": "24° 48 ' 33.3684'' E",
 		"imageUrl": "https://image.shutterstock.com/image-photo/greece-crete-260nw-437801344.jpg",
 		"alt": "photo in Greece",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "06 / 01 / 1862",
 		"uid": ""
 	},
@@ -94,7 +94,7 @@
 		"longitude": "87° 20 ' 46.6476'' W",
 		"imageUrl": "https://image.shutterstock.com/image-photo/islas-cies-vigo-spain-estuarys-260nw-1478813897.jpg",
 		"alt": "photo in Spain",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "08 / 01 / 1862",
 		"uid": ""
 	},
@@ -105,7 +105,7 @@
 		"longitude": "32° 26 ' 47.6448'' E",
 		"imageUrl": "https://image.shutterstock.com/image-photo/suez-canal-260nw-522531625.jpg",
 		"alt": "photo in Egypt",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "10 / 01 / 1862",
 		"uid": ""
 	},
@@ -116,7 +116,7 @@
 		"longitude": "67.2667° W",
 		"imageUrl": "https://image.shutterstock.com/image-photo/landscape-view-cape-horn-headland-260nw-706444354.jpg",
 		"alt": "photo in Chile",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "03 / 01 / 1863",
 		"uid": ""
 	},
@@ -127,7 +127,7 @@
 		"longitude": "18° W",
 		"imageUrl": "https://cdn.pixabay.com/photo/2017/06/17/20/32/atlantis-2413464__480.jpg",
 		"alt": "depiction of ruins in legendary Atlantis",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "07 / 01 / 1863",
 		"uid": ""
 	},
@@ -138,7 +138,7 @@
 		"longitude": "138.2529° E",
 		"imageUrl": "https://cdn.pixabay.com/photo/2017/01/13/08/08/tori-1976609__480.jpg",
 		"alt": "photo in Japan",
-		"beenThere": "yes",
+		"beenThere": true,
 		"timestamp": "12 / 01 / 1864",
 		"uid": ""
 	}
