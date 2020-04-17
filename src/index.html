@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Nautilus</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#crew-members">Crew Members <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#crew">Crew Members <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#destinations">Destinations</a>
@@ -23,7 +23,7 @@
           <a class="nav-link" href="#envReadings">Environmental Readings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#species">Species</a>
+          <a class="nav-link" href="#speciesDiv">Species</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">LogIn</a>
@@ -31,11 +31,14 @@
       </ul>
     </div>
   </nav>
-<div id ="destinations"></div>
-<div id ="envReadings"></div>
-<div id ="species"></div>
-<div id = "crew-members"></div>
+<div id="destinations"></div>
+<div id="envReadings"></div>
+<div id="species" class="hide"></div>
+<div id="crew"></div>
 
-  <button class="btn btn-danger">Help</button>
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+
+
+
 </body>
 </html>
