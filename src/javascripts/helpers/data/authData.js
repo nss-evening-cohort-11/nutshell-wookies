@@ -7,16 +7,21 @@ import speciesContainer from '../../components/SpeciesContainer/speciesContainer
 // const destinationsDiv = $('#destinations');
 // const envReadingsDiv = $('#envReadings');
 // const speciesDiv = $('#species');
-// const logoutButton = $('#navbar-logout-button');
+const logoutButton = $('#navbar-logout-button');
+const loginButton = $('#auth');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in
+      loginButton.addClass('hide');
+      logoutButton.removeClass('hide');
       destinationsContainer.buildDestinationsContainer();
       speciesContainer.buildSpeciesContainer();
     } else {
       // person is not logged in
+      loginButton.removeClass('hide');
+      logoutButton.addClass('hide');
       destinationsContainer.buildDestinationsContainer();
       speciesContainer.buildSpeciesContainer();
     }
