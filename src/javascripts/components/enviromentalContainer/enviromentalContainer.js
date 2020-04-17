@@ -6,6 +6,7 @@ const buildReadings = () => {
   enviroData.getEnvironmentalData()
     .then((enviroRead) => {
       let domString = '';
+      domString += '<div class = "enviroPage">';
       domString += '<h2 class="text-center">Enviromental Readings</h2>';
       domString += '<div class="d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
