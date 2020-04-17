@@ -3,6 +3,7 @@ import apiKeys from './helpers/apiKeys.json';
 import authData from './helpers/data/authData';
 import logoutButton from './components/logout/logout';
 import destinationsContainer from './components/destinationsContainer/destinationsContainer';
+import speciesContainer from './components/SpeciesContainer/speciesContainer';
 import authActions from './components/auth/auth';
 import '../styles/main.scss';
 
@@ -12,6 +13,7 @@ const init = () => {
   authActions.loginButton();
   logoutButton.logoutEvent();
   destinationsContainer.buildDestinationsContainer();
+  speciesContainer.buildSpeciesContainer();
 };
 
 init();
