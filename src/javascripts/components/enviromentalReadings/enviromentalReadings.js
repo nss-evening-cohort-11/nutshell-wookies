@@ -1,4 +1,3 @@
-import utils from '../../helpers/utils';
 
 const envReadingMaker = (envReading) => {
   let domString = '';
@@ -26,7 +25,7 @@ const envReadingMaker = (envReading) => {
   domString += '</div>';
   domString += '</div>';
 
-  utils.printToDom('envReadings', domString);
+  return domString;
 };
 
 export default { envReadingMaker };

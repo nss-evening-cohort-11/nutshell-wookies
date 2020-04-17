@@ -1,10 +1,10 @@
 
 import '../styles/main.scss';
-import envReading from './components/enviromentalReadings/enviromentalReadings';
+import envReading from './components/enviromentalContainer/enviromentalContainer';
 
 console.error('Hello');
 const init = () => {
-  envReading.envReadingMaker();
+  envReading.buildReadings();
 };
 
 init();
