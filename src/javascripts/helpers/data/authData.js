@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import destinationsContainer from '../../components/destinationsContainer/destinationsContainer';
-
+import speciesContainer from '../../components/SpeciesContainer/speciesContainer';
 // const dashboardDiv = $('#dashboard');
 // const crewDiv = $('#crew');
 // const destinationsDiv = $('#destinations');
@@ -14,9 +14,11 @@ const checkLoginStatus = () => {
     if (user) {
       // person is logged in
       destinationsContainer.buildDestinationsContainer();
+      speciesContainer.buildSpeciesContainer();
     } else {
       // person is not logged in
       destinationsContainer.buildDestinationsContainer();
+      speciesContainer.buildSpeciesContainer();
     }
   });
 };
