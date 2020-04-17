@@ -107,10 +107,12 @@ body {
   border-radius: 50px;
 }
 #env-card-read {
-  border: 5px 5px black
+  border: 5px 5px black;
+  $color6-ivory: #FFFFF0;
 }
 .no-gutters {
-  border: 5px 5px black
+  border: 5px 5px black;
+  $color6-ivory: #FFFFF0;
 }
 // TYPEWRITER EFFECT BELOW
 .typewriter {
