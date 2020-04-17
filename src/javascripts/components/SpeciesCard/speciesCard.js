@@ -11,8 +11,8 @@ const buildSingleSpeciesCard = (species) => {
       <p class="card-text">Depth: ${species.depth}</p>
       <p class="card-text">Location: ${species.destinationId}</p>
       <div class="row justify-content-around">
-        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-feather-alt"></i></  button>
-        '<button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-skull-crossbones"></i></button>
+        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-feather-alt"></i></button>
+        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-skull-crossbones"></i></button>
       </div>
     </div>`;
   return domString;
