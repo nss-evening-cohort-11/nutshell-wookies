@@ -14,7 +14,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#crew">Crew Members <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#dashboard">Dashboard<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#crew">Crew Members</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#destinations">Destinations</a>
@@ -31,11 +34,50 @@
       </ul>
     </div>
   </nav>
+
+  <!-- CSS EXAMPLES BELOW -- Anca: I will clean this up once finalized.  -->
+  <!-- <div class="pageDisplay">
+    EXAMPLE: Heading with typewriter animation and embossed style:
+    <h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>
+    EXAMPLE: Add button with background rusty image:
+    <div class="text-center m-5">
+      <input type="button" class="btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">
+    </div>
+    <div>
+    EXAMPLE: More Button Examples:
+      <input type="button" class="col-4 btn-default btn-lg crudButtonImage glowing" value="WIDER">
+      <button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i></button>
+    </div>
+    <div>
+    EXAMPLE: Card Example (Makeshift - not actually using Bootstrap - got some error when I tried that ...); including a couple of button types - background with gradient color versus background with image; glowing font versus plain -- feather for Edit?? cross & bones for Delete?? :
+    <div class="cardDisplay" style="width: 18rem;">
+      <img>
+      <h3>Solomon Islands</h3>
+      <p>Latitude: 34324</p>
+      <p>Longitude: 734324</p>
+      <div class="row">
+        <button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>
+        <button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-skull-crossbones"></i></button>
+      </div>
+      <div class="row"></div>
+        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"  data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fas fa-feather-alt"></i></button>
+        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-skull-crossbones"></i></button>
+      </div>
+    </div>
+    </div>
+  </div> -->
+
+<div id="dashboard"></div>
 <div id ="destinations"></div>
 <div id ="envReadings"></div>
 <div id ="species"></div>
-<div id = "crew"></div>
+<div id ="crew"></div>
+<div id="species" class="hide"></div>
 
-  
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+
+
+
+
 </body>
 </html>
