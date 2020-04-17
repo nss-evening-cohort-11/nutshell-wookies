@@ -10,6 +10,10 @@ body {
   background-size: cover;
 }
 
+.hide {
+  display: none;
+}
+
 .pageDisplay {
   background-color: $color5-dark-brown;
   opacity: 0.9;
@@ -127,8 +131,12 @@ body {
 
 // TYPEWRITER EFFECT CODE ENDS
 .speciesCard {
-  max-width: 600px;
-  margin: 10px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: $color2-orange;
+  box-shadow: 3px 5px 5px $color3-copper;
   border-radius: 20px;
   img {
     width: 100%;
@@ -136,5 +144,7 @@ body {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  }  p {
+    padding: 5px;
   }
 }
