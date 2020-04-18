@@ -8,6 +8,7 @@ const getDestinations = () => new Promise((resolve, reject) => {
     .then((response) => {
       const allDestinations = response.data;
       const destinations = [];
+      console.error('demDestinations', destinations);
       if (destinations) {
         Object.keys(allDestinations).forEach((destinationId) => {
           allDestinations[destinationId].id = destinationId;
