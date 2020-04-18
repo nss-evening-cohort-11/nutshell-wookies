@@ -10,6 +10,10 @@ body {
   background-size: cover;
 }
 
+.hide {
+  display: none;
+}
+
 
 .pageDisplay {
   background-color: $color5-dark-brown;
@@ -64,10 +68,6 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-}
-
-.hide {
-  display: none;
 }
 
 .crudButtonImage {
