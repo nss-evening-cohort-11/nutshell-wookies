@@ -4,7 +4,7 @@ import authData from './helpers/data/authData';
 import logoutButton from './components/logout/logout';
 import destinationsContainer from './components/destinationsContainer/destinationsContainer';
 import speciesContainer from './components/SpeciesContainer/speciesContainer';
-import authActions from './components/Auth/auth';
+import authActions from './components/auth/auth';
 import '../styles/main.scss';
 
 import envReading from './components/enviromentalContainer/enviromentalContainer';
