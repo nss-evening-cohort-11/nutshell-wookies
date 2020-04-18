@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+// import envRead from '../../components/enviromentalContainer/enviromentalContainer';
+
 // const dashboardDiv = $('#dashboard');
 // const crewDiv = $('#crew');
 // const destinationsDiv = $('#destinations');
@@ -8,6 +10,7 @@ import 'firebase/auth';
 // const speciesDiv = $('#species');
 const loginButton = $('#navbar-login-button');
 const logoutButton = $('#navbar-logout-button');
+
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
