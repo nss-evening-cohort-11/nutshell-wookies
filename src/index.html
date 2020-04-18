@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nautilus</title>
+  <title>Document</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img class ="logo" src='./screenshots/Nautilus.png'>
+  <div class = "navbar-backgound">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar-background">
+    <img class="logo" src='./screenshots/Nautilus.png'>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,15 +27,18 @@
           <a class="nav-link" href="#envReadings">Environmental Readings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#speciesDiv">Species</a>
+          <a class="nav-link" href="#species">Species</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">LogIn</a>
+          <button class="nav-link btn" id="navbar-login-button" href="#">Log In</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn" id="navbar-logout-button" href="#">Log Out</button>
         </li>
       </ul>
     </div>
   </nav>
-
+</div>
   <!-- CSS EXAMPLES BELOW -- Anca: I will clean this up once finalized.  -->
   <!-- <div class="pageDisplay">
     EXAMPLE: Heading with typewriter animation and embossed style:
@@ -75,6 +79,7 @@
 <div id="species" class="hide"></div>
 
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+
 
 
 

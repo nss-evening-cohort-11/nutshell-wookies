@@ -1,34 +1,29 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import destinationsContainer from '../../components/destinationsContainer/destinationsContainer';
-
-import envRead from '../../components/enviromentalContainer/enviromentalContainer';
-
-const authDiv = $('#auth');
-const envReadingDiv = $('#envReadings');
+// import envRead from '../../components/enviromentalContainer/enviromentalContainer';
 
 // const dashboardDiv = $('#dashboard');
 // const crewDiv = $('#crew');
 // const destinationsDiv = $('#destinations');
 // const envReadingsDiv = $('#envReadings');
 // const speciesDiv = $('#species');
-// const logoutButton = $('#navbar-logout-button');
+const loginButton = $('#navbar-login-button');
+const logoutButton = $('#navbar-logout-button');
 
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in
-      authDiv.addClass('hide');
-      envReadingDiv.removeClass('hide');
-      envRead.buildReadings();
-      destinationsContainer.buildDestinationsContainer();
+      loginButton.addClass('hide');
+      logoutButton.removeClass('hide');
+      $('.crudButtonImage').removeClass('hide');
     } else {
-      // person is NOT logged in
-      authDiv.removeClass('hide');
-      envReadingDiv.addClass('hide');
-      destinationsContainer.buildDestinationsContainer();
+      // person is not logged in
+      loginButton.removeClass('hide');
+      logoutButton.addClass('hide');
+      $('.crudButtonImage').addClass('hide');
     }
   });
 };
