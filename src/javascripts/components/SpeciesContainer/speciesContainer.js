@@ -3,6 +3,17 @@ import speciesCard from '../SpeciesCard/speciesCard';
 import './speciesContainer.scss';
 import utils from '../../helpers/utils';
 
+const deleteSpecies = (e) => {
+  e.preventDefault();
+  const { speciesId } = e.target.id;
+  speciesData.deleteSpecies(e.target.id)
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      buildSpeciesContainer(speciesId);
+    })
+    .catch((err) => console.error(err));
+};
+
 const buildSpeciesContainer = () => {
   let domString = '';
   domString += '<div class="pageDisplay">';
@@ -18,8 +29,10 @@ const buildSpeciesContainer = () => {
       });
       domString += '</div>';
       utils.printToDom('species', domString);
+      $('#species').on('click', '.delete-button', deleteSpecies);
     })
     .catch((err) => console.error(err));
 };
+
 
 export default { buildSpeciesContainer };
