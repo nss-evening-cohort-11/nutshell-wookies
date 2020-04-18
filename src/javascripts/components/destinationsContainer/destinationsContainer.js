@@ -21,6 +21,7 @@ const buildDestinationsContainer = () => {
       domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>';
       domString += '<div class="text-center m-5">';
       domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">';
+      domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       destinations.forEach((item) => {
