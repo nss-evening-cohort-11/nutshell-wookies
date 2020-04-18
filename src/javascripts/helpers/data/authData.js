@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import destinationsContainer from '../../components/destinationsContainer/destinationsContainer';
+import crewMemberContainer from '../../components/crewMemberContainer/crewMemberContainer';
 
 // import envRead from '../../components/enviromentalContainer/enviromentalContainer';
 
@@ -21,6 +22,7 @@ const checkLoginStatus = () => {
       logoutButton.removeClass('hide');
       $('.crudButtonImage').removeClass('hide');
       destinationsContainer.destinationEvents();
+      crewMemberContainer.crewEvents();
     } else {
       // person is not logged in
       loginButton.removeClass('hide');

@@ -8,17 +8,19 @@ const getAllCrew = () => new Promise((resolve, reject) => {
     .then((response) => {
       const demCrew = response.data;
       const crew = [];
-      Object.keys(demCrew).forEach((crewId) => {
-        demCrew[crewId].id = crewId;
-        crew.push(demCrew[crewId]);
-      });
+      if (crew) {
+        Object.keys(demCrew).forEach((crewId) => {
+          demCrew[crewId].id = crewId;
+          console.error('demCrews there?', demCrew);
+          crew.push(demCrew[crewId]);
+          console.error('resolve Crew?', crewId);
+        });
+      }
       resolve(crew);
     })
     .catch((error) => reject(error));
 });
 
-const getCrewById = (crewId) => axios.get(`${baseUrl}/crew/${crewId}.json`);
-
 const deleteCrew = (crewId) => axios.delete(`${baseUrl}/crew/${crewId}.json`);
 
-export default { getAllCrew, deleteCrew, getCrewById };
+export default { getAllCrew, deleteCrew };
