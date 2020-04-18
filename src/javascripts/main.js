@@ -7,6 +7,10 @@ import speciesContainer from './components/SpeciesContainer/speciesContainer';
 import authActions from './components/Auth/auth';
 import '../styles/main.scss';
 
+import envReading from './components/enviromentalContainer/enviromentalContainer';
+
+console.error('Hello');
+
 const init = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
   authData.checkLoginStatus();
@@ -14,6 +18,7 @@ const init = () => {
   logoutButton.logoutEvent();
   destinationsContainer.buildDestinationsContainer();
   speciesContainer.buildSpeciesContainer();
+  envReading.buildReadings();
 };
 
 init();
