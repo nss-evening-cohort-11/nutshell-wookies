@@ -20,4 +20,7 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getEnvironmentalData };
+const getSingleEnviroRead = (enviroId) => axios.get(`$baseUrl}/envReadings/${enviroId}.json`);
+
+
+export default { getEnvironmentalData, getSingleEnviroRead };

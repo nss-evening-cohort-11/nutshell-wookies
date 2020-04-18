@@ -2,7 +2,7 @@
 
   "firebaseKeys":{
    "apiKey": "",
-   "uthDomain": "",
+   "authDomain": "",
     "databaseURL": "",
     "projectId": "",
     "storageBucket": "",

@@ -8,6 +8,7 @@ const buildReadings = () => {
       let domString = '';
       domString += '<div class = "pageDisplay">';
       domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromental Readings</p>';
+      domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add Data">';
       enviroRead.forEach((reading) => {
         domString += readingComponent.envReadingMaker(reading);
       });
