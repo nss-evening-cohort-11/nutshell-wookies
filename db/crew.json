@@ -4,7 +4,7 @@
     "lastName": "Crumpton",
     "age": "26",
     "dateAboard": "06/09/2015",
-    "imgUrl": "Photo Url Here",
+    "imgUrl": "https://miro.medium.com/fit/c/256/256/1*dC8-bBPmIJjBM8lFX0VqeQ.png",
     "title": "Supply Officer",
     "isMale": true,
     "description": "description goes here yada yada yada"
@@ -14,7 +14,7 @@
     "lastName": "Korte",
     "age": "37",
     "dateAboard": "05/02/1994",
-    "imgUrl": "Photo Url Here",
+    "imgUrl": "https://miro.medium.com/fit/c/256/256/1*dC8-bBPmIJjBM8lFX0VqeQ.png",
     "title": "Commanding Officer",
     "isMale": true,
     "description": "description goes here yada yada yada"
@@ -24,7 +24,7 @@
     "lastName": "Rawlins",
     "age": "21",
     "dateAboard": "12/20/2007",
-    "imgUrl": "Photo Url Here",
+    "imgUrl": "https://miro.medium.com/fit/c/256/256/1*dC8-bBPmIJjBM8lFX0VqeQ.png",
     "title": "Lead Engineer",
     "isMale": false,
     "description": "description goes here yada yada yada"
@@ -34,7 +34,7 @@
     "lastName": "Simon",
     "age": "21",
     "dateAboard": "09/15/2016",
-    "imgUrl": "Photo Url Here",
+    "imgUrl": "https://miro.medium.com/fit/c/256/256/1*dC8-bBPmIJjBM8lFX0VqeQ.png",
     "title": "Operations Officer",
     "isMale": false,
     "description": "description goes here yada yada yada"
@@ -44,7 +44,7 @@
     "lastName": "Johnson",
     "age": "45",
     "dateAboard": "01/25/2000",
-    "imgUrl": "Photo Url Here",
+    "imgUrl": "https://miro.medium.com/fit/c/256/256/1*dC8-bBPmIJjBM8lFX0VqeQ.png",
     "title": "Executive Officer",
     "isMale": true,
     "description": "description goes here yada yada yada"
