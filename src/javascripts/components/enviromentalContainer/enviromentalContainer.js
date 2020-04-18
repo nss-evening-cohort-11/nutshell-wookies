@@ -2,6 +2,18 @@ import enviroData from '../../helpers/data/envReadings';
 import readingComponent from '../enviromentalReadings/enviromentalReadings';
 import utils from '../../helpers/utils';
 
+const removeEnviroData = (e) => {
+  const enviroId = e.target.closest('.card').id;
+  console.error('enviroId', enviroId);
+  enviroData.deleteEnviroRead(enviroId)
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      buildReadings();
+      // utils.printToDom('envReadings', 'delete-data');
+    })
+    .catch((err) => console.error('could not delete', err));
+};
+
 const buildReadings = () => {
   enviroData.getEnvironmentalData()
     .then((enviroRead) => {
@@ -18,4 +30,10 @@ const buildReadings = () => {
     .catch((err) => console.error('problem with Peta', err));
 };
 
-export default { buildReadings };
+
+const enviroEvents = () => {
+  $('body').on('click', '.delete-enviroment', removeEnviroData);
+};
+
+
+export default { buildReadings, enviroEvents };

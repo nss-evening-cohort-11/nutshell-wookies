@@ -1,11 +1,10 @@
-import destination from '../../helpers/data/destinationsData';
-
 const envReadingMaker = (envReading) => {
   let domString = '';
-  domString += '<div class ="cardDisplay">';
-  domString += `<img id="envUrl" src="${envReading.Url}`;
-  domString += '<div class="row" id ="env-card-read">';
-  domString += `<h2>${destination.name}</h2>`;
+  domString += `<div class ="card cardDisplay" id="${envReading.id}" >`;
+  // domString += `<div class ="enviroReadingDiv">`;
+  domString += `<img id="envUrl" src="${envReading.Url}>`;
+  domString += '<div class="row" id="env-card-read">';
+  domString += `<h2>${envReading.destinationId}</h2>`;
   domString += '<div class="row no-gutters">';
   domString += '<div class="col-8 col-sm-6">TimeStamp:</div>';
   domString += `<div class="col-4 col-sm-6">${envReading.TimeStamp}</div>`;
@@ -21,11 +20,11 @@ const envReadingMaker = (envReading) => {
   domString += `<div class="col-4 col-sm-6"> ${envReading.Current}</div>`;
   domString += '<div class="col-8 col-sm-6">Pressure:</div>';
   domString += `<div class="col-4 col-sm-6"> ${envReading.Pressure}</div>`;
-  domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing" id = "edit-data"><i class="fas fa-feather-alt"></i></button>';
-  domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing" id = "delete-data"><i class="fas fa-skull-crossbones"></i></button>';
+  domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing" id="edit-data"><i class="fas fa-feather-alt"></i></button>';
+  domString += '<button type="button" class="delete-enviroment col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-skull-crossbones"></i></button>';
   domString += '</div>';
   domString += '</div>';
-  // domString += '</div>';
+  domString += '</div>';
 
 
   return domString;

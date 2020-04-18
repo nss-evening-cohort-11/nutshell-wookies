@@ -21,9 +21,6 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-// const getSingleEnviroRead = (enviroId) => axios.get(`${baseUrl}/envReadings/${enviroId}.json`);
 const deleteEnviroRead = (enviroId) => axios.delete(`${baseUrl}/envReadings/${enviroId}.json`);
-// const addEnviroRead = (newData) => axios.post(`${baseUrl}/envReadings.json`, newData);
-// const updataRead = (enviroId, modifiedData) => axios.put(`${baseUrl}envReadings/${enviroId},json`, modifiedData);
 
 export default { getEnvironmentalData, deleteEnviroRead };
