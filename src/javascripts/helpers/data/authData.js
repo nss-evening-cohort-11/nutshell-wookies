@@ -21,6 +21,7 @@ const checkLoginStatus = () => {
       loginButton.addClass('hide');
       logoutButton.removeClass('hide');
       $('.crudButtonImage').removeClass('hide');
+      $('.delete-crew').removeClass('hide');
       destinationsContainer.destinationEvents();
       crewMemberContainer.crewEvents();
     } else {
@@ -28,6 +29,7 @@ const checkLoginStatus = () => {
       loginButton.removeClass('hide');
       logoutButton.addClass('hide');
       $('.crudButtonImage').addClass('hide');
+      $('.delete-crew').addClass('hide');
     }
   });
 };
