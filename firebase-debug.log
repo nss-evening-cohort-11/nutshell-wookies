@@ -1,0 +1,264 @@
+[debug] [2020-04-17T23:30:22.141Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:30:22.143Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-17T23:30:22.143Z] CLI Version:   8.0.2
+[debug] [2020-04-17T23:30:22.143Z] Platform:      win32
+[debug] [2020-04-17T23:30:22.143Z] Node Version:  v12.14.1
+[debug] [2020-04-17T23:30:22.144Z] Time:          Fri Apr 17 2020 18:30:22 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-17T23:30:22.144Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:30:22.144Z] 
+[debug] [2020-04-17T23:30:22.155Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-17T23:30:22.156Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ydall\workspace\projects\group\nutshell-wookies
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using nautilus-explorer.
+[debug] [2020-04-17T23:30:55.061Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-17T23:30:55.061Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-17T23:30:55.278Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 17 Apr 2020 23:30:55 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:30:55.294Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nautilus-explorer  
+ 
+[debug] [2020-04-17T23:30:55.660Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 17 Apr 2020 23:30:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:30:55.660Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-17T23:30:55.662Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-17T23:30:55.824Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:40:35)
+    at Request.self.callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:312:28)
+    at IncomingMessage.emit (events.js:228:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1185:12)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[error] 
+[error] Error: Failed to get Firebase project nautilus-explorer. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-04-17T23:35:08.896Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:35:08.898Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-17T23:35:08.898Z] CLI Version:   8.0.2
+[debug] [2020-04-17T23:35:08.898Z] Platform:      win32
+[debug] [2020-04-17T23:35:08.899Z] Node Version:  v12.14.1
+[debug] [2020-04-17T23:35:08.900Z] Time:          Fri Apr 17 2020 18:35:08 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-17T23:35:08.900Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:35:08.900Z] 
+[debug] [2020-04-17T23:35:08.906Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-17T23:35:08.907Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ydall\workspace\projects\group\nutshell-wookies
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using nautilus-explorer.
+[debug] [2020-04-17T23:36:08.036Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nautilus-explorer  
+ 
+[debug] [2020-04-17T23:36:08.374Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 17 Apr 2020 23:36:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:36:08.375Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-17T23:36:08.379Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-17T23:36:08.509Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:40:35)
+    at Request.self.callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:312:28)
+    at IncomingMessage.emit (events.js:228:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1185:12)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[error] 
+[error] Error: Failed to get Firebase project nautilus-explorer. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-04-17T23:38:12.932Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:38:12.934Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-04-17T23:38:12.934Z] CLI Version:   8.0.2
+[debug] [2020-04-17T23:38:12.934Z] Platform:      win32
+[debug] [2020-04-17T23:38:12.934Z] Node Version:  v12.14.1
+[debug] [2020-04-17T23:38:12.935Z] Time:          Fri Apr 17 2020 18:38:12 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-17T23:38:12.935Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:38:12.936Z] 
+[debug] [2020-04-17T23:38:12.943Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-17T23:38:12.944Z] > authorizing via signed-in user
+[debug] [2020-04-17T23:38:12.944Z] [iam] checking project nautilus-explorer for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-17T23:38:12.947Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/nautilus-explorer:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-04-17T23:38:13.374Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 17 Apr 2020 23:38:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=262","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:38:13.378Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project nautilus-explorer:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2020-04-17T23:38:13.380Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nautilus-explorer  
+ 
+[debug] [2020-04-17T23:38:13.660Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 17 Apr 2020 23:38:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:38:13.660Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-17T23:38:13.663Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-17T23:38:13.803Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:40:35)
+    at Request.self.callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:312:28)
+    at IncomingMessage.emit (events.js:228:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1185:12)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[error] 
+[error] Error: Failed to get Firebase project nautilus-explorer. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-04-17T23:38:58.919Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:38:58.921Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-17T23:38:58.921Z] CLI Version:   8.0.2
+[debug] [2020-04-17T23:38:58.921Z] Platform:      win32
+[debug] [2020-04-17T23:38:58.921Z] Node Version:  v12.14.1
+[debug] [2020-04-17T23:38:58.922Z] Time:          Fri Apr 17 2020 18:38:58 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-17T23:38:58.922Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:38:58.922Z] 
+[debug] [2020-04-17T23:38:58.929Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-17T23:38:58.929Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ydall\workspace\projects\group\nutshell-wookies
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using nautilus-explorer.
+[debug] [2020-04-17T23:40:13.060Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nautilus-explorer  
+ 
+[debug] [2020-04-17T23:40:13.370Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 17 Apr 2020 23:40:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:40:13.371Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-17T23:40:13.375Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-17T23:40:13.553Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:40:35)
+    at Request.self.callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:312:28)
+    at IncomingMessage.emit (events.js:228:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1185:12)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[error] 
+[error] Error: Failed to get Firebase project nautilus-explorer. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-04-17T23:41:43.142Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:41:43.144Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-17T23:41:43.144Z] CLI Version:   8.1.1
+[debug] [2020-04-17T23:41:43.144Z] Platform:      win32
+[debug] [2020-04-17T23:41:43.144Z] Node Version:  v12.14.1
+[debug] [2020-04-17T23:41:43.146Z] Time:          Fri Apr 17 2020 18:41:43 GMT-0500 (Central Daylight Time)
+[debug] [2020-04-17T23:41:43.146Z] ----------------------------------------------------------------------
+[debug] [2020-04-17T23:41:43.146Z] 
+[debug] [2020-04-17T23:41:43.156Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-17T23:41:43.156Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ydall\workspace\projects\group\nutshell-wookies
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using nautilus-explorer.
+[debug] [2020-04-17T23:41:53.485Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nautilus-explorer  
+ 
+[debug] [2020-04-17T23:41:53.768Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 17 Apr 2020 23:41:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-17T23:41:53.769Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-17T23:41:53.773Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-17T23:41:53.951Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:223:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (C:\Users\ydall\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:312:28)
+    at IncomingMessage.emit (events.js:228:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1185:12)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[error] 
+[error] Error: Failed to get Firebase project nautilus-explorer. Please make sure the project exists and your account has permission to access it.

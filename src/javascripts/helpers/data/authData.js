@@ -2,6 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import destinationsContainer from '../../components/destinationsContainer/destinationsContainer';
 
+// import envRead from '../../components/enviromentalContainer/enviromentalContainer';
+
 // const dashboardDiv = $('#dashboard');
 // const crewDiv = $('#crew');
 // const destinationsDiv = $('#destinations');
@@ -9,6 +11,7 @@ import destinationsContainer from '../../components/destinationsContainer/destin
 // const speciesDiv = $('#species');
 const loginButton = $('#navbar-login-button');
 const logoutButton = $('#navbar-logout-button');
+
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
