@@ -1,7 +1,8 @@
+import firebase from 'firebase/app';
 import destinationsData from '../../helpers/data/destinationsData';
-import utils from '../../helpers/utils';
 import destinationCard from '../destinationCard/destinationCard';
-
+import destinationModal from '../destinationModalForm/destinationModalForm';
+import utils from '../../helpers/utils';
 
 const removeDestination = (e) => {
   const destinationId = e.target.closest('.card').id;
@@ -13,6 +14,29 @@ const removeDestination = (e) => {
     .catch((error) => console.error('could not delete destination', error));
 };
 
+const makeNewDestination = (e) => {
+  e.preventDefault();
+  const newDestination = {
+    name: $('#destination-name').val(),
+    country: $('#destination-country').val(),
+    latitude: $('#destination-latitude').val(),
+    longitude: $('#destination-longitude').val(),
+    imageUrl: $('#destination-imageUrl').val(),
+    alt: $('#destination-name').val(),
+    beenThere: $('#destination-beenThere').val(),
+    timestamp: $('#destination-timestamp').val(),
+    uid: firebase.auth().currentUser.uid,
+  };
+  console.log('new destination', newDestination);
+  destinationsData.addDestination(newDestination)
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      buildDestinationsContainer();
+      utils.printToDom('exampleModal', '');
+    })
+    .catch((error) => console.error('could not add a new destination', error));
+};
+
 const buildDestinationsContainer = () => {
   destinationsData.getDestinations()
     .then((destinations) => {
@@ -20,7 +44,7 @@ const buildDestinationsContainer = () => {
       domString += '<div class="pageDisplay">';
       domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>';
       domString += '<div class="text-center m-5">';
-      domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">';
+      domString += '<input id="button-add-destination" type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">';
       domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
@@ -38,6 +62,8 @@ const buildDestinationsContainer = () => {
 
 const destinationEvents = () => {
   $('body').on('click', '.delete-destination', removeDestination);
+  $('#button-add-destination').click(destinationModal.showDestinationModalForm);
+  $('#button-save-destination').click(makeNewDestination);
 };
 
 export default { buildDestinationsContainer, destinationEvents };
