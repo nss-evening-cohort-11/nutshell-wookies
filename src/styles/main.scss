@@ -17,7 +17,7 @@ body {
   display: block;
   width: 90%;
   margin: auto;
-  height: 70%;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
@@ -48,6 +48,8 @@ body {
 .glowing {
   text-shadow: 0px 0px 6px $color6-ivory;
 }
+
+
 
 .cardDisplay {
   background-color: $color2-orange;
