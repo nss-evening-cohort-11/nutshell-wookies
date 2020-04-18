@@ -8,13 +8,17 @@ const getAllSpecies = () => new Promise((resolve, reject) => {
     .then((response) => {
       const demSpecies = response.data;
       const species = [];
-      Object.keys(demSpecies).forEach((fbId) => {
-        demSpecies[fbId].id = fbId;
-        species.push(demSpecies[fbId]);
-      });
+      if (species) {
+        Object.keys(demSpecies).forEach((fbId) => {
+          demSpecies[fbId].id = fbId;
+          species.push(demSpecies[fbId]);
+        });
+      }
       resolve(species);
     })
     .catch((error) => reject(error));
 });
 
-export default { getAllSpecies };
+const deleteSpecies = (speciesId) => axios.delete(`${baseUrl}/species/${speciesId}.json`);
+
+export default { getAllSpecies, deleteSpecies };
