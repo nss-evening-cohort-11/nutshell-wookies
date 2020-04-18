@@ -4,12 +4,11 @@ import './speciesContainer.scss';
 import utils from '../../helpers/utils';
 
 const deleteSpecies = (e) => {
-  e.preventDefault();
-  const { speciesId } = e.target.id;
-  speciesData.deleteSpecies(e.target.id)
+  const speciesId = e.target.closest('.speciesCard').id;
+  speciesData.deleteSpecies(speciesId)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
-      buildSpeciesContainer(speciesId);
+      buildSpeciesContainer();
     })
     .catch((err) => console.error(err));
 };
