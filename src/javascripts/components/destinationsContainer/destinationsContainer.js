@@ -1,8 +1,8 @@
 import firebase from 'firebase/app';
 import destinationsData from '../../helpers/data/destinationsData';
 import destinationCard from '../destinationCard/destinationCard';
-import destinationModal from '../destinationModalForm/destinationModalForm';
 import utils from '../../helpers/utils';
+import destinationModalForm from '../destinationModalForm/destinationModalForm';
 
 const removeDestination = (e) => {
   const destinationId = e.target.closest('.card').id;
@@ -14,7 +14,7 @@ const removeDestination = (e) => {
     .catch((error) => console.error('could not delete destination', error));
 };
 
-const makeNewDestination = (e) => {
+const makeDestination = (e) => {
   e.preventDefault();
   const newDestination = {
     name: $('#destination-name').val(),
@@ -30,9 +30,10 @@ const makeNewDestination = (e) => {
   console.log('new destination', newDestination);
   destinationsData.addDestination(newDestination)
     .then(() => {
+      $('#modalAddDestination').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildDestinationsContainer();
-      utils.printToDom('exampleModal', '');
+      // utils.printToDom('modalAddDestination', '');
     })
     .catch((error) => console.error('could not add a new destination', error));
 };
@@ -45,7 +46,7 @@ const buildDestinationsContainer = () => {
       domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>';
       domString += '<div class="text-center m-5">';
       domString += '<input id="button-add-destination" type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">';
-      domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>';
+      // domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       destinations.forEach((item) => {
@@ -62,8 +63,8 @@ const buildDestinationsContainer = () => {
 
 const destinationEvents = () => {
   $('body').on('click', '.delete-destination', removeDestination);
-  $('#button-add-destination').click(destinationModal.showDestinationModalForm);
-  $('#button-save-destination').click(makeNewDestination);
+  $('body').on('click', '#button-add-destination', destinationModalForm.showDestinationModalForm);
+  $('body').on('click', '#button-save-destination', makeDestination);
 };
 
 export default { buildDestinationsContainer, destinationEvents };

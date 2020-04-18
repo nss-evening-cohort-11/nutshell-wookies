@@ -13,7 +13,7 @@ const envReadingMaker = (envReading) => {
   domString += '<div class="col-8 col-sm-6">Longitude:</div>';
   domString += `<div class="col-4 col-sm-6">${envReading.Longitude}</div>`;
   domString += '<div class="col-8 col-sm-6">Temperature:</div>';
-  domString += `<div class="col-4 col-sm-6"> ${envReading.Temperature}</div>`;
+  domString += `<div class="col-4 col-sm-6"> ${envReading.Temperature} ${envReading.destination.name}</div>`;
   domString += '<div class="col-8 col-sm-6">Depth:</div>';
   domString += `<div class="col-4 col-sm-6"> ${envReading.Depth}</div>`;
   domString += '<div class="col-8 col-sm-6">Current:</div>';

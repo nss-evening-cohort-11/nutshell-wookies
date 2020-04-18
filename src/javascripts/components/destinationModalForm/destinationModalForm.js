@@ -1,6 +1,7 @@
 import utils from '../../helpers/utils';
 
 const showDestinationModalForm = () => {
+  console.log('adding a new destination');
   let domString = '';
   domString = '<form>';
   domString = '<div class="form-group">';
@@ -17,8 +18,8 @@ const showDestinationModalForm = () => {
   domString = '</div>';
   domString = '<button id="button-save-destination" type="submit" class="btn btn-primary">Submit</button>';
   domString = '</form>';
-
-  utils.printToDom('exampleModal', domString);
+  $('#modalAddDestination').modal('show');
+  utils.printToDom('modalBodyAddDestination', domString);
 };
 
 export default { showDestinationModalForm };
