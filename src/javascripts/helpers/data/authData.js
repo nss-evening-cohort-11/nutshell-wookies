@@ -23,7 +23,6 @@ const checkLoginStatus = () => {
       $('.crudButtonImage').removeClass('hide');
       destinationsContainer.destinationEvents();
       crewMemberContainer.crewEvents();
-
     } else {
       // person is not logged in
       loginButton.removeClass('hide');
