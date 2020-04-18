@@ -9,6 +9,7 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
     .then((response) => {
       const demEnviroData = response.data;
       const enviroData = [];
+      console.error(demEnviroData);
       if (demEnviroData) {
         Object.keys(demEnviroData).forEach((enviroId) => {
           demEnviroData[enviroId].id = enviroId;
