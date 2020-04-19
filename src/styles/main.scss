@@ -15,6 +15,13 @@ body {
   display: none;
 }
 
+.nav-link {
+  font-family: Oldenburg;
+  color: $color5-dark-brown;
+  font-size: 20px;
+}
+
+
 
 .pageDisplay {
   background-color: $color5-dark-brown;
@@ -33,6 +40,7 @@ body {
 
 .headingDisplay {
   background-color: $color2-orange;
+  font-family: Oldenburg;
   color: $color6-ivory;
   box-shadow: 3px 5px 5px $color3-copper;
   border-radius: 20px;
@@ -168,6 +176,8 @@ body {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: Oldenburg;
+  color: $color5-dark-brown;
   background-color: $color2-orange;
   box-shadow: 3px 5px 5px $color3-copper;
   border-radius: 20px;
@@ -179,5 +189,6 @@ body {
     border-top-right-radius: 20px;
   }  p {
     padding: 5px;
+
   }
 }
