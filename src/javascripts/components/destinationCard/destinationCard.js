@@ -7,7 +7,7 @@ const buildDestinationCard = (destination) => {
   domString += `<p class="card-text font-italic">${destination.country}</p>`;
   domString += `<p class="card-text">${destination.latitude} ${destination.longitude}</p>`;
   domString += '<div class="row justify-content-around">';
-  domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-feather-alt"></i></button>';
+  domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing edit-destination"><i class="fas fa-feather-alt"></i></button>';
   domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing delete-destination"><i class="fas fa-skull-crossbones"></i></button>';
   domString += '</div>';
   domString += '</div>';
