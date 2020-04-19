@@ -20,7 +20,7 @@ const buildCrewContainer = () => {
       domString += '<div class="pageDisplay">';
       domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Crew Members</p></h1>';
       domString += '<div class="text-center m-5">';
-      domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Crew Member">';
+      domString += '<input type="button" class="hide col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Crew Member">';
       domString += '</div>';
       domString += '<div class="d-flex flex-column">';
       crewMembers.forEach((item) => {
