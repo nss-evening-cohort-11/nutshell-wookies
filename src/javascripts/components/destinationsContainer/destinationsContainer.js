@@ -1,4 +1,5 @@
 import firebase from 'firebase/app';
+import moment from 'moment';
 import destinationsData from '../../helpers/data/destinationsData';
 import destinationCard from '../destinationCard/destinationCard';
 import utils from '../../helpers/utils';
@@ -24,16 +25,15 @@ const makeDestination = (e) => {
     imageUrl: $('#destination-imageUrl').val(),
     alt: $('#destination-name').val(),
     beenThere: $('#destination-beenThere').val(),
-    timestamp: $('#destination-timestamp').val(),
+    timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
-  console.log('new destination', newDestination);
   destinationsData.addDestination(newDestination)
     .then(() => {
+      $('.modal-body input').val('');
       $('#modalAddDestination').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildDestinationsContainer();
-      // utils.printToDom('modalAddDestination', '');
     })
     .catch((error) => console.error('could not add a new destination', error));
 };
@@ -43,10 +43,9 @@ const buildDestinationsContainer = () => {
     .then((destinations) => {
       let domString = '';
       domString += '<div class="pageDisplay">';
-      domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>';
-      domString += '<div class="text-center m-5">';
-      domString += '<input id="button-add-destination" type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">';
-      // domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>';
+      domString += '<div class="row">';
+      domString += '<h1 class="headingDisplay softEmboss col-10"><p class="typewriter">Destinations</p></h1>';
+      domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       destinations.forEach((item) => {
