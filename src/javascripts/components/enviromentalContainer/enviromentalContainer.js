@@ -1,4 +1,7 @@
-// import firebase from 'firebase/app';
+
+import 'firebase/auth';
+
+import moment from 'moment';
 import enviroData from '../../helpers/data/envReadings';
 import readingComponent from '../enviromentalReadings/enviromentalReadings';
 import addEnviroModal from '../enviromentalModalForm/enviromentModalForm';
@@ -36,10 +39,10 @@ const makeNewEnviro = (e) => {
   const newEnviroData = {
     name: $('#enviroment-location').val(),
     Url: $('#enviroment-imageUrl').val(),
-    // destinationId: $('destination-name').val(),
-    // TimeStamp: $('TimeStamp').val(),
-    Latitude: $('#enviroment-latitude').val() * 1,
-    Longitude: $('#enviroment-longitude').val() * 1,
+    destinationId: $('destination-name').val(),
+    TimeStamp: moment().format(),
+    Latitude: $('#enviroment-latitude').val(),
+    Longitude: $('#enviroment-longitude').val(),
     Temperature: $('#enviroment-temperature').val() * 1,
     Depth: $('#enviroment-depth').val() * 1,
     Current: $('#enviroment-current').val(),
