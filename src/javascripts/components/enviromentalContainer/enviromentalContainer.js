@@ -10,7 +10,6 @@ const removeEnviroData = (e) => {
     .then(() => {
       // eslint-disable-next-line no-use-before-define
       buildReadings();
-      // utils.printToDom('envReadings', 'delete-data');
     })
     .catch((err) => console.error('could not delete', err));
 };
@@ -22,7 +21,6 @@ const buildReadings = () => {
       domString += '<div class="pageDisplay">';
       domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromental Readings</p></h1>';
       domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add">';
-      // domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>'
       domString += '</div>';
       domString += 'div class = "d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
@@ -53,7 +51,6 @@ const makeNewEnviro = (e) => {
       $('.modal-body input').val('');
       $('#modalAddEnviroment').modal('hide');
       buildReadings();
-      // utils.printToDom('envReadings', '');
     })
     .catch((err) => console.error('could not add Data', err));
 };
