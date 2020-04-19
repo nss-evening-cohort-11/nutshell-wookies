@@ -47,11 +47,11 @@ const speciesEvents = () => {
 const buildSpeciesContainer = () => {
   let domString = '';
   domString += '<div class="pageDisplay">';
-  domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Species</p></h1>';
+  domString += '<div class="row">';
+  domString += '<h1 class="headingDisplay softEmboss col-10"><p class="typewriter">Species</p></h1>';
   const user = firebase.auth().currentUser;
-  domString += '<div class="text-center m-5">';
   if (user != null) {
-    domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" id="add-species-button" value="Add a New Species">';
+    domString += '<button id="add-species-button" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 mr-2" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-calendar-plus"></i></button>';
     domString += '</div>';
   }
   domString += '<div class="d-flex flex-wrap justify-content-center">';
