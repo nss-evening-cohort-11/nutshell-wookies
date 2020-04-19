@@ -23,4 +23,10 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
 
 const deleteEnviroRead = (enviroId) => axios.delete(`${baseUrl}/envReadings/${enviroId}.json`);
 
-export default { getEnvironmentalData, deleteEnviroRead };
+const addEnviroData = (newEnviroData) => axios.post(`${baseUrl}/envReadings.json`, newEnviroData);
+
+export default {
+  getEnvironmentalData,
+  deleteEnviroRead,
+  addEnviroData,
+};
