@@ -39,7 +39,7 @@ const makeNewEnviro = (e) => {
   const newEnviroData = {
     name: $('#enviroment-location').val(),
     Url: $('#enviroment-imageUrl').val(),
-    destinationId: $('destination-name').val(),
+    destinationId: $('enviroment-location').val(),
     TimeStamp: moment().format(),
     Latitude: $('#enviroment-latitude').val(),
     Longitude: $('#enviroment-longitude').val(),
