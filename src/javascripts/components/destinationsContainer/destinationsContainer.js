@@ -25,7 +25,7 @@ const makeDestination = (e) => {
     longitude: $('#destination-longitude').val(),
     imageUrl: $('#destination-imageUrl').val(),
     alt: $('#destination-name').val(),
-    beenThere: $('#destination-beenThere').val(),
+    beenThere: $('#destination-beenThere:checked').val(),
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
@@ -48,7 +48,7 @@ const editDestinationEvent = (e) => {
 
 const updateDestination = (e) => {
   e.preventDefault();
-  const destinationId = e.target.closest('.edit-destination-form-tag').id;
+  const destinationId = $('.edit-destination-form-tag').data('id');
   console.error('dest id from update function', destinationId);
   const editedDestination = {
     name: $('#edit-destination-name').val(),
@@ -57,7 +57,7 @@ const updateDestination = (e) => {
     longitude: $('#edit-destination-longitude').val(),
     imageUrl: $('#edit-destination-imageUrl').val(),
     alt: $('#edit-destination-name').val(),
-    beenThere: $('#edit-destination-beenThere').val(),
+    beenThere: $('#edit-destination-beenThere:checked').val(),
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
