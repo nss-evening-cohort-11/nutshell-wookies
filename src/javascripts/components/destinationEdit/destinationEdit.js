@@ -29,7 +29,11 @@ const showEditDestinationForm = (destinationId) => {
       domString += `<input type="text" class="form-control" id="edit-destination-imageUrl" aria-describedby="photoUrl" placeholder="Enter a photo link" value="${selectedDestination.imageUrl}">`;
       domString += '</div>';
       domString += '<div class="form-group form-check">';
-      domString += `<input type="checkbox" class="form-check-input" id="edit-destination-beenThere" value=${selectedDestination.beenThere}>`;
+      if ($('#destination-beenThere:checked') !== null) {
+        domString += '<input type="checkbox" class="form-check-input" id="edit-destination-beenThere" checked>';
+      } else if ($('#destination-beenThere:checked') === null) {
+        domString += '<input type="checkbox" class="form-check-input" id="edit-destination-beenThere">';
+      }
       domString += '<label class="form-check-label" for="edit-destination-beenThere">Have we been there yet?</label>';
       domString += '</div>';
       domString += '</form>';
