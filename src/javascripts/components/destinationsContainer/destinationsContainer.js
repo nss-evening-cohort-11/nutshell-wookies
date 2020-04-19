@@ -4,6 +4,7 @@ import destinationsData from '../../helpers/data/destinationsData';
 import destinationCard from '../destinationCard/destinationCard';
 import utils from '../../helpers/utils';
 import destinationModalForm from '../destinationModalForm/destinationModalForm';
+import destinationEdit from '../destinationEdit/destinationEdit';
 
 const removeDestination = (e) => {
   const destinationId = e.target.closest('.card').id;
@@ -24,18 +25,52 @@ const makeDestination = (e) => {
     longitude: $('#destination-longitude').val(),
     imageUrl: $('#destination-imageUrl').val(),
     alt: $('#destination-name').val(),
-    beenThere: $('#destination-beenThere').val(),
+    beenThere: $('#destination-beenThere:checked').val(),
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
   destinationsData.addDestination(newDestination)
     .then(() => {
-      $('.modal-body input').val('');
+      $('#modalBodyAddDestination input').val('');
       $('#modalAddDestination').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildDestinationsContainer();
     })
     .catch((error) => console.error('could not add a new destination', error));
+};
+
+const editDestinationEvent = (e) => {
+  e.preventDefault();
+  const destinationId = e.target.closest('.card').id;
+  $('#modalEditDestination').modal('show');
+  destinationEdit.showEditDestinationForm(destinationId);
+};
+
+const updateDestination = (e) => {
+  e.preventDefault();
+  const destinationId = $('.edit-destination-form-tag').data('id');
+  console.error('dest id from update function', destinationId);
+  const editedDestination = {
+    name: $('#edit-destination-name').val(),
+    country: $('#edit-destination-country').val(),
+    latitude: $('#edit-destination-latitude').val(),
+    longitude: $('#edit-destination-longitude').val(),
+    imageUrl: $('#edit-destination-imageUrl').val(),
+    alt: $('#edit-destination-name').val(),
+    beenThere: $('#edit-destination-beenThere:checked').val(),
+    timestamp: moment().format(),
+    uid: firebase.auth().currentUser.uid,
+  };
+  console.log('edited dest', editedDestination);
+  console.log('id of edited dest', destinationId);
+  destinationsData.updateDestination(destinationId, editedDestination)
+    .then(() => {
+      // $('.modal-body input').val('');
+      $('#modalEditDestination').modal('hide');
+      // eslint-disable-next-line no-use-before-define
+      buildDestinationsContainer();
+    })
+    .catch((error) => console.error('could not update the destination', error));
 };
 
 const buildDestinationsContainer = () => {
@@ -62,8 +97,10 @@ const buildDestinationsContainer = () => {
 
 const destinationEvents = () => {
   $('body').on('click', '.delete-destination', removeDestination);
-  $('body').on('click', '#button-add-destination', destinationModalForm.showDestinationModalForm);
+  $('body').on('click', '.edit-destination', editDestinationEvent);
+  $('body').on('click', '#button-add-destination', destinationModalForm.showAddDestinationModalForm);
   $('body').on('click', '#button-save-destination', makeDestination);
+  $('body').on('click', '#button-save-edit-destination', updateDestination);
 };
 
 export default { buildDestinationsContainer, destinationEvents };
