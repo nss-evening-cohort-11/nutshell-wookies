@@ -3,11 +3,15 @@
 @import '../styles/colors.scss';
 
 body {
-  // background-color: $color5-dark-brown;
-  background-image: url('/src/images-wookies/rust.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background: url('/src/images-wookies/rust.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hide {
+  display: none;
 }
 
 .pageDisplay {
@@ -61,10 +65,6 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-}
-
-.hide {
-  display: none;
 }
 
 .crudButtonImage {
