@@ -8,7 +8,6 @@ const getDestinations = () => new Promise((resolve, reject) => {
     .then((response) => {
       const allDestinations = response.data;
       const destinations = [];
-      console.error('demDestinations', destinations);
       if (destinations) {
         Object.keys(allDestinations).forEach((destinationId) => {
           allDestinations[destinationId].id = destinationId;
@@ -22,4 +21,6 @@ const getDestinations = () => new Promise((resolve, reject) => {
 
 const deleteDestination = (destinationId) => axios.delete(`${baseUrl}/destinations/${destinationId}.json`);
 
-export default { getDestinations, deleteDestination };
+const addDestination = (newDestination) => axios.post(`${baseUrl}/destinations.json`, newDestination);
+
+export default { getDestinations, deleteDestination, addDestination };
