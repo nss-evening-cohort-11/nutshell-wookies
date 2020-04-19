@@ -12,9 +12,7 @@ body {
 a {
   color: $color5-dark-brown;
 }
-.col-6.btn-default {
-  text-align: center;
-}
+
 .pageDisplay {
   background-color: $color5-dark-brown;
   opacity: 0.9;
@@ -145,8 +143,8 @@ a {
 }
 
 #envUrl {
-  height: 250px;
-  width: 450px;
+  height: 300px;
+  width: 1200px;
   border: 5px 5px black;
   box-shadow: 5px 5px black;
   border-radius: 50px;

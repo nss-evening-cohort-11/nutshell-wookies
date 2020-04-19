@@ -21,9 +21,10 @@ const buildReadings = () => {
       let domString = '';
       domString += '<div class="pageDisplay">';
       domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromental Readings</p></h1>';
-      domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonImage glowing" id="button-add-enviroment" value="Add Data">';
+      domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add">';
+      // domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>'
       domString += '</div>';
-      domString += 'div class = "d-flex fles-wrap">';
+      domString += 'div class = "d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
         domString += readingComponent.envReadingMaker(reading);
       });
@@ -34,20 +35,20 @@ const buildReadings = () => {
 };
 const makeNewEnviro = (e) => {
   e.preventDefault();
-  const newEnvData = {
-    name: $('destination-name').val(),
-    Url: $('Url-pic').val(),
-    destinationId: $('destination-name').val(),
-    TimeStamp: $('TimeStamp').val(),
-    Latitude: $('Latitude').val() * 1,
-    Longitude: $('Longitude').val() * 1,
-    Temperature: $('Temperature').val() * 1,
-    Depth: $('Depth').val() * 1,
-    Current: $('Current').val(),
-    Pressure: $('Pressure').val() * 1,
+  const newEnviroData = {
+    name: $('#enviroment-location').val(),
+    Url: $('#enviroment-imageUrl').val(),
+    // destinationId: $('destination-name').val(),
+    // TimeStamp: $('TimeStamp').val(),
+    Latitude: $('#enviroment-latitude').val() * 1,
+    Longitude: $('#enviroment-longitude').val() * 1,
+    Temperature: $('#enviroment-temperature').val() * 1,
+    Depth: $('#enviroment-depth').val() * 1,
+    Current: $('#enviroment-current').val(),
+    Pressure: $('#enviroment-pressure').val() * 1,
     // uid: firebase.auth().currentUser.uid,
   };
-  enviroData.addEnviroData(newEnvData)
+  enviroData.addEnviroData(newEnviroData)
     .then(() => {
       $('.modal-body input').val('');
       $('#modalAddEnviroment').modal('hide');
