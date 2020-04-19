@@ -14,17 +14,16 @@ const checkLoginStatus = () => {
       // person is logged in
       loginButton.addClass('hide');
       logoutButton.removeClass('hide');
-      // $('.crudButtonImage').removeClass('hide');
-      $('.delete-crew').removeClass('hide');
+      $('.crudButtonColor').removeClass('hide');
+      destinationsContainer.destinationEvents();
     } else {
       // person is not logged in
       loginButton.removeClass('hide');
       logoutButton.addClass('hide');
-      // $('.crudButtonImage').addClass('hide');
-      $('.delete-crew').addClass('hide');
+      $('.crudButtonColor').addClass('hide');
     }
-    destinationsContainer.destinationEvents();
     enviromentalContainer.enviroEvents();
+    crewMemberContainer.crewEvents();
     destinationsContainer.buildDestinationsContainer();
     speciesContainer.buildSpeciesContainer();
     enviromentalContainer.buildReadings();
