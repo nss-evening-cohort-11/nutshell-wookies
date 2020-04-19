@@ -42,7 +42,7 @@ const newEnviroData = () => {
   domString += '<button type="submit" class="btn btn-dark" id="data-creator">Add Enviromental Data</button>';
   domString += '</form>';
 
-  utils.printToDom('new-envReadings', domString);
+  utils.printToDom('envReadings', domString);
 };
 
 
