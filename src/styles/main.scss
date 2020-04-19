@@ -4,9 +4,10 @@
 
 body {
   // background-color: $color5-dark-brown;
-  background-image: url('/src/images-wookies/rust.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('/src/images-wookies/rust.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -108,8 +109,8 @@ body {
   background-color:$color2-orange;
 }
 
-div.navbar-background {
-  background: $color3-copper;
+.navbar-background {
+  background-color: $color3-copper;
 }
 .sticky-top {
   background-color:$color3-copper;
