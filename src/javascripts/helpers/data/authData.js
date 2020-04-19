@@ -7,6 +7,7 @@ import crewMemberContainer from '../../components/crewMemberContainer/crewMember
 
 const loginButton = $('#navbar-login-button');
 const logoutButton = $('#navbar-logout-button');
+const newEnviroDiv = $('new-envReadings');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -14,11 +15,13 @@ const checkLoginStatus = () => {
       // person is logged in
       loginButton.addClass('hide');
       logoutButton.removeClass('hide');
+      newEnviroDiv.removeClass('hide');
       $('.crudButtonImage').removeClass('hide');
     } else {
       // person is not logged in
       loginButton.removeClass('hide');
       logoutButton.addClass('hide');
+      newEnviroDiv.addClass('hide');
       $('.crudButtonImage').addClass('hide');
     }
     destinationsContainer.destinationEvents();

@@ -8,6 +8,9 @@ const newEnviroData = () => {
   domString += '<label for="destination-name">Destination</label>';
   domString += '<input type="text" class="form-control" id="destination-name" placeholder="Easter Island">';
   domString += '</div>';
+  domString += '<label for="Url-pic">Insert Pic here</label>';
+  domString += '<input type="text" class="form-control" id="Url-pic" placeholder="url-pic">';
+  domString += '</div>';
   domString += '<div class="form-group">';
   domString += '<label for="TimeStamp">TimeStamp:</label>';
   domString += '<input type="text" class="form-control" id="TimeStamp" placeholder="1/01/2019">';
