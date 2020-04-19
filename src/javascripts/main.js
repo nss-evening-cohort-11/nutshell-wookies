@@ -3,7 +3,7 @@ import 'bootstrap';
 import apiKeys from './helpers/apiKeys.json';
 import authData from './helpers/data/authData';
 import logoutButton from './components/logout/logout';
-import authActions from './components/Auth/auth';
+import authActions from './components/auth/auth';
 import '../styles/main.scss';
 
 const init = () => {
