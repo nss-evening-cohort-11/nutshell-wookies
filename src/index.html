@@ -39,38 +39,6 @@
     </div>
   </nav>
 </div>
-  <!-- CSS EXAMPLES BELOW -- Anca: I will clean this up once finalized.  -->
-  <!-- <div class="pageDisplay">
-    EXAMPLE: Heading with typewriter animation and embossed style:
-    <h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>
-    EXAMPLE: Add button with background rusty image:
-    <div class="text-center m-5">
-      <input type="button" class="btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">
-    </div>
-    <div>
-    EXAMPLE: More Button Examples:
-      <input type="button" class="col-4 btn-default btn-lg crudButtonImage glowing" value="WIDER">
-      <button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i></button>
-    </div>
-    <div>
-    EXAMPLE: Card Example (Makeshift - not actually using Bootstrap - got some error when I tried that ...); including a couple of button types - background with gradient color versus background with image; glowing font versus plain -- feather for Edit?? cross & bones for Delete?? :
-    <div class="cardDisplay" style="width: 18rem;">
-      <img>
-      <h3>Solomon Islands</h3>
-      <p>Latitude: 34324</p>
-      <p>Longitude: 734324</p>
-      <div class="row">
-        <button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>
-        <button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-skull-crossbones"></i></button>
-      </div>
-      <div class="row"></div>
-        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"  data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fas fa-feather-alt"></i></button>
-        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-skull-crossbones"></i></button>
-      </div>
-    </div>
-    </div>
-  </div> -->
-
 
 <!-- MODAL FOR ADD DESTINATION  -->
 <div class="modal fade" id="modalAddDestination" tabindex="-1" role="dialog" aria-labelledby="addDestinationModalTitle" aria-hidden="true">
@@ -119,6 +87,54 @@
   </div>
 </div>
 <!-- ADD DESTINATION MODAL ENDS HERE -->
+
+<!-- MODAL FOR EDIT DESTINATION  -->
+<div class="modal fade" id="modalEditDestination" tabindex="-1" role="dialog" aria-labelledby="editDestinationModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modalDisplay">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editDestinationModalTitle">Edit Destination</h5>
+        <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div id="modalBodyEditDestination" class="modal-body">
+        <form id="modalForm">
+          <div class="form-group">
+            <label for="edit-destination-name">Name</label>
+            <input type="text" class="form-control" id="edit-destination-name" aria-describedby="name" placeholder="Enter a destination">
+          </div>
+          <div class="form-group">
+            <label for="edit-destination-country">Country</label>
+            <input type="text" class="form-control" id="edit-destination-country" aria-describedby="country" placeholder="Enter the country">
+          </div>
+          <div class="form-group">
+            <label for="edit-destination-latitude">Latitude</label>
+            <input type="text" class="form-control" id="edit-destination-latitude" aria-describedby="latitude" placeholder="Enter the latitude">
+          </div>
+          <div class="form-group">
+            <label for="edit-destination-longitude">Longitude</label>
+            <input type="text" class="form-control" id="edit-destination-longitude" aria-describedby="longitude" placeholder="Enter the longitude">
+          </div>
+          <div class="form-group">
+            <label for="edit-destination-imageUrl">Photo</label>
+            <input type="text" class="form-control" id="edit-destination-imageUrl" aria-describedby="photoUrl" placeholder="Enter a photo link">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="edit-destination-beenThere">
+            <label class="form-check-label" for="edit-destination-beenThere">Have we been there yet?</label>
+          </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+        <button id="button-save-edit-destination" type="button" class="btn buttonSaveEdit glowing">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EDIT DESTINATION MODAL ENDS HERE -->
 
 <div class="fullPage hide" id="dashboard"></div>
 <div class="fullPage hide" id="destinations"></div>

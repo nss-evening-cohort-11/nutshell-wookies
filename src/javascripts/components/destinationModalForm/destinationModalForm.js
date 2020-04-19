@@ -1,6 +1,5 @@
-const showDestinationModalForm = () => {
+const showAddDestinationModalForm = () => {
   $('#modalAddDestination').modal('show');
 };
 
-
-export default { showDestinationModalForm };
+export default { showAddDestinationModalForm };
