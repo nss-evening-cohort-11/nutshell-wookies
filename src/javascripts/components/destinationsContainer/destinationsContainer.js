@@ -31,7 +31,7 @@ const makeDestination = (e) => {
   };
   destinationsData.addDestination(newDestination)
     .then(() => {
-      $('.modal-body input').val('');
+      $('#modalBodyAddDestination input').val('');
       $('#modalAddDestination').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildDestinationsContainer();
