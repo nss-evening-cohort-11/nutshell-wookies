@@ -3,7 +3,6 @@
 @import '../styles/colors.scss';
 
 body {
-  // background-color: $color5-dark-brown;
   background: url('/src/images-wookies/rust.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -28,7 +27,6 @@ a {
   border-radius: 20px;
   padding: 10px;
   background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, $color7-gold, $color4-medium-brown, $color5-dark-brown));
-  // background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, scale-color($color3-copper, $lightness: 30%), $color4-medium-brown, $color5-dark-brown));
 }
 
 .headingDisplay {
@@ -37,11 +35,9 @@ a {
   box-shadow: 3px 5px 5px $color3-copper;
   border-radius: 20px;
   padding: 15px;
-  width: 80%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  // text-transform: uppercase;
 }
 
 .softEmboss {
@@ -53,8 +49,6 @@ a {
 .glowing {
   text-shadow: 0px 0px 6px $color6-ivory;
 }
-
-
 
 .cardDisplay {
   background-color: $color2-orange;
@@ -87,20 +81,46 @@ a {
 }
 
 .crudButtonColor {
-  background-color: $color3-copper;
-  background-image: linear-gradient($color5-dark-brown, $color3-copper);
+  background-color: $color8-copper-green;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: $color6-ivory;
-  // text-transform: uppercase;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  border: 2px solid $color3-copper;
+  font-size: 1.5em;
+}
+
+.buttonSaveEdit {
+  background-color: $color5-dark-brown;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $color6-ivory;
   border-radius: 20px;
   padding-bottom: 20px;
   height: 50px;
   width: 100px;
   margin: 10px;
   border: 2px solid $color4-medium-brown;
-  font-size: 1.5em;
+  font-size: 1.25em;
+}
+
+.modalDisplay {
+  background-color: $color8-copper-green;
+  color: $color6-ivory;
+  display: block;
+  width: 90%;
+  margin: auto;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .logo {
@@ -162,6 +182,7 @@ a {
 }
 
 // TYPEWRITER EFFECT CODE ENDS
+
 .speciesCard {
   max-width: 500px;
   margin: auto;
