@@ -14,14 +14,14 @@ const checkLoginStatus = () => {
       // person is logged in
       loginButton.addClass('hide');
       logoutButton.removeClass('hide');
-      $('.crudButtonImage').removeClass('hide');
+      $('.crudButtonColor').removeClass('hide');
+      destinationsContainer.destinationEvents();
     } else {
       // person is not logged in
       loginButton.removeClass('hide');
       logoutButton.addClass('hide');
-      $('.crudButtonImage').addClass('hide');
+      $('.crudButtonColor').addClass('hide');
     }
-    destinationsContainer.destinationEvents();
     enviromentalContainer.enviroEvents();
     crewMemberContainer.crewEvents();
     destinationsContainer.buildDestinationsContainer();
