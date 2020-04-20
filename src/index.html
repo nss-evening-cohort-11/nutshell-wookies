@@ -176,6 +176,65 @@
     </div>
   </div>
 
+  <!-- MODAL FOR ADD CREW  -->
+  <div class="modal fade" id="modalAddCrew" tabindex="-1" role="dialog"
+    aria-labelledby="addCrewModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modalDisplay">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCrewModalTitle">Add a New Crew Member</h5>
+          <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="modalBodyAddCrew" class="modal-body">
+          <form id="modalForm">
+            <div class="form-group">
+              <label for="crew-firstName">First Name</label>
+              <input type="text" class="form-control" id="crew-firstName" aria-describedby="firstName"
+                placeholder="Enter Recruits First Name">
+            </div>
+            <div class="form-group">
+              <label for="crew-lastName">Last Name</label>
+              <input type="text" class="form-control" id="crew-lastName" aria-describedby="lastName"
+                placeholder="Enter Recruits Last Name">
+            </div>
+            <div class="form-group">
+              <label for="crew-age">Age</label>
+              <input type="text" class="form-control" id="crew-age" aria-describedby="age"
+                placeholder="Enter Recruits Age">
+            </div>
+            <div class="form-group">
+              <label for="crew-jobTitle">Job Title</label>
+              <input type="text" class="form-control" id="crew-jobTitle" aria-describedby="jobTitle"
+                placeholder="Enter Recruits Job Title">
+            </div>
+            <div class="form-group">
+              <label for="crew-imgUrl">Photo</label>
+              <input type="text" class="form-control" id="crew-imgUrl" aria-describedby="photoUrl"
+                placeholder="Enter Photo Link of Recruit">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="crew-genderM">
+              <label class="form-check-label" for="crew-genderM">Male</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="crew-genderF">
+              <label class="form-check-label" for="crew-genderF">Female</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+          <button id="button-save-crew" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ADD DESTINATION MODAL ENDS HERE -->
+
 </body>
 
 </html>

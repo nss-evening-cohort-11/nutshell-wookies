@@ -23,4 +23,13 @@ const getAllCrew = () => new Promise((resolve, reject) => {
 
 const deleteCrew = (crewId) => axios.delete(`${baseUrl}/crew/${crewId}.json`);
 
-export default { getAllCrew, deleteCrew };
+const addNewCrew = (newCrew) => axios.post(`${baseUrl}/species.json`, newCrew);
+
+const getSingleCrew = (crewId) => axios.get(`${baseUrl}/crew/${crewId}.json`);
+
+export default {
+  getAllCrew,
+  deleteCrew,
+  addNewCrew,
+  getSingleCrew,
+};
