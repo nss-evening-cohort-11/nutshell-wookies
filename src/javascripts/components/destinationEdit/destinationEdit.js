@@ -5,7 +5,6 @@ const showEditDestinationForm = (destinationId) => {
   destinationsData.getSingleDestination(destinationId)
     .then((response) => {
       const selectedDestination = response.data;
-      console.log('single dest', destinationId);
       let domString = '';
       domString += `<form id="modalForm" class="edit-destination-form-tag" data-id="${destinationId}">`;
       domString += '<div class="form-group">';
@@ -32,7 +31,6 @@ const showEditDestinationForm = (destinationId) => {
       if (selectedDestination.beenThere) {
         domString += '<input type="checkbox" class="form-check-input" id="edit-destination-beenThere" checked>';
       } else {
-        console.error('unchecked', $('#destination-beenThere:checked'));
         domString += '<input type="checkbox" class="form-check-input" id="edit-destination-beenThere">';
       }
       domString += '<label class="form-check-label" for="edit-destination-beenThere">Have we been there yet?</label>';
