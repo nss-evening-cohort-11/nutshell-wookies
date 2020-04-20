@@ -68,7 +68,7 @@ const editEnviromentEvent = (e) => {
 
 const updateEnviroment = (e) => {
   e.preventDefault();
-  const enviroId = $('edit-enviroment-form-tag').data('id');
+  const enviroId = $('.edit-enviroment-form-tag').data('id');
   const editedEnviroment = {
     Url: $('#edit-enviroment-Url').val(),
     destinationId: $('#edit-destinationId').val(),

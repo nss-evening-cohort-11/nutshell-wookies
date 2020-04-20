@@ -23,23 +23,23 @@ const editEnviroData = (enviroId) => {
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Latitude">Latitude</label>';
-      domString += `<input type="number" class="form-control" id="edit-enviroment-Latitude" placeholder="Latitude" value ="${selectedEnviroment.Latitude}">`;
+      domString += `<input type="text" class="form-control" id="edit-enviroment-Latitude" placeholder="Latitude" value ="${selectedEnviroment.Latitude}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Longitude">Longitude</label>';
-      domString += `<input type="number" class="form-control" id="edit-enviroment-Longitude" placeholder="Longitude" value ="${selectedEnviroment.Longitude}">`;
+      domString += `<input type="text" class="form-control" id="edit-enviroment-Longitude" placeholder="Longitude" value ="${selectedEnviroment.Longitude}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Temperature">Temperature</label>';
-      domString += `<input type="number" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
+      domString += `<input type="text" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Temperature">Temperature</label>';
-      domString += `<input type="number" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
+      domString += `<input type="text" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Depth">Depth</label>';
-      domString += `<input type="number" class="form-control" id="edit-enviroment-Depth" placeholder="Depth" value ="${selectedEnviroment.Depth}">`;
+      domString += `<input type="text" class="form-control" id="edit-enviroment-Depth" placeholder="Depth" value ="${selectedEnviroment.Depth}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Current">Current</label>';
@@ -47,7 +47,7 @@ const editEnviroData = (enviroId) => {
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Pressure">Pressure</label>';
-      domString += `<input type="number" class="form-control" id="edit-enviroment-Pressure" placeholder="Pressure" value ="${selectedEnviroment.Pressure}">`;
+      domString += `<input type="text" class="form-control" id="edit-enviroment-Pressure" placeholder="Pressure" value ="${selectedEnviroment.Pressure}">`;
       domString += '</div>';
       utils.printToDom('modalBodyEditEnviroment', domString);
     })
