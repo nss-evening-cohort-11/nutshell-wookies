@@ -1,4 +1,3 @@
-import firebase from 'firebase/app';
 import moment from 'moment';
 import crewData from '../../helpers/data/crewData';
 import crewMember from '../crewMember/crewMember';
@@ -27,7 +26,6 @@ const makeCrewMember = (e) => {
     description: $('#crew-description').val(),
     gender: $('#crew-male:checked').val(),
     timestamp: moment().format(),
-    uid: firebase.auth().currentUser.uid,
   };
   crewData.addNewCrew(newCrew)
     .then(() => {
