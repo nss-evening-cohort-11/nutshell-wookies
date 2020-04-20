@@ -11,9 +11,7 @@ const getAllCrew = () => new Promise((resolve, reject) => {
       if (crew) {
         Object.keys(demCrew).forEach((crewId) => {
           demCrew[crewId].id = crewId;
-          console.error('demCrews there?', demCrew);
           crew.push(demCrew[crewId]);
-          console.error('resolve Crew?', crewId);
         });
       }
       resolve(crew);

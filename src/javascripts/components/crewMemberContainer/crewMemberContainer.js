@@ -63,7 +63,6 @@ const crewEvents = () => {
   $('body').on('click', '.delete-crew', removeCrew);
   $('body').on('click', '#button-add-crew', crewModalForm.showAddCrewModalForm);
   $('body').on('click', '#button-save-crew', makeCrewMember);
-  console.error('save button working?', makeCrewMember);
 };
 
 export default { buildCrewContainer, crewEvents };
