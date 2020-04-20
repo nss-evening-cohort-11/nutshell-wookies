@@ -71,18 +71,8 @@ body {
   }
 }
 
-.crudButtonImage {
-  background-image: url('/src/images-wookies/button_background.png');
-  background-color: $color3-copper;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: $color6-ivory;
-  border-radius: 20px;
-  padding-bottom: 10px;
-  margin: 10px;
-  border: 2px solid $color4-medium-brown;
-  font-size: 1.5em;
+.imageFit {
+  max-height: 300px; 
 }
 
 .crudButtonColor {
@@ -151,10 +141,6 @@ body {
 
 a:hover {
 	color: $color2-orange;
-}
-
-.hamburger {
-  color: $color6-ivory;
 }
 
 #envUrl {
