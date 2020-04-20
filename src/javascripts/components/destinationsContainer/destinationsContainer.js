@@ -61,8 +61,8 @@ const updateDestination = (e) => {
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
-  console.log('edited dest', editedDestination);
-  console.log('id of edited dest', destinationId);
+  // console.log('edited dest', editedDestination);
+  // console.log('id of edited dest', destinationId);
   destinationsData.updateDestination(destinationId, editedDestination)
     .then(() => {
       // $('.modal-body input').val('');
