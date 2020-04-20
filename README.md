@@ -18,7 +18,31 @@ Welcome aboard! This application is a dashboard for the captain and crew of the 
 # Screenshots
 
 Dashboard View:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-dashboard.PNG)
 
+Crew Members View:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-crew.PNG)
+
+Crew Members Logged-In:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-crew-logged-in.PNG)
+
+Destinations View:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-destinations.PNG)
+
+Destinations Logged-In:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-destinations-logged-in.PNG)
+
+Environment View:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-environment.PNG)
+
+Environment Logged-In:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-environmental-logged-in.PNG)
+
+Species View:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-species.PNG)
+
+Species Logged-In:
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-species-logged-in.PNG)
 
 # How To Run
 
