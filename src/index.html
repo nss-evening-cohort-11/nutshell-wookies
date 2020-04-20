@@ -1,231 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nautilus</title>
+  <link href="https://fonts.googleapis.com/css?family=Oldenburg&display=swap" rel="stylesheet">
+  <title>Nautilus Explorer</title>
 </head>
+
 <body>
   <div class="navbar-background sticky-top">
     <nav class="navbar navbar-expand-lg">
-    <img class="logo" src='./screenshots/Nautilus.png'>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/" id="dashboardLink">Dashboard<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="crewLink">Crew Members</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="destinationsLink">Destinations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="envReadingsLink">Environmental Readings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="speciesLink">Species</a>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link btn hide" id="navbar-login-button" href="#">Log In</button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link btn" id="navbar-logout-button" href="#">Log Out</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-  <!-- CSS EXAMPLES BELOW -- Anca: I will clean this up once finalized.  -->
-  <!-- <div class="pageDisplay">
-    EXAMPLE: Heading with typewriter animation and embossed style:
-    <h1 class="headingDisplay softEmboss"><p class="typewriter">Destinations</p></h1>
-    EXAMPLE: Add button with background rusty image:
-    <div class="text-center m-5">
-      <input type="button" class="btn-default btn-lg crudButtonImage glowing" value="Add a New Destination">
-    </div>
-    <div>
-    EXAMPLE: More Button Examples:
-      <input type="button" class="col-4 btn-default btn-lg crudButtonImage glowing" value="WIDER">
-      <button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i></button>
-    </div>
-    <div>
-    EXAMPLE: Card Example (Makeshift - not actually using Bootstrap - got some error when I tried that ...); including a couple of button types - background with gradient color versus background with image; glowing font versus plain -- feather for Edit?? cross & bones for Delete?? :
-    <div class="cardDisplay" style="width: 18rem;">
-      <img>
-      <h3>Solomon Islands</h3>
-      <p>Latitude: 34324</p>
-      <p>Longitude: 734324</p>
-      <div class="row">
-        <button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-feather-alt"></i></button>
-        <button type="button" class="col-4 btn-default btn-lg crudButtonColor"><i class="fas fa-skull-crossbones"></i></button>
+      <img class="logo" src='./screenshots/Nautilus.png'>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/" id="dashboardLink">Dashboard<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="crewLink">Crew Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="destinationsLink">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="envReadingsLink">Environmental Readings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="speciesLink">Species</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn hide" id="navbar-login-button" href="#">Log In</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn" id="navbar-logout-button" href="#">Log Out</button>
+          </li>
+        </ul>
       </div>
-      <div class="row"></div>
-        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"  data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fas fa-feather-alt"></i></button>
-        <button type="button" class="col-4 btn-default btn-lg crudButtonImage glowing"><i class="fas fa-skull-crossbones"></i></button>
-      </div>
-    </div>
-    </div>
-  </div> -->
+    </nav>
+  </div>
 
 
-<!-- MODAL FOR ADD DESTINATION  -->
-<div class="modal fade" id="modalAddDestination" tabindex="-1" role="dialog" aria-labelledby="addDestinationModalTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modalDisplay">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addDestinationModalTitle">Add a New Destination</h5>
-        <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+  <div class="fullPage hide" id="dashboard"></div>
+  <div class="fullPage hide" id="destinations"></div>
+  <div class="fullPage hide" id="envReadings"></div>
+  <div class="fullPage hide" id="crew"></div>
+  <div class="fullPage hide" id="species"></div>
 
-      <div id="modalBodyAddDestination" class="modal-body">
-        <form id="modalForm">
-          <div class="form-group">
-            <label for="destination-name">Name</label>
-            <input type="text" class="form-control" id="destination-name" aria-describedby="name" placeholder="Enter a destination">
-          </div>
-          <div class="form-group">
-            <label for="destination-country">Country</label>
-            <input type="text" class="form-control" id="destination-country" aria-describedby="country" placeholder="Enter the country">
-          </div>
-          <div class="form-group">
-            <label for="destination-latitude">Latitude</label>
-            <input type="text" class="form-control" id="destination-latitude" aria-describedby="latitude" placeholder="Enter the latitude">
-          </div>
-          <div class="form-group">
-            <label for="destination-longitude">Longitude</label>
-            <input type="text" class="form-control" id="destination-longitude" aria-describedby="longitude" placeholder="Enter the longitude">
-          </div>
-          <div class="form-group">
-            <label for="destination-imageUrl">Photo</label>
-            <input type="text" class="form-control" id="destination-imageUrl" aria-describedby="photoUrl" placeholder="Enter a photo link">
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="destination-beenThere">
-            <label class="form-check-label" for="destination-beenThere">Have we been there yet?</label>
-          </div>
+
+  <!-- MODAL FOR ADD DESTINATION  -->
+  <div class="modal fade" id="modalAddDestination" tabindex="-1" role="dialog"
+    aria-labelledby="addDestinationModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modalDisplay">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addDestinationModalTitle">Add a New Destination</h5>
+          <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="modalBodyAddDestination" class="modal-body">
+          <form id="modalForm">
+            <div class="form-group">
+              <label for="destination-name">Name</label>
+              <input type="text" class="form-control" id="destination-name" aria-describedby="name"
+                placeholder="Enter a destination">
+            </div>
+            <div class="form-group">
+              <label for="destination-country">Country</label>
+              <input type="text" class="form-control" id="destination-country" aria-describedby="country"
+                placeholder="Enter the country">
+            </div>
+            <div class="form-group">
+              <label for="destination-latitude">Latitude</label>
+              <input type="text" class="form-control" id="destination-latitude" aria-describedby="latitude"
+                placeholder="Enter the latitude">
+            </div>
+            <div class="form-group">
+              <label for="destination-longitude">Longitude</label>
+              <input type="text" class="form-control" id="destination-longitude" aria-describedby="longitude"
+                placeholder="Enter the longitude">
+            </div>
+            <div class="form-group">
+              <label for="destination-imageUrl">Photo</label>
+              <input type="text" class="form-control" id="destination-imageUrl" aria-describedby="photoUrl"
+                placeholder="Enter a photo link">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="destination-beenThere">
+              <label class="form-check-label" for="destination-beenThere">Have we been there yet?</label>
+            </div>
           </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
-        <button id="button-save-destination" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+          <button id="button-save-destination" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- ADD DESTINATION MODAL ENDS HERE -->
-<!-- MODAL FOR ADD ENVIROMENT STARTS HERE  -->
-<div class="modal fade" id="modalAddEnviroment" tabindex="-1" role="dialog" aria-labelledby="addEnviromentModalTitle" aria-hidden="true">
+
+<!-- MODAL FOR EDIT DESTINATION  -->
+<div class="modal fade" id="modalEditDestination" tabindex="-1" role="dialog" aria-labelledby="editDestinationModalTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content modalDisplay">
       <div class="modal-header">
-        <h5 class="modal-title" id="addEnviromentModalTitle">Add New Enviroment Data</h5>
+        <h5 class="modal-title" id="editDestinationModalTitle">Edit Destination</h5>
         <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
-      <div id="modalBodyAddEnviroment" class="modal-body">
-        <form id="modalForm">
-          <div class="form-group">
-            <label for="destinationId">Name:</label>
-            <input type="text" class="form-control" id="destinationId" aria-describedby="location" placeholder="Enter a location">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-temperature">Temperture/Celsius:</label>
-            <input type="number" class="form-control" id="enviroment-temperature" aria-describedby="temperature" placeholder="Enter a temperature">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-latitude">Latitude:</label>
-            <input type="number" class="form-control" id="enviroment-latitude" aria-describedby="latitude" placeholder="Enter the latitude">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-longitude">Longitude:</label>
-            <input type="number" class="form-control" id="enviroment-longitude" aria-describedby="longitude" placeholder="Enter the longitude">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-imageUrl">Photo:</label>
-            <input type="text" class="form-control" id="enviroment-imageUrl" aria-describedby="photoUrl" placeholder="Enter a photo link">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-depth">Depth:</label>
-            <input type="number" class="form-control" id="enviroment-depth" aria-describedby="depth" placeholder="Enter depth">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-current">Current:</label>
-            <input type="text" class="form-control" id="enviroment-current" aria-describedby="current" placeholder="Enter the current">
-          </div>
-          <div class="form-group">
-            <label for="enviroment-presuure">Pressure:</label>
-            <input type="number" class="form-control" id="enviroment-pressure" aria-describedby="pressure" placeholder="Enter a pressure">
-          </div>
-          </form>
+      <div id="modalBodyEditDestination" class="modal-body">
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
-        <button id="button-save-enviroment" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        <button id="button-save-edit-destination" type="button" class="btn buttonSaveEdit glowing">Save</button>
       </div>
     </div>
   </div>
 </div>
-<!-- ADD ENVIROMENT MODAL ENDS HERE -->
+<!-- EDIT DESTINATION MODAL ENDS HERE -->
 
-
-<div class="fullPage hide" id="dashboard"></div>
-<div class="fullPage hide" id="destinations"></div>
-<div class="fullPage hide" id="envReadings"></div>
-<div class="fullPage hide" id="crew"></div>
-<div class="fullPage hide" id="species"></div>
-
-<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add New Species</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="type">Type</label>
-            <input type="text" class="form-control" id="type" placeholder="Enter Type">
-          </div>
-          <div class="form-group">
-            <label for="depth">Depth</label>
-            <input type="text" class="form-control" id="depth" placeholder="Enter Depth">
-          </div>
-          <div class="form-group">
-            <label for="color">Color</label>
-            <input type="text" class="form-control" id="color" placeholder="Enter Color">
-          </div>
-          <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" class="form-control" id="description" placeholder="Enter Description">
-          </div>
-          <div class="form-group">
-            <label for="species-image-url">Image Url</label>
-            <input type="text" class="form-control" id="species-image-url" placeholder="Enter Image Url">
-          </div>
-          <div class="form-group">
-            <label for="location">Location</label>
-            <input type="text" class="form-control" id="location" placeholder="Enter Location">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-species-modal">Close</button>
-        <button type="button" id="add-new-species"  class="btn btn-primary">Save</button>
+<!-- MODAL FOR ADD SPECIES  -->
+  <div class="modal fade" id="modalAddSpecies" tabindex="-1" role="dialog" aria-labelledby="addSpeciesModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modalDisplay">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addSpeciesModalTitle">Add New Species</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="type">Type</label>
+              <input type="text" class="form-control" id="type" placeholder="Enter Type">
+            </div>
+            <div class="form-group">
+              <label for="depth">Depth</label>
+              <input type="text" class="form-control" id="depth" placeholder="Enter Depth">
+            </div>
+            <div class="form-group">
+              <label for="color">Color</label>
+              <input type="text" class="form-control" id="color" placeholder="Enter Color">
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" class="form-control" id="description" placeholder="Enter Description">
+            </div>
+            <div class="form-group">
+              <label for="species-image-url">Image Url</label>
+              <input type="text" class="form-control" id="species-image-url" placeholder="Enter Image Url">
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" class="form-control" id="location" placeholder="Enter Location">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn buttonSaveEdit" data-dismiss="modal" id="close-species-modal">Close</button>
+          <button type="button" id="add-new-species" class="btn buttonSaveEdit">Save</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- ADD SPECIES MODAL ENDS HERE -->
 
+  <!-- MODAL FOR EDIT SPECIES  -->
+  <div class="modal fade" id="modalEditSpecies" tabindex="-1" role="dialog" aria-labelledby="editSpeciesModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modalDisplay">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editSpeciesModalTitle">Edit Species</h5>
+          <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="modalBodyEditSpecies" class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+          <button id="button-save-edit-species" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- EDIT SPECIES MODAL ENDS HERE -->
 </body>
+
 </html>

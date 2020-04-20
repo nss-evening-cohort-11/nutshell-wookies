@@ -23,4 +23,14 @@ const addNewSpecies = (newSpecies) => axios.post(`${baseUrl}/species.json`, newS
 
 const removeSpecies = (speciesId) => axios.delete(`${baseUrl}/species/${speciesId}.json`);
 
-export default { getAllSpecies, removeSpecies, addNewSpecies };
+const getSingleSpecies = (speciesId) => axios.get(`${baseUrl}/species/${speciesId}.json`);
+
+const updateSpecies = (speciesId, editedSpecies) => axios.put(`${baseUrl}/species/${speciesId}.json`, editedSpecies);
+
+export default {
+  getAllSpecies,
+  removeSpecies,
+  addNewSpecies,
+  getSingleSpecies,
+  updateSpecies,
+};
