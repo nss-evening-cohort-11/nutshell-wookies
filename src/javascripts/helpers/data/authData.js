@@ -7,7 +7,7 @@ import crewMemberContainer from '../../components/crewMemberContainer/crewMember
 
 const loginButton = $('#navbar-login-button');
 const logoutButton = $('#navbar-logout-button');
-const newEnviroDiv = $('new-envReadings');
+// const newEnviroDiv = $('new-envReadings');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
