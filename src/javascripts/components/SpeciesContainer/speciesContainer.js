@@ -29,7 +29,7 @@ const addNewSpecies = (e) => {
   };
   speciesData.addNewSpecies(newSpecies)
     .then(() => {
-      $('#modalBodyAddSpecies input').val('');
+      $('.modal-body input').val('');
       $('#modalAddSpecies').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildSpeciesContainer();
