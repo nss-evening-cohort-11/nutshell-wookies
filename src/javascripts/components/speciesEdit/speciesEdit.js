@@ -29,7 +29,7 @@ const showEditSpeciesForm = (speciesId) => {
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-species-location">Location</label>';
-      domString += `<input type="text" class="form-control" id="edit-species-location" aria-describedby="location" placeholder="Enter a location name" value="${selectedSpecies.destinationId}">`;
+      domString += `<input type="text" class="form-control" id="edit-species-location" aria-describedby="location" placeholder="Enter a location name" value="${selectedSpecies.location}">`;
       domString += '</div>';
       domString += '</form>';
       utils.printToDom('modalBodyEditSpecies', domString);

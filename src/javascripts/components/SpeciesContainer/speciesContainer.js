@@ -25,6 +25,7 @@ const addNewSpecies = (e) => {
     color: $('#color').val(),
     description: $('#description').val(),
     imageUrl: $('#species-image-url').val(),
+    location: $('#species-location').val(),
     uid,
   };
   speciesData.addNewSpecies(newSpecies)
@@ -52,7 +53,7 @@ const updateSpecies = (e) => {
     depth: $('#edit-species-depth').val(),
     color: $('#edit-species-color').val(),
     description: $('#edit-species-description').val(),
-    destinationId: $('#edit-species-destinationId').val(),
+    location: $('#edit-species-location').val(),
     imageUrl: $('#edit-species-imageUrl').val(),
     uid: firebase.auth().currentUser.uid,
   };

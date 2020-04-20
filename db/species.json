@@ -5,7 +5,7 @@
     "depth": "50ft.",
     "color": "blue/gray",
     "description": "Blue whales are the largest animals ever known to have lived on Earth. These magnificent marine mammals rule the oceans at up to 100 feet long and upwards of 200 tons. Their tongues alone can weigh as much as an elephant. Their hearts, as much as an automobile.",
-    "destinationId": "destination11",
+    "location": "Cape Horn",
     "imageUrl": "https://www.elsetge.cat/myimg/f/46-460242_blue-whale-computer-backgrounds-blue-whale-computer-blue.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -15,7 +15,7 @@
     "depth": "10ft.",
     "color": "gray/white",
     "description": "In the wild, these sleek swimmers can reach speeds of over 18 miles an hour. They surface often to breathe, doing so two or three times a minute. Bottlenose dolphins travel in social groups and communicate with each other by a complex system of squeaks and whistles. Schools have been known to come to the aid of an injured dolphin and help it to the surface.",
-    "destinationId": "destination3",
+    "location": "Torres Strait",
     "imageUrl": "https://images2.alphacoders.com/101/1017050.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -25,7 +25,7 @@
     "depth": "200ft.",
     "color": "gray/white",
     "description": "Hammerhead sharks are consummate predators that use their oddly shaped heads to improve their ability to find prey.Their wide-set eyes give them a better visual range than most other sharks. And by spreading their highly specialized sensory organs over their wide, mallet-shaped head, they can more thoroughly scan the ocean for food.",
-    "destinationId": "destination1",
+    "location": "Sandwich Island",
     "imageUrl": "https://wallpapercave.com/wp/wp2112395.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -35,7 +35,7 @@
     "depth": "300ft.",
     "color": "black/white",
     "description": "The sea creatures live in tropical, subtropical, and temperate ocean waters across the globe. “Manta” means blanket or cloak in Spanish, describing the look of the animals’ large, flat, diamond-shaped bodies, which are characterized by triangular pectoral fins. Manta rays have two horn-shaped fins protruding from the front of their heads, which has also given them the nickname “devil fish.”",
-    "destinationId": "destination4",
+    "location": "Vanikoro",
     "imageUrl": "https://wallpapercave.com/wp/wp2372176.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -45,7 +45,7 @@
     "depth": "100ft.",
     "color": "red and white stripes",
     "description": "Red lionfish are native to the reefs and rocky crevices of the Indo-Pacific, although they've found their way to warm ocean habitats worldwide. The lionfish has a wild mane of venomous spines. Lionfish are native only to Indo-Pacific seas. They are an introduced species elsewhere.",
-    "destinationId": "destination2",
+    "location": "East India",
     "imageUrl": "https://wallpapercave.com/wp/6S1JTDy.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -55,7 +55,7 @@
     "depth": "500ft.",
     "color": "gray",
     "description": "Sperm whales are easily recognized by their massive heads and prominent rounded foreheads.They have the largest brain of any creature known to have lived on Earth.Sperm whales are known to dive as deep as 3,280 feet in search of squid to eat. These giant mammals must hold their breath for up to 90 minutes on such dives.These toothed whales eat thousands of pounds of fish and squid—about one ton per day.",
-    "destinationId": "destination9",
+    "location": "Vigo Bay",
     "imageUrl": "https://www.biographic.com/wp-content/uploads/2019/12/02_sperm-whale-aggregation-tony-wu-web-ready.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -65,7 +65,7 @@
     "depth": "50ft.",
     "color": "darkgray with white spots",
     "description": "As the largest fish in the sea, reaching lengths of 40 feet or more, whale sharks have an enormous menu from which to choose. Fortunately for most sea-dwellers—and us!—their favorite meal is plankton. They scoop these tiny plants and animals up, along with any small fish that happen to be around, with their colossal gaping mouths while swimming close to the water's surface.",
-    "destinationId": "destination8",
+    "location": "Crete",
     "imageUrl": "https://www.nationalgeographic.com/content/dam/yourshot/2014/05/3636516.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   },
@@ -75,7 +75,7 @@
     "depth": "150ft.",
     "color": "purple/white/gray",
     "description": "There are about 375 species of squid. Squid have 10 arms. Two of their arms are longer than the other eight and are called tentacles. Squid range in size from under an inch to more than 60 feet in length! They have long, tubular bodies and little heads. Squid are very fast swimmers and use a kind of jet propulsion to move.",
-    "destinationId": "destination13",
+    "location": "Japan",
     "imageUrl": "https://wallpapermemory.com/uploads/351/squid-background-hd-2560x1600-458208.jpg",
     "uid": "KcyQzlu4ARWQFneHHXl1pwBXXth1"
   }
