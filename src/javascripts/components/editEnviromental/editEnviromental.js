@@ -1,10 +1,11 @@
 import utils from '../../helpers/utils';
 import envReadings from '../../helpers/data/envReadings';
 
-const editEnviroData = (enviroId) => {
+const showEditEnviromentForm = (enviroId) => {
   envReadings.getSingleEnviroment(enviroId)
     .then((response) => {
       const selectedEnviroment = response.data;
+      console.error('response', enviroId);
       let domString = '';
       domString += `<form id="modalForm" class="edit-enviroment-form-tag" data-id="${enviroId}">`;
       domString += '<h2 class = text-center>New Enviromental Data</h2>';
@@ -49,8 +50,9 @@ const editEnviroData = (enviroId) => {
       domString += '<label for="edit-enviroment-Pressure">Pressure</label>';
       domString += `<input type="text" class="form-control" id="edit-enviroment-Pressure" placeholder="Pressure" value ="${selectedEnviroment.Pressure}">`;
       domString += '</div>';
+      domString += '</form>';
       utils.printToDom('modalBodyEditEnviroment', domString);
     })
     .catch((err) => console.error('could not edit enviro', err));
 };
-export default { editEnviroData };
+export default { showEditEnviromentForm };

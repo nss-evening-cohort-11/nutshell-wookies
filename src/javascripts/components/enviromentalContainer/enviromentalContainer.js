@@ -1,6 +1,6 @@
 
 import 'firebase/auth';
-
+import firebase from 'firebase/app';
 import moment from 'moment';
 import enviroData from '../../helpers/data/envReadings';
 import readingComponent from '../enviromentalReadings/enviromentalReadings';
@@ -25,7 +25,10 @@ const buildReadings = () => {
       domString += '<div class="pageDisplay">';
       domString += '<div class="row">';
       domString += '<h1 class="headingDisplay softEmboss col-8"><p class = "typewriter">Enviromental Readings</p></h1>';
-      domString += '<button type="button" class="col-2 mt-5 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add"><i class="fas fa-calendar-plus"></i></button>';
+      const user = firebase.auth().currentUser;
+      if (user !== null) {
+        domString += '<button type="button" class="col-2 mt-5 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add"><i class="fas fa-calendar-plus"></i></button>';
+      }
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
@@ -50,7 +53,7 @@ const makeNewEnviro = (e) => {
     Depth: $('#enviroment-depth').val() * 1,
     Current: $('#enviroment-current').val(),
     Pressure: $('#enviroment-pressure').val() * 1,
-    // uid: firebase.auth().currentUser.uid,
+    uid: firebase.auth().currentUser.uid,
   };
   enviroData.addEnviroData(newEnviroData)
     .then(() => {
@@ -64,8 +67,9 @@ const makeNewEnviro = (e) => {
 const editEnviromentEvent = (e) => {
   e.preventDefault();
   const enviroId = e.target.closest('.card').id;
-  $('edit-enviroment').modal('show');
-  enviroEdit.editEnviroData(enviroId);
+  $('modalEditEnviroment').modal('show');
+  enviroEdit.showEditEnviromentForm(enviroId);
+  console.error('card', '.card');
 };
 
 const updateEnviroment = (e) => {
@@ -81,7 +85,9 @@ const updateEnviroment = (e) => {
     Depth: $('#edit-enviroment-Depth').val() * 1,
     Current: $('#edit-enviroment-Current').val(),
     Pressure: $('#edit-enviroment-Pressure').val() * 1,
+    uid: firebase.auth().currentUser.uid,
   };
+  console.error('edited env', editedEnviroment);
   enviroData.updateEnviroment(enviroId, editedEnviroment)
     .then(() => {
       $('#modalEditEnviroment').modal('hide');
@@ -92,10 +98,10 @@ const updateEnviroment = (e) => {
 
 const enviroEvents = () => {
   $('body').on('click', '.delete-enviroment', removeEnviroData);
-  $('body').on('click', '.edit-enviroment', editEnviromentEvent);
+  $('body').on('click', '#edit-enviroment-button', editEnviromentEvent);
   $('body').on('click', '#button-add-enviroment', addEnviroModal.showEnviromentModalForm);
   $('body').on('click', '#button-save-enviroment', makeNewEnviro);
-  $('body').on('click', '#button-save-edit-destination', updateEnviroment);
+  $('body').on('click', '#button-save-edit-enviroment', updateEnviroment);
 };
 
 
