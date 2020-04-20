@@ -76,13 +76,13 @@ const buildCrewContainer = () => {
     .then((crewMembers) => {
       let domString = '';
       domString += '<div class="pageDisplay">';
-      domString += '<h1 class="headingDisplay softEmboss"><p class="typewriter">Crew Members</p></h1>';
+      domString += '<div class="row">';
+      domString += '<h1 class="col-8 headingDisplay softEmboss mr-1"><p class="typewriter">Crew Members</p></h1>';
       const user = firebase.auth().currentUser;
       if (user != null) {
-        domString += '<div class="text-center m-5">';
-        domString += '<button id="button-add-crew" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddCrew"><i class="fas fa-calendar-plus"></i></button>';
-        domString += '</div>';
+        domString += '<button id="button-add-crew" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 col-2" data-toggle="modal" data-target="#modalAddCrew"><i class="fas fa-calendar-plus"></i></button>';
       }
+      domString += '</div>';
       domString += '<div class="d-flex flex-column">';
       crewMembers.forEach((item) => {
         // domString += '<div class="">';
