@@ -29,8 +29,6 @@ const makeDestination = (e) => {
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
-  console.error('new dest', newDestination);
-  console.error('new dest checkbox', newDestination.beenThere);
   destinationsData.addDestination(newDestination)
     .then(() => {
       $('#modalBodyAddDestination input').val('');
@@ -52,8 +50,6 @@ const editDestinationEvent = (e) => {
 const updateDestination = (e) => {
   e.preventDefault();
   const destinationId = $('.edit-destination-form-tag').data('id');
-  console.error('dest id from update function', destinationId);
-  console.error('checkbox value', $('#edit-destination-beenThere')[0].checked);
   const editedDestination = {
     name: $('#edit-destination-name').val(),
     country: $('#edit-destination-country').val(),
@@ -65,7 +61,6 @@ const updateDestination = (e) => {
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
-  console.error('edited dest', editedDestination);
   destinationsData.updateDestination(destinationId, editedDestination)
     .then(() => {
       $('#modalEditDestination').modal('hide');

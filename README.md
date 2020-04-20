@@ -1,5 +1,7 @@
 # Nautilus-Explorer
 
+[Nautilus Explorer](https://nautilus-explorer.firebaseapp.com/)
+
 # Technologies Used
 
 * HTML5, CSS3 AND Javascript
@@ -18,7 +20,7 @@ Welcome aboard! This application is a dashboard for the captain and crew of the 
 # Screenshots
 
 Dashboard View:
-![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-dashboard.PNG)
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-dashboard2.PNG)
 
 Crew Members View:
 ![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-crew.PNG)
@@ -52,11 +54,11 @@ Contributors:
  [Michele Rawlins](https://github.com/Michele-Rawlins)
 
  [Zachary Crumpton](https://github.com/ZacCrumpton)
- 
+
  [John Johnson](https://github.com/John-Ryan-Johnson)
 
 
-# How To Run
+ # How To Run
 
 * Clone down this project.
 * Create apiKeys.json file using the template apiKeysExample.json with your own firebase keys added.

@@ -5,7 +5,6 @@ const showEditCrewForm = (crewId) => {
   crewData.getSingleCrew(crewId)
     .then((response) => {
       const selectedCrewMember = response.data;
-      console.log('single crew', crewId);
       let domString = '';
       domString += `<form id="modalForm" class="edit-crew-form-tag" data-id="${crewId}">`;
       domString += '<div class="form-group">';
