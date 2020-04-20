@@ -60,8 +60,6 @@ const updateCrew = (e) => {
     gender: $('#edit-crew-male:checked').val(),
     timestamp: moment().format(),
   };
-  console.log('edited crew', editedCrew);
-  console.log('id of edited crew', crewId);
   crewData.updateCrew(crewId, editedCrew)
     .then(() => {
       $('#modalEditCrew').modal('hide');
@@ -102,7 +100,6 @@ const crewEvents = () => {
   $('body').on('click', '.edit-crew', editCrewEvent);
   $('body').on('click', '#button-save-crew', makeCrewMember);
   $('body').on('click', '#button-save-edit-crew', updateCrew);
-  console.error('save button working?', makeCrewMember);
 };
 
 export default { buildCrewContainer, crewEvents, editCrewEvent };
