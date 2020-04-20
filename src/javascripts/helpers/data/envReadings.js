@@ -9,8 +9,7 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
     .then((response) => {
       const demEnviroData = response.data;
       const enviroData = [];
-      console.error(demEnviroData);
-      if (demEnviroData) {
+      if (enviroData) {
         Object.keys(demEnviroData).forEach((enviroId) => {
           demEnviroData[enviroId].id = enviroId;
           enviroData.push(demEnviroData[enviroId]);
@@ -23,4 +22,10 @@ const getEnvironmentalData = () => new Promise((resolve, reject) => {
 
 const deleteEnviroRead = (enviroId) => axios.delete(`${baseUrl}/envReadings/${enviroId}.json`);
 
-export default { getEnvironmentalData, deleteEnviroRead };
+const addEnviroData = (newEnviroData) => axios.post(`${baseUrl}/envReadings.json`, newEnviroData);
+
+export default {
+  getEnvironmentalData,
+  deleteEnviroRead,
+  addEnviroData,
+};

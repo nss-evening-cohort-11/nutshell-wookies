@@ -11,7 +11,7 @@
 <body>
   <div class="navbar-background sticky-top">
     <nav class="navbar navbar-expand-lg">
-      <img class="logo" src='./screenshots/Nautilus.png'>
+      <img class="logo" src='/src/images-wookies/nautilus.png'>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,18 +34,28 @@
             <a class="nav-link" href="#" id="speciesLink">Species</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn hide" id="navbar-login-button" href="#">Log In</button>
+            <a class="nav-link hide" id="navbar-login-button" href="#">Log In</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn" id="navbar-logout-button" href="#">Log Out</button>
+            <a class="nav-link" id="navbar-logout-button" href="#">Log Out</a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
 
+  <div class="fullPage image" id="dashboard">
+    <h4 class="overlayText">
+      <span class="spacer">
+        "The sea is nature's vast reserve. It was through the sea that the globe as it were began, and who knows if it will not end in the sea! Perfect peace abides here. The sea does not belong to despots. 
+        <span class='spacer'></span><br /> <span class='spacer'></span>
+        On its surface, immoral rights can still be claimed, men can fight each other, devour each other, and carry out all earth's atrocities. But thirty feet below the surface, their power ceases, their influence fades, their authority disappears. 
+        <span class='spacer'></span><br /> <span class='spacer'></span>
+        Ah, sir, live, live in the heart of the sea! Independence is possible only here! Here I recognize no master! Here I am free!""
+      </span>
+    </h4>
+  </div>
 
-  <div class="fullPage hide" id="dashboard"></div>
   <div class="fullPage hide" id="destinations"></div>
   <div class="fullPage hide" id="envReadings"></div>
   <div class="fullPage hide" id="crew"></div>
@@ -129,6 +139,65 @@
   </div>
 </div>
 <!-- EDIT DESTINATION MODAL ENDS HERE -->
+
+<!-- MODAL FOR ADD ENVIROMENT STARTS HERE  -->
+<div class="modal fade" id="modalAddEnviroment" tabindex="-1" role="dialog" aria-labelledby="addEnviromentModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modalDisplay">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addEnviromentModalTitle">Add New Enviroment Data</h5>
+        <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="modalBodyAddEnviroment" class="modal-body">
+        <form id="modalForm">
+          <div class="form-group">
+            <label for="destinationId">Name:</label>
+            <input type="text" class="form-control" id="destinationId" aria-describedby="location" placeholder="Enter a location">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-temperature">Temperture/Celsius:</label>
+            <input type="number" class="form-control" id="enviroment-temperature" aria-describedby="temperature" placeholder="Enter a temperature">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-latitude">Latitude:</label>
+            <input type="number" class="form-control" id="enviroment-latitude" aria-describedby="latitude" placeholder="Enter the latitude">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-longitude">Longitude:</label>
+            <input type="number" class="form-control" id="enviroment-longitude" aria-describedby="longitude" placeholder="Enter the longitude">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-imageUrl">Photo:</label>
+            <input type="text" class="form-control" id="enviroment-imageUrl" aria-describedby="photoUrl" placeholder="Enter a photo link">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-depth">Depth:</label>
+            <input type="number" class="form-control" id="enviroment-depth" aria-describedby="depth" placeholder="Enter depth">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-current">Current:</label>
+            <input type="text" class="form-control" id="enviroment-current" aria-describedby="current" placeholder="Enter the current">
+          </div>
+          <div class="form-group">
+            <label for="enviroment-presuure">Pressure:</label>
+            <input type="number" class="form-control" id="enviroment-pressure" aria-describedby="pressure" placeholder="Enter a pressure">
+          </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+        <button id="button-save-enviroment" type="button" class="btn buttonSaveEdit glowing">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ADD ENVIROMENT MODAL ENDS HERE -->
+<!--ADD EDIT ENVIROMENT STARTS HERE-->
+
+
+<!--ADD EDIT ENVIROMENT ENDS HERE-->
 
 <!-- MODAL FOR ADD SPECIES  -->
   <div class="modal fade" id="modalAddSpecies" tabindex="-1" role="dialog" aria-labelledby="addSpeciesModalTitle"
@@ -259,8 +328,30 @@
     </div>
   </div>
 </div>
-<!-- ADD DESTINATION MODAL ENDS HERE -->
+<!-- ADD CREW MODAL ENDS HERE -->
 
+<!-- CREW EDIT MODAL STARTS HERE -->
+<div class="modal fade" id="modalEditCrew" tabindex="-1" role="dialog" aria-labelledby="editCrewModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modalDisplay">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editCrewModalTitle">Edit Crew</h5>
+        <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div id="modalBodyEditCrew" class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+        <button id="button-save-edit-crew" type="button" class="btn buttonSaveEdit glowing">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END CREW EDIT MODAL-->
 </body>
 
 </html>

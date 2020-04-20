@@ -3,7 +3,7 @@
 @import '../styles/colors.scss';
 
 body {
-  background: url('/src/images-wookies/rust.jpg') no-repeat center center fixed;
+  background: url('/src/images-wookies/submarine_inside.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,14 +16,13 @@ body {
 
 .nav-link {
   font-family: Oldenburg;
-  color: $color5-dark-brown;
+  color: $color6-ivory;
   font-size: 20px;
 }
 
-
 .pageDisplay {
   background-color: $color5-dark-brown;
-  opacity: 0.9;
+  opacity: 0.95;
   display: block;
   width: 90%;
   margin: auto;
@@ -32,7 +31,7 @@ body {
   margin-bottom: 20px;
   border-radius: 20px;
   padding: 10px;
-  background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, $color7-gold, $color4-medium-brown, $color5-dark-brown));
+  background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, $color2-orange, $color4-medium-brown, $color5-dark-brown));
 }
 
 .headingDisplay {
@@ -63,6 +62,7 @@ body {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  
   img {
     display: inline-block;
     width: 100%;
@@ -71,18 +71,8 @@ body {
   }
 }
 
-.crudButtonImage {
-  background-image: url('/src/images-wookies/button_background.png');
-  background-color: $color3-copper;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: $color6-ivory;
-  border-radius: 20px;
-  padding-bottom: 10px;
-  margin: 10px;
-  border: 2px solid $color4-medium-brown;
-  font-size: 1.5em;
+.imageFit {
+  max-height: 300px; 
 }
 
 .crudButtonColor {
@@ -130,9 +120,13 @@ body {
 
 .logo {
   width: 75px;
+  border-radius: 50%;
+  margin: 5px;
+  border: solid 1px $color5-dark-brown;
+
 }
 #navbarNav {
-  background-color: $color2-orange;
+  background-color: $color5-dark-brown;
 }
 
 .navbar-background {
@@ -145,9 +139,13 @@ body {
   background-color: $color3-copper;
 }
 
+a:hover {
+	color: $color2-orange;
+}
+
 #envUrl {
-  height: 250px;
-  width: 350px;
+  height: 300px;
+  width: 1200px;
   border: 5px 5px black;
   box-shadow: 5px 5px black;
   border-radius: 50px;
@@ -217,4 +215,33 @@ body {
   p {
     padding: 5px;
   }
+}
+
+// DASHBOARD OVERLAID TEXT CSS BELOW
+
+.overlayText {
+  font-family: Oldenburg;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 50%;
+  padding: 50px;
+}
+
+h4 span {
+  color: $color6-ivory;
+  font: bold 24px/45px;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /*; fyi: fallback color*/
+  background: $color5-dark-brown;
+  opacity: 0.9;
+}
+
+h4 span.spacer {
+  padding: 0.5px 5px;
+}
+.crewImg{
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 30px;
 }

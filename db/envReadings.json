@@ -1,7 +1,7 @@
 {
   "enviroment1": {
   "Url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFpKfEyboRS1BwhLP15fvIPGgeY6GAFqdTv4LsqpwqQbBwzbcy&usqp=CAU",
-  "destinationId": "destination1",
+  "destinationId": "Norway",
   "TimeStamp": "6 / 10 / 84",
   "Latitude": "26.8206° N",
   "Longitude": "30.8025° E",
@@ -12,8 +12,8 @@
   "uid":"I58sAutxprZjeysPiZDoutmqXVn1"
   },
   "environment2": {
-  "Url": "https://whalesunderwater.com/wp-content/uploads/2019/12/20191109_0204.jpg",
-  "destinationId": "destination2",
+  "Url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9ys5YZAlliqaJBk5DwPneqkkUygW0QZIUmUIXsufQqOgiQcpv&usqp=CAU",
+  "destinationId": "Japan",
   "TimeStamp": "4 / 15 / 84",
   "Latitude": "06.3150° S",
   "Longitude": "143.955 E",
@@ -25,7 +25,7 @@
   },
   "environment3": {
   "Url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDCgG4BVrcVr6gytmbWAfGTQ_Eyzl53ZrxdRN70fnMj7SZo_3_&usqp=CAU",
-  "destinationId": "destination3",
+  "destinationId": "Hawaii",
   "TimeStamp": "4 / 13 / 83",
   "Latitude": "15.000° S",
   "Longitude": "12.9° E",
@@ -36,8 +36,8 @@
   "uid":"l6asVxZPnKTVlsKUlJBF16lY64c2"
   },
   "environment4": {
-    "Url": "https://cdn.theculturetrip.com/wp-content/uploads/2018/10/at-gulen-dive-resort-youll-get-the-chance-to-explore-may-shipwrecks.jpg",
-    "destinationId": "destination4",
+    "Url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2nG86--eIw26DIeUw936xGNNtiPexGkHBv268W7Iw7EFPfFrG&usqp=CAU",
+    "destinationId": "Bermuda",
     "TimeStamp": "9 / 15 / 84",
     "Latitude": "10.3150° S",
     "Longitude": "13.955 E",
@@ -49,7 +49,7 @@
     },
     "environment5": {
       "Url": "https://images.pexels.com/photos/3395879/pexels-photo-3395879.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "destinationId": "destination5",
+      "destinationId": "Bering Strait",
       "TimeStamp": "9 / 5 / 88",
       "Latitude": "16.3150° S",
       "Longitude": "42.565 E",
@@ -61,7 +61,7 @@
       },
       "environment6": {
         "Url": "https://images.pexels.com/photos/2690764/pexels-photo-2690764.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-        "destinationId": "destination6",
+        "destinationId": "Alaska",
         "TimeStamp": "12 / 1 / 92",
         "Latitude": "20.3150° S",
         "Longitude": "81.955 E",
@@ -73,7 +73,7 @@
         },
         "environment7": {
           "Url": "https://images.pexels.com/photos/3410956/pexels-photo-3410956.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-          "destinationId": "destination7",
+          "destinationId": "Bora Bora",
           "TimeStamp": "4 / 15 / 84",
           "Latitude": "35.3150° S",
           "Longitude": "120.955 E",

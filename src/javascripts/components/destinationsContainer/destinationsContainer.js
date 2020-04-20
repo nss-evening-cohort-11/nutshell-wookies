@@ -61,11 +61,8 @@ const updateDestination = (e) => {
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
-  console.log('edited dest', editedDestination);
-  console.log('id of edited dest', destinationId);
   destinationsData.updateDestination(destinationId, editedDestination)
     .then(() => {
-      // $('.modal-body input').val('');
       $('#modalEditDestination').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildDestinationsContainer();
@@ -80,11 +77,14 @@ const buildDestinationsContainer = () => {
       domString += '<div class="pageDisplay">';
       domString += '<div class="row">';
       domString += '<h1 class="headingDisplay softEmboss col-10"><p class="typewriter">Destinations</p></h1>';
-      domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>';
+      const user = firebase.auth().currentUser;
+      if (user !== null) {
+        domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor test glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>';
+      }
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       destinations.forEach((item) => {
-        domString += '<div class="col-md-3">';
+        domString += '<div class="col-md-4">';
         domString += destinationCard.buildDestinationCard(item);
         domString += '</div>';
       });
