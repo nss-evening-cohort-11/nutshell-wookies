@@ -20,7 +20,7 @@ Welcome aboard! This application is a dashboard for the captain and crew of the 
 # Screenshots
 
 Dashboard View:
-![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-dashboard.PNG)
+![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-dashboard2.PNG)
 
 Crew Members View:
 ![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-crew.PNG)
