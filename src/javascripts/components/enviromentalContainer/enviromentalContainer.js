@@ -22,8 +22,10 @@ const buildReadings = () => {
     .then((enviroRead) => {
       let domString = '';
       domString += '<div class="pageDisplay">';
-      domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromental Readings</p></h1>';
-      domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add">';
+      domString += '<div class="row">';
+      domString += '<h1 class="headingDisplay softEmboss col-8"><p class = "typewriter">Enviromental Readings</p></h1>';
+      domString += '<button type="button" class="col-2 mt-5 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add"><i class="fas fa-calendar-plus"></i></button>';
+      domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
         domString += readingComponent.envReadingMaker(reading);
