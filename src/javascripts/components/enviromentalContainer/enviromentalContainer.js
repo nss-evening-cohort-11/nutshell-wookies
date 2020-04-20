@@ -22,7 +22,7 @@ const buildReadings = () => {
     .then((enviroRead) => {
       let domString = '';
       domString += '<div class="pageDisplay">';
-      domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromental Readings</p></h1>';
+      domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromentals Readings</p></h1>';
       domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add">';
       domString += '<div class="d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
