@@ -6,6 +6,7 @@ import enviroData from '../../helpers/data/envReadings';
 import readingComponent from '../enviromentalReadings/enviromentalReadings';
 import addEnviroModal from '../enviromentalModalForm/enviromentModalForm';
 import utils from '../../helpers/utils';
+import enviroEdit from '../editEnviromental/editEnviromental';
 
 const removeEnviroData = (e) => {
   const enviroId = e.target.closest('.card').id;
@@ -58,10 +59,41 @@ const makeNewEnviro = (e) => {
     .catch((err) => console.error('could not add Data', err));
 };
 
+const editEnviromentEvent = (e) => {
+  e.preventDefault();
+  const enviroId = e.target.closest('.card').id;
+  $('edit-enviroment').modal('show');
+  enviroEdit.editEnviroData(enviroId);
+};
+
+const updateEnviroment = (e) => {
+  e.preventDefault();
+  const enviroId = $('edit-enviroment-form-tag').data('id');
+  const editedEnviroment = {
+    Url: $('#edit-enviroment-Url').val(),
+    destinationId: $('#edit-destinationId').val(),
+    TimeStamp: moment().format(),
+    Latitude: $('#edit-enviroment-Latitude').val(),
+    Longitude: $('#edit-enviroment-Longitude').val(),
+    Temperature: $('#edit-enviroment-Temperature').val() * 1,
+    Depth: $('#edit-enviroment-Depth').val() * 1,
+    Current: $('#edit-enviroment-Current').val(),
+    Pressure: $('#edit-enviroment-Pressure').val() * 1,
+  };
+  enviroData.updateEnviroment(enviroId, editedEnviroment)
+    .then(() => {
+      $('#modalEditEnviroment').modal('hide');
+      buildReadings();
+    })
+    .catch((err) => console.error('could not update', err));
+};
+
 const enviroEvents = () => {
   $('body').on('click', '.delete-enviroment', removeEnviroData);
+  $('body').on('click', '.edit-enviroment', editEnviromentEvent);
   $('body').on('click', '#button-add-enviroment', addEnviroModal.showEnviromentModalForm);
   $('body').on('click', '#button-save-enviroment', makeNewEnviro);
+  $('body').on('click', '#button-save-edit-destination', updateEnviroment);
 };
 
 
