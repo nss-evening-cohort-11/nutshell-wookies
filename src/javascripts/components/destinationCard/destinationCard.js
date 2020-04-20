@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 const buildDestinationCard = (destination) => {
   let domString = '';
   domString += `<div class="card cardDisplay" id=${destination.id}>`;
-  domString += `<img src="${destination.imageUrl}" class="card-img-top" alt="${destination.alt}">`;
+  domString += `<img src="${destination.imageUrl}" class="card-img-top imageFit" alt="${destination.alt}">`;
   domString += '<div class="card-body">';
   domString += `<h5 class="card-title">${destination.name}</h5>`;
   domString += `<p class="card-text font-italic">${destination.country}</p>`;
