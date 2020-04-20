@@ -23,7 +23,7 @@ const getAllCrew = () => new Promise((resolve, reject) => {
 
 const deleteCrew = (crewId) => axios.delete(`${baseUrl}/crew/${crewId}.json`);
 
-const addNewCrew = (newCrew) => axios.post(`${baseUrl}/species.json`, newCrew);
+const addNewCrew = (newCrew) => axios.post(`${baseUrl}/crew.json`, newCrew);
 
 const getSingleCrew = (crewId) => axios.get(`${baseUrl}/crew/${crewId}.json`);
 

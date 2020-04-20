@@ -20,10 +20,10 @@ const makeCrewMember = (e) => {
   e.preventDefault();
   const newCrew = {
     firstName: $('#crew-firstName').val(),
-    lastName: $('#crew-LastName').val(),
+    lastName: $('#crew-lastName').val(),
     age: $('#crew-age').val(),
     title: $('#crew-jobTitle').val(),
-    imgUrl: $('#crew-imageUrl').val(),
+    imgUrl: $('#crew-imgUrl').val(),
     description: $('#crew-description').val(),
     gender: $('#crew-male:checked').val(),
     timestamp: moment().format(),
