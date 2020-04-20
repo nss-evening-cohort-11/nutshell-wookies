@@ -24,7 +24,7 @@ const envReadingMaker = (envReading) => {
   domString += '<button type="button" class="delete-enviroment col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i></button>';
   domString += '</div>';
   domString += '</div>';
-  domString += '</div>';
+  // domString += '</div>';
 
 
   return domString;

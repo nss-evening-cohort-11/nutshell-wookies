@@ -3,7 +3,7 @@
 @import '../styles/colors.scss';
 
 body {
-  background: url('/src/images-wookies/submarine_inside.jpg') no-repeat center center fixed;
+  background: url('https://i.pinimg.com/originals/03/93/ca/0393ca183c2b119cf10a90acf44206c0.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,7 +28,7 @@ body {
   margin: auto;
   height: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   border-radius: 20px;
   padding: 10px;
   background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, $color2-orange, $color4-medium-brown, $color5-dark-brown));
@@ -239,4 +239,19 @@ h4 span {
 
 h4 span.spacer {
   padding: 0.5px 5px;
+}
+// DASHBOARD CLASSES END HERE
+
+// FOOTER
+.footer {
+  color: $color6-ivory;
+  background-color: $color5-dark-brown;
+  margin-top: 5000px;
+  padding-top: 10px;
+}
+
+.crewImg{
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 30px;
 }

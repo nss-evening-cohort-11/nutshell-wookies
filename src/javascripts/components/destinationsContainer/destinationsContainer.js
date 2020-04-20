@@ -25,13 +25,16 @@ const makeDestination = (e) => {
     longitude: $('#destination-longitude').val(),
     imageUrl: $('#destination-imageUrl').val(),
     alt: $('#destination-name').val(),
-    beenThere: $('#destination-beenThere:checked').val(),
+    beenThere: $('#destination-beenThere')[0].checked,
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
+  console.error('new dest', newDestination);
+  console.error('new dest checkbox', newDestination.beenThere);
   destinationsData.addDestination(newDestination)
     .then(() => {
       $('#modalBodyAddDestination input').val('');
+      $('#destination-beenThere')[0].checked = false;
       $('#modalAddDestination').modal('hide');
       // eslint-disable-next-line no-use-before-define
       buildDestinationsContainer();
@@ -50,6 +53,7 @@ const updateDestination = (e) => {
   e.preventDefault();
   const destinationId = $('.edit-destination-form-tag').data('id');
   console.error('dest id from update function', destinationId);
+  console.error('checkbox value', $('#edit-destination-beenThere')[0].checked);
   const editedDestination = {
     name: $('#edit-destination-name').val(),
     country: $('#edit-destination-country').val(),
@@ -57,10 +61,11 @@ const updateDestination = (e) => {
     longitude: $('#edit-destination-longitude').val(),
     imageUrl: $('#edit-destination-imageUrl').val(),
     alt: $('#edit-destination-name').val(),
-    beenThere: $('#edit-destination-beenThere:checked').val(),
+    beenThere: $('#edit-destination-beenThere')[0].checked,
     timestamp: moment().format(),
     uid: firebase.auth().currentUser.uid,
   };
+  console.error('edited dest', editedDestination);
   destinationsData.updateDestination(destinationId, editedDestination)
     .then(() => {
       $('#modalEditDestination').modal('hide');
@@ -76,10 +81,10 @@ const buildDestinationsContainer = () => {
       let domString = '';
       domString += '<div class="pageDisplay">';
       domString += '<div class="row">';
-      domString += '<h1 class="headingDisplay softEmboss col-10"><p class="typewriter">Destinations</p></h1>';
+      domString += '<h1 class="headingDisplay softEmboss col-8"><p class="typewriter">Destinations</p></h1>';
       const user = firebase.auth().currentUser;
       if (user !== null) {
-        domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor test glowing mt-5 mr-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>';
+        domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor test glowing mt-5 col-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>';
       }
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
