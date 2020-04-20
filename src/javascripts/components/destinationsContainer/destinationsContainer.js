@@ -84,7 +84,7 @@ const buildDestinationsContainer = () => {
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       destinations.forEach((item) => {
-        domString += '<div class="col-md-3">';
+        domString += '<div class="col-md-4">';
         domString += destinationCard.buildDestinationCard(item);
         domString += '</div>';
       });
