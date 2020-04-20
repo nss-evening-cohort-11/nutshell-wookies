@@ -11,7 +11,7 @@
 <body>
   <div class="navbar-background sticky-top">
     <nav class="navbar navbar-expand-lg">
-      <img class="logo" src='./screenshots/Nautilus.png'>
+      <img class="logo" src='/src/images-wookies/nautilus.png'>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,10 +34,10 @@
             <a class="nav-link" href="#" id="speciesLink">Species</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn hide" id="navbar-login-button" href="#">Log In</button>
+            <a class="nav-link hide" id="navbar-login-button" href="#">Log In</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn" id="navbar-logout-button" href="#">Log Out</button>
+            <a class="nav-link" id="navbar-logout-button" href="#">Log Out</a>
           </li>
         </ul>
       </div>
@@ -45,7 +45,17 @@
   </div>
 
 
-  <div class="fullPage hide" id="dashboard"></div>
+  <div class="fullPage image" id="dashboard">
+    <h4 class="overlayText">
+      <span class="spacer">
+        "The sea is nature's vast reserve. It was through the sea that the globe as it were began, and who knows if it will not end in the sea! Perfect peace abides here. The sea does not belong to despots. 
+        <span class='spacer'></span><br /> <span class='spacer'></span>
+        On its surface, immoral rights can still be claimed, men can fight each other, devour each other, and carry out all earth's atrocities. But thirty feet below the surface, their power ceases, their influence fades, their authority disappears. 
+        <span class='spacer'></span><br /> <span class='spacer'></span>
+        Ah, sir, live, live in the heart of the sea! Independence is possible only here! Here I recognize no master! Here I am free!""
+      </span>
+    </h4>
+  </div>
   <div class="fullPage hide" id="destinations"></div>
   <div class="fullPage hide" id="envReadings"></div>
   <div class="fullPage hide" id="crew"></div>
