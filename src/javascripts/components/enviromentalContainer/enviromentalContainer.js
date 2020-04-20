@@ -25,7 +25,7 @@ const buildReadings = () => {
       domString += '<h1 class="headingDisplay softEmboss"><p class = "typewriter">Enviromental Readings</p></h1>';
       domString += '<input type="button" class="col-6 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add">';
       domString += '</div>';
-      domString += 'div class = "d-flex flex-wrap">';
+      domString += '<div class="d-flex flex-wrap">';
       enviroRead.forEach((reading) => {
         domString += readingComponent.envReadingMaker(reading);
       });
@@ -37,9 +37,9 @@ const buildReadings = () => {
 const makeNewEnviro = (e) => {
   e.preventDefault();
   const newEnviroData = {
-    name: $('#enviroment-location').val(),
+    // name: $('#enviroment-location').val(),
     Url: $('#enviroment-imageUrl').val(),
-    destinationId: $('enviroment-location').val(),
+    destinationId: $('#destinationId').val(),
     TimeStamp: moment().format(),
     Latitude: $('#enviroment-latitude').val(),
     Longitude: $('#enviroment-longitude').val(),
