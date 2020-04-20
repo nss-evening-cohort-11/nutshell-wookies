@@ -27,9 +27,12 @@ const addNewCrew = (newCrew) => axios.post(`${baseUrl}/crew.json`, newCrew);
 
 const getSingleCrew = (crewId) => axios.get(`${baseUrl}/crew/${crewId}.json`);
 
+const updateCrew = (crewId, editedCrew) => axios.put(`${baseUrl}/crew/${crewId}.json`, editedCrew);
+
 export default {
   getAllCrew,
   deleteCrew,
   addNewCrew,
   getSingleCrew,
+  updateCrew,
 };
