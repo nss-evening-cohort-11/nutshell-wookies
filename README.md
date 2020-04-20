@@ -1,5 +1,7 @@
 # Nautilus-Explorer
 
+[Nautilus Explorer](https://nautilus-explorer.firebaseapp.com/)
+
 # Technologies Used
 
 * HTML5, CSS3 AND Javascript
@@ -56,10 +58,7 @@ Contributors:
  [John Johnson](https://github.com/John-Ryan-Johnson)
 
 
- [Nautilus Explorer](https://nautilus-explorer.firebaseapp.com/)
-
-
-# How To Run
+ # How To Run
 
 * Clone down this project.
 * Create apiKeys.json file using the template apiKeysExample.json with your own firebase keys added.
