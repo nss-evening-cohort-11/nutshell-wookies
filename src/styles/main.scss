@@ -3,7 +3,7 @@
 @import '../styles/colors.scss';
 
 body {
-  background: url('/src/images-wookies/submarine_inside.jpg') no-repeat center center fixed;
+  background: url('https://i.pinimg.com/originals/03/93/ca/0393ca183c2b119cf10a90acf44206c0.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,7 +28,7 @@ body {
   margin: auto;
   height: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   border-radius: 20px;
   padding: 10px;
   background-image: (linear-gradient(to right, $color5-dark-brown, $color4-medium-brown, $color2-orange, $color4-medium-brown, $color5-dark-brown));
@@ -218,20 +218,25 @@ a:hover {
 }
 
 // DASHBOARD OVERLAID TEXT CSS BELOW
-
+.overlayHeading {
+  font-family: Oldenburg;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  padding: 10px;
+}
 .overlayText {
   font-family: Oldenburg;
   position: absolute;
-  top: 100px;
+  top: 200px;
   left: 100px;
   width: 50%;
   padding: 50px;
 }
 
-h4 span {
+h2, h5 span {
   color: $color6-ivory;
   font: bold 24px/45px;
-  letter-spacing: -1px;
   background: rgb(0, 0, 0); /*; fyi: fallback color*/
   background: $color5-dark-brown;
   opacity: 0.9;
@@ -246,9 +251,10 @@ h4 span.spacer {
 .footer {
   color: $color6-ivory;
   background-color: $color5-dark-brown;
-  margin-top: 10px;
+  margin-top: 5000px;
   padding-top: 10px;
 }
+// FOOTER ENDS HERE 
 
 .crewImg{
   max-width: 300px;
