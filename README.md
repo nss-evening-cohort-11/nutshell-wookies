@@ -44,6 +44,15 @@ Species View:
 Species Logged-In:
 ![Main View](https://github.com/nss-evening-cohort-11/nutshell-wookies/blob/master/screenshots/Nautilus-species-logged-in.PNG)
 
+
+Contributors:
+
+ [Anca Simon](https://github.com/ancasimon)
+ [Michele Rawlins](https://github.com/Michele-Rawlins)
+ [Zachary Crumpton](https://github.com/ZacCrumpton)
+ [John Johnson](https://github.com/John-Ryan-Johnson)
+
+
 # How To Run
 
 * Clone down this project.
