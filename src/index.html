@@ -11,7 +11,7 @@
 <body>
   <div class="navbar-background sticky-top">
     <nav class="navbar navbar-expand-lg">
-      <img class="logo" src='./screenshots/Nautilus.png'>
+      <img class="logo" src='/src/images-wookies/nautilus.png'>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,10 +34,10 @@
             <a class="nav-link" href="#" id="speciesLink">Species</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn hide" id="navbar-login-button" href="#">Log In</button>
+            <a class="nav-link hide" id="navbar-login-button" href="#">Log In</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link btn" id="navbar-logout-button" href="#">Log Out</button>
+            <a class="nav-link" id="navbar-logout-button" href="#">Log Out</a>
           </li>
         </ul>
       </div>
@@ -45,8 +45,18 @@
   </div>
 
 
-  <div class="fullPage hide" id="dashboard"></div>
-  <div class="fullPage hide" id="destinations"></div>
+  <div class="fullPage image" id="dashboard">
+    <h4 class="overlayText">
+      <span class="spacer">
+        "The sea is nature's vast reserve. It was through the sea that the globe as it were began, and who knows if it will not end in the sea! Perfect peace abides here. The sea does not belong to despots. 
+        <span class='spacer'></span><br /> <span class='spacer'></span>
+        On its surface, immoral rights can still be claimed, men can fight each other, devour each other, and carry out all earth's atrocities. But thirty feet below the surface, their power ceases, their influence fades, their authority disappears. 
+        <span class='spacer'></span><br /> <span class='spacer'></span>
+        Ah, sir, live, live in the heart of the sea! Independence is possible only here! Here I recognize no master! Here I am free!""
+      </span>
+    </h4>
+  </div>
+   <div class="fullPage hide" id="destinations"></div>
   <div class="fullPage hide" id="envReadings"></div>
   <div class="fullPage hide" id="crew"></div>
   <div class="fullPage hide" id="species"></div>
@@ -237,28 +247,89 @@
   </div>
   <!-- ADD SPECIES MODAL ENDS HERE -->
 
-  <!-- MODAL FOR EDIT SPECIES  -->
-  <div class="modal fade" id="modalEditSpecies" tabindex="-1" role="dialog" aria-labelledby="editSpeciesModalTitle" aria-hidden="true">
+    <!-- MODAL FOR EDIT SPECIES  -->
+    <div class="modal fade" id="modalEditSpecies" tabindex="-1" role="dialog" aria-labelledby="editSpeciesModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modalDisplay">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editSpeciesModalTitle">Edit Species</h5>
+            <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  
+          <div id="modalBodyEditSpecies" class="modal-body">
+  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+            <button id="button-save-edit-species" type="button" class="btn buttonSaveEdit glowing">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EDIT SPECIES MODAL ENDS HERE -->
+
+  <!-- MODAL FOR ADD CREW  -->
+  <div class="modal fade" id="modalAddCrew" tabindex="-1" role="dialog"
+    aria-labelledby="addCrewModalTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content modalDisplay">
         <div class="modal-header">
-          <h5 class="modal-title" id="editSpeciesModalTitle">Edit Species</h5>
+          <h5 class="modal-title" id="addCrewModalTitle">Add a New Crew Member</h5>
           <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
 
-        <div id="modalBodyEditSpecies" class="modal-body">
-
+        <div id="modalBodyAddCrew" class="modal-body">
+          <form id="modalForm">
+            <div class="form-group">
+              <label for="crew-firstName">First Name</label>
+              <input type="text" class="form-control" id="crew-firstName" aria-describedby="firstName"
+                placeholder="Enter Recruits First Name">
+            </div>
+            <div class="form-group">
+              <label for="crew-lastName">Last Name</label>
+              <input type="text" class="form-control" id="crew-lastName" aria-describedby="lastName"
+                placeholder="Enter Recruits Last Name">
+            </div>
+            <div class="form-group">
+              <label for="crew-age">Age</label>
+              <input type="text" class="form-control" id="crew-age" aria-describedby="age"
+                placeholder="Enter Recruits Age">
+            </div>
+            <div class="form-group">
+              <label for="crew-jobTitle">Job Title</label>
+              <input type="text" class="form-control" id="crew-jobTitle" aria-describedby="jobTitle"
+                placeholder="Enter Recruits Job Title">
+            </div>
+            <div class="form-group">
+              <label for="crew-imgUrl">Photo</label>
+              <input type="text" class="form-control" id="crew-imgUrl" aria-describedby="imgUrl"
+                placeholder="Enter Photo Link of Recruit">
+            </div>
+            <div class="form-group">
+              <label for="crew-description">Description</label>
+              <input type="text" class="form-control" id="crew-description" aria-describedby="description"
+                placeholder="Enter A Description">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="crew-gender">
+              <label class="form-check-label" for="crew-genderM">Male</label>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
-          <button id="button-save-edit-species" type="button" class="btn buttonSaveEdit glowing">Save</button>
+          <button id="button-save-crew" type="button" class="btn buttonSaveEdit glowing">Save</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- EDIT SPECIES MODAL ENDS HERE -->
+</div>
+<!-- ADD DESTINATION MODAL ENDS HERE -->
+
 </body>
 
 </html>
