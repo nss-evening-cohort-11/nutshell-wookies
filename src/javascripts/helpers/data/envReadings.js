@@ -24,8 +24,15 @@ const deleteEnviroRead = (enviroId) => axios.delete(`${baseUrl}/envReadings/${en
 
 const addEnviroData = (newEnviroData) => axios.post(`${baseUrl}/envReadings.json`, newEnviroData);
 
+const getSingleEnviroment = (enviroId) => axios.get(`${baseUrl}/envReadings/${enviroId}.json`);
+
+const updateEnviroment = (enviroId, editedEnviroment) => axios.put(`${baseUrl}/envReadings/${enviroId}.json`, editedEnviroment);
+
 export default {
   getEnvironmentalData,
   deleteEnviroRead,
   addEnviroData,
+  getSingleEnviroment,
+  updateEnviroment,
+
 };
