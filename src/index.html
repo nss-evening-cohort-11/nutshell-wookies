@@ -43,7 +43,7 @@
       </div>
     </nav>
   </div>
-     
+
 
   <div class="fullPage image" id="dashboard">
     <h4 class="overlayText">
@@ -129,7 +129,7 @@
       </div>
 
       <div id="modalBodyEditDestination" class="modal-body">
-        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
@@ -140,12 +140,13 @@
 </div>
 <!-- EDIT DESTINATION MODAL ENDS HERE -->
 
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- MODAL FOR ADD SPECIES  -->
+  <div class="modal fade" id="modalAddSpecies" tabindex="-1" role="dialog" aria-labelledby="addSpeciesModalTitle"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content modalDisplay">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add New Species</h5>
+          <h5 class="modal-title" id="addSpeciesModalTitle">Add New Species</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -185,6 +186,90 @@
       </div>
     </div>
   </div>
+  <!-- ADD SPECIES MODAL ENDS HERE -->
+
+    <!-- MODAL FOR EDIT SPECIES  -->
+    <div class="modal fade" id="modalEditSpecies" tabindex="-1" role="dialog" aria-labelledby="editSpeciesModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modalDisplay">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editSpeciesModalTitle">Edit Species</h5>
+            <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  
+          <div id="modalBodyEditSpecies" class="modal-body">
+  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+            <button id="button-save-edit-species" type="button" class="btn buttonSaveEdit glowing">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EDIT SPECIES MODAL ENDS HERE -->
+
+  <!-- MODAL FOR ADD CREW  -->
+  <div class="modal fade" id="modalAddCrew" tabindex="-1" role="dialog"
+    aria-labelledby="addCrewModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modalDisplay">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCrewModalTitle">Add a New Crew Member</h5>
+          <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="modalBodyAddCrew" class="modal-body">
+          <form id="modalForm">
+            <div class="form-group">
+              <label for="crew-firstName">First Name</label>
+              <input type="text" class="form-control" id="crew-firstName" aria-describedby="firstName"
+                placeholder="Enter Recruits First Name">
+            </div>
+            <div class="form-group">
+              <label for="crew-lastName">Last Name</label>
+              <input type="text" class="form-control" id="crew-lastName" aria-describedby="lastName"
+                placeholder="Enter Recruits Last Name">
+            </div>
+            <div class="form-group">
+              <label for="crew-age">Age</label>
+              <input type="text" class="form-control" id="crew-age" aria-describedby="age"
+                placeholder="Enter Recruits Age">
+            </div>
+            <div class="form-group">
+              <label for="crew-jobTitle">Job Title</label>
+              <input type="text" class="form-control" id="crew-jobTitle" aria-describedby="jobTitle"
+                placeholder="Enter Recruits Job Title">
+            </div>
+            <div class="form-group">
+              <label for="crew-imgUrl">Photo</label>
+              <input type="text" class="form-control" id="crew-imgUrl" aria-describedby="imgUrl"
+                placeholder="Enter Photo Link of Recruit">
+            </div>
+            <div class="form-group">
+              <label for="crew-description">Description</label>
+              <input type="text" class="form-control" id="crew-description" aria-describedby="description"
+                placeholder="Enter A Description">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="crew-gender">
+              <label class="form-check-label" for="crew-genderM">Male</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+          <button id="button-save-crew" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ADD DESTINATION MODAL ENDS HERE -->
 
 </body>
 
