@@ -43,7 +43,7 @@
       </div>
     </nav>
   </div>
-     
+
 
   <div class="fullPage hide" id="dashboard"></div>
   <div class="fullPage hide" id="destinations"></div>
@@ -119,7 +119,7 @@
       </div>
 
       <div id="modalBodyEditDestination" class="modal-body">
-        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
@@ -130,12 +130,13 @@
 </div>
 <!-- EDIT DESTINATION MODAL ENDS HERE -->
 
-  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- MODAL FOR ADD SPECIES  -->
+  <div class="modal fade" id="modalAddSpecies" tabindex="-1" role="dialog" aria-labelledby="addSpeciesModalTitle"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content modalDisplay">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add New Species</h5>
+          <h5 class="modal-title" id="addSpeciesModalTitle">Add New Species</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -175,7 +176,30 @@
       </div>
     </div>
   </div>
+  <!-- ADD SPECIES MODAL ENDS HERE -->
 
+  <!-- MODAL FOR EDIT SPECIES  -->
+  <div class="modal fade" id="modalEditSpecies" tabindex="-1" role="dialog" aria-labelledby="editSpeciesModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modalDisplay">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editSpeciesModalTitle">Edit Species</h5>
+          <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="modalBodyEditSpecies" class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+          <button id="button-save-edit-species" type="button" class="btn buttonSaveEdit glowing">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- EDIT SPECIES MODAL ENDS HERE -->
 </body>
 
 </html>
