@@ -11,8 +11,8 @@ const showEditEnviromentForm = (enviroId) => {
       domString += '<h2 class = text-center>New Enviromental Data</h2>';
       domString += '<form class="col-10 offset-1">';
       domString += '<div class="form-group">';
-      domString += '<label for="edit-enviroment-destinationId">Destination Id</label>';
-      domString += `<input type="text" class="form-control" id="edit-enviroment-destinationId" placeholder="destination" value ="${selectedEnviroment.destinationId}">`;
+      domString += '<label for="edit-enviroment-destinationId">destinationId</label>';
+      domString += `<input type="text" class="form-control" id="edit-enviroment-destinationId" placeholder="destinationId" value ="${selectedEnviroment.destinationId}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Url">Image Url</label>';
@@ -35,9 +35,9 @@ const showEditEnviromentForm = (enviroId) => {
       domString += `<input type="text" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
       domString += '</div>';
       domString += '<div class="form-group">';
-      domString += '<label for="edit-enviroment-Temperature">Temperature</label>';
-      domString += `<input type="text" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
-      domString += '</div>';
+      // domString += '<label for="edit-enviroment-Temperature">Temperature</label>';
+      // domString += `<input type="text" class="form-control" id="edit-enviroment-Temperature" placeholder="Temperature" value ="${selectedEnviroment.Temperature}">`;
+      // domString += '</div>';
       domString += '<div class="form-group">';
       domString += '<label for="edit-enviroment-Depth">Depth</label>';
       domString += `<input type="text" class="form-control" id="edit-enviroment-Depth" placeholder="Depth" value ="${selectedEnviroment.Depth}">`;

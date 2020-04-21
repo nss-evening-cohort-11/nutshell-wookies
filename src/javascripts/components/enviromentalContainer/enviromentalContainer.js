@@ -21,7 +21,7 @@ const updateEnviroment = (e) => {
   const enviroId = $('.edit-enviroment-form-tag').data('id');
   const editedEnviroment = {
     Url: $('#edit-enviroment-Url').val(),
-    destinationId: $('#edit-destinationId').val(),
+    destinationId: $('#edit-enviroment-destinationId').val(),
     TimeStamp: moment().format(),
     Latitude: $('#edit-enviroment-Latitude').val(),
     Longitude: $('#edit-enviroment-Longitude').val(),
@@ -43,7 +43,6 @@ const updateEnviroment = (e) => {
 const makeNewEnviro = (e) => {
   e.preventDefault();
   const newEnviroData = {
-    // name: $('#enviroment-location').val(),
     Url: $('#enviroment-imageUrl').val(),
     destinationId: $('#destinationId').val(),
     TimeStamp: moment().format(),
@@ -98,61 +97,6 @@ const buildReadings = () => {
     })
     .catch((err) => console.error('problem with Peta', err));
 };
-// const makeNewEnviro = (e) => {
-//   e.preventDefault();
-//   const newEnviroData = {
-//     // name: $('#enviroment-location').val(),
-//     Url: $('#enviroment-imageUrl').val(),
-//     destinationId: $('#destinationId').val(),
-//     TimeStamp: moment().format(),
-//     Latitude: $('#enviroment-latitude').val(),
-//     Longitude: $('#enviroment-longitude').val(),
-//     Temperature: $('#enviroment-temperature').val() * 1,
-//     Depth: $('#enviroment-depth').val() * 1,
-//     Current: $('#enviroment-current').val(),
-//     Pressure: $('#enviroment-pressure').val() * 1,
-//     uid: firebase.auth().currentUser.uid,
-//   };
-//   enviroData.addEnviroData(newEnviroData)
-//     .then(() => {
-//       $('.modal-body input').val('');
-//       $('#modalAddEnviroment').modal('hide');
-//       buildReadings();
-//     })
-//     .catch((err) => console.error('could not add Data', err));
-// };
-
-// const editEnviromentEvent = (e) => {
-//   e.preventDefault();
-//   const enviroId = e.target.closest('.card').id;
-//   $('modalEditEnviroment').modal('show');
-//   enviroEdit.showEditEnviromentForm(enviroId);
-//   console.error('card', '.card');
-// };
-
-// const updateEnviroment = (e) => {
-//   e.preventDefault();
-//   const enviroId = $('.edit-enviroment-form-tag').data('id');
-//   const editedEnviroment = {
-//     Url: $('#edit-enviroment-Url').val(),
-//     destinationId: $('#edit-destinationId').val(),
-//     TimeStamp: moment().format(),
-//     Latitude: $('#edit-enviroment-Latitude').val(),
-//     Longitude: $('#edit-enviroment-Longitude').val(),
-//     Temperature: $('#edit-enviroment-Temperature').val() * 1,
-//     Depth: $('#edit-enviroment-Depth').val() * 1,
-//     Current: $('#edit-enviroment-Current').val(),
-//     Pressure: $('#edit-enviroment-Pressure').val() * 1,
-//     uid: firebase.auth().currentUser.uid,
-//   };
-//   console.error('edited env', editedEnviroment);
-//   enviroData.updateEnviroment(enviroId, editedEnviroment)
-//     .then(() => {
-//       $('#modalEditEnviroment').modal('hide');
-//       buildReadings();
-//     })
-//     .catch((err) => console.error('could not update', err));
-// };
 
 const enviroEvents = () => {
   $('body').on('click', '.delete-enviroment', removeEnviroData);
