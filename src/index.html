@@ -154,8 +154,8 @@
       <div id="modalBodyAddEnviroment" class="modal-body">
         <form id="modalForm">
           <div class="form-group">
-            <label for="destinationId">Name:</label>
-            <input type="text" class="form-control" id="destinationId" aria-describedby="location" placeholder="Enter a location">
+            <label for="destinationId">destinationId:</label>
+            <input type="text" class="form-control" id="destinationId" aria-describedby="location" placeholder="destinationId">
           </div>
           <div class="form-group">
             <label for="enviroment-temperature">Temperture/Celsius:</label>
@@ -196,9 +196,28 @@
 </div>
 <!-- ADD ENVIROMENT MODAL ENDS HERE -->
 <!--ADD EDIT ENVIROMENT STARTS HERE-->
+<div class="modal fade" id="modalEditEnviroment" tabindex="-1" role="dialog" aria-labelledby="editEnviromentModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modalDisplay">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editEnviromentModalTitle">Edit Destination</h5>
+        <button type="button" class="close buttonSaveEdit" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
+      <div id="modalBodyEditEnviroment" class="modal-body">
 
-<!--ADD EDIT ENVIROMENT ENDS HERE-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+        <button id="button-save-edit-enviroment" type="button" class="btn buttonSaveEdit glowing">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--EDIT ENVIROMENT ENDS HERE-->
 
 <!-- MODAL FOR ADD SPECIES  -->
   <div class="modal fade" id="modalAddSpecies" tabindex="-1" role="dialog" aria-labelledby="addSpeciesModalTitle"
