@@ -8,17 +8,21 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
 }
 
 .hide {
   display: none;
 }
 
-.nav-link {
+
+.navbar-dark .navbar-nav .nav-link {
   font-family: Oldenburg;
   color: $color6-ivory;
   font-size: 20px;
+  margin-left: 1em;
 }
+
 
 .pageDisplay {
   background-color: $color5-dark-brown;
@@ -119,24 +123,19 @@ body {
 }
 
 .logo {
+  background-color: $color3-copper;
   width: 75px;
   border-radius: 50%;
   margin: 5px;
   border: solid 1px $color5-dark-brown;
-
-}
-#navbarNav {
-  background-color: $color5-dark-brown;
 }
 
-.navbar-background {
-  background-color: $color3-copper;
+.navbar-toggler-icon {
+  color: white;
 }
-.sticky-top {
-  background-color: $color3-copper;
-}
+
 .navbar {
-  background-color: $color3-copper;
+  background-color: $color5-dark-brown;
 }
 
 a:hover {
