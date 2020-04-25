@@ -8,7 +8,7 @@ const buildExcursion = () => {
       let domString = '';
       domString += '<div class="pageDisplay">';
       domString += '<div class="row">';
-      domString += '<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">Crew Members</p></h1>';
+      domString += '<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">Excursions</p></h1>';
       domString += '</div>';
       domString += '<div class="d-flex flex-column">';
       excursions.forEach((makeExcursionCardsInfo) => {

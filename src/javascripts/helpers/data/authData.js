@@ -10,7 +10,6 @@ import excursionComponent from '../../components/excursionComponent/excursion';
 const loginButton = $('#navbar-login-button');
 const logoutButton = $('#navbar-logout-button');
 const excursionsInNavbar = $('#excursionLink');
-const excursionsDiv = $('#excursion');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -19,13 +18,11 @@ const checkLoginStatus = () => {
       loginButton.addClass('hide');
       logoutButton.removeClass('hide');
       excursionsInNavbar.removeClass('hide');
-      excursionsDiv.removeClass('hide');
     } else {
       // person is not logged in
       loginButton.removeClass('hide');
       logoutButton.addClass('hide');
       excursionsInNavbar.addClass('hide');
-      excursionsDiv.addClass('hide');
     }
     enviromentalContainer.enviroEvents();
     crewMemberContainer.crewEvents();
