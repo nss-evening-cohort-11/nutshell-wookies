@@ -1,6 +1,22 @@
 {
   "excursion1": {
-    "firstName": "Zachary",
-    "date": "Crumpton"
+    "name": "Sandwich Island",
+		"country": "Hawaii",
+    "date": "April 24, 2020"
+  },
+  "excursion2": {
+    "name": "East India",
+    "country": "India",
+    "date" :"April 24, 2020"
+  },
+  "excursion3": {
+    "name": "Torres Strait",
+		"country": "Australia",
+    "date": "April 24, 2020"
+  },
+  "excursion4": {
+    "name": "Vanikoro",
+		"country": "Solomon Islands",
+    "date": "April 24, 2020"
   }
 }
