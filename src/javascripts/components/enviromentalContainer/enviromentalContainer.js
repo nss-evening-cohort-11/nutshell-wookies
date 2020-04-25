@@ -101,7 +101,7 @@ const buildReadings = () => {
 const enviroEvents = () => {
   $('body').on('click', '.delete-enviroment', removeEnviroData);
   $('body').on('click', '#edit-enviroment-button', editEnviromentEvent);
-  console.error('editEnviromentEvent', editEnviromentEvent);
+  // console.error('editEnviromentEvent', editEnviromentEvent);
   $('body').on('click', '#button-add-enviroment', addEnviroModal.showEnviromentModalForm);
   $('body').on('click', '#button-save-enviroment', makeNewEnviro);
   $('body').on('click', '#button-save-edit-enviroment', updateEnviroment);

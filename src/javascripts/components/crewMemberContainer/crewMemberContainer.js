@@ -83,9 +83,7 @@ const buildCrewContainer = () => {
       domString += '</div>';
       domString += '<div class="d-flex flex-column">';
       crewMembers.forEach((item) => {
-        // domString += '<div class="">';
         domString += crewMember.crewBuilder(item);
-        // domString += '</div>';
       });
       domString += '</div>';
       domString += '</div>';
