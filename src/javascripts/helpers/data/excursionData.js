@@ -3,6 +3,8 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
+const removeExcursion = (excursionId) => axios.delete(`${baseUrl}/excursions/${excursionId}.json`);
+
 const getExcursion = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/excursions.json`)
     .then((response) => {
@@ -19,4 +21,4 @@ const getExcursion = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getExcursion };
+export default { getExcursion, removeExcursion };
