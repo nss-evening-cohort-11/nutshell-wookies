@@ -24,8 +24,8 @@ const envReadingMaker = (envReading) => {
     domString += `<div class="col-4 col-sm-6"> ${envReading.Current}</div>`;
     domString += '<div class="col-8 col-sm-6">Pressure:</div>';
     domString += `<div class="col-4 col-sm-6">${envReading.Pressure}</div>`;
-    domString += '<button type="button" class="delete-enviroment col-2 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i></button>';
-    domString += '<button type="button" id="edit-enviroment-button" class="col-2 btn-default btn-lg crudButtonColor glowing "><i class="fas fa-feather-alt"></i></button>';
+    domString += '<button type="button" id="edit-enviroment-button" class="col-2 btn-default btn-lg crudButtonColor glowing "><i class="fas fa-feather-alt"></i> Reading</button>';
+    domString += '<button type="button" class="delete-enviroment col-2 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> Reading</button>';
     domString += '</div>';
     domString += '</div>';
     // domString += '</div>';

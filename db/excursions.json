@@ -1,0 +1,18 @@
+{
+  "excursion1": {
+    "excursionName": "Sight seeing: A mysterious sea monster",
+    "date": "April 24, 2020"
+  },
+  "excursion2": {
+    "excursionName": "Lunch in Japan",
+    "date" :"April 24, 2020"
+  },
+  "excursion3": {
+    "excursionName": "Sight seeing: Coral formations and sunken vessels from the Battle of Vigo Bay",
+    "date": "April 24, 2020"
+  },
+  "excursion4": {
+    "excursionName": "Question Panal with a Marine Biologist",
+    "date": "April 24, 2020"
+  }
+}
