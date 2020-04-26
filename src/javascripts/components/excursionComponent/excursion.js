@@ -2,6 +2,14 @@ import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
 import excursionCards from '../excursionCards/excursionCards';
 
+const deleteExcursionEvent = (e) => {
+  const excursionId = e.target.closest('.excursionCard').id;
+  excursionData.removeExcursion(excursionId)
+    // eslint-disable-next-line no-use-before-define
+    .then(() => buildExcursion())
+    .catch((err) => console.error('Delete Excursion Event not working', err));
+};
+
 const buildExcursion = () => {
   excursionData.getExcursion()
     .then((excursions) => {
@@ -23,4 +31,8 @@ const buildExcursion = () => {
     .catch((err) => console.error('Build Excursion is not working', err));
 };
 
-export default { buildExcursion };
+const excursionEvents = () => {
+  $('body').on('click', '.deleteExcursion', deleteExcursionEvent);
+};
+
+export default { buildExcursion, excursionEvents };

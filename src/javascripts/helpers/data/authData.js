@@ -27,6 +27,7 @@ const checkLoginStatus = () => {
     enviromentalContainer.enviroEvents();
     crewMemberContainer.crewEvents();
     destinationsContainer.destinationEvents();
+    excursionComponent.excursionEvents();
     destinationsContainer.buildDestinationsContainer();
     speciesContainer.buildSpeciesContainer();
     enviromentalContainer.buildReadings();
