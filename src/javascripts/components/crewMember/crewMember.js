@@ -14,8 +14,8 @@ const crewBuilder = (crew) => {
     domString += `<div class=""><h5 class="card-title">${crew.firstName} ${crew.lastName}</h5></div>`;
     domString += `<div class="><p class="card-text">Age: ${crew.age}</p></div>`;
     domString += `<div class="><p class="card-text">${crew.description}</p></div>`;
-    domString += '<button type="button" class="edit-crew col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-feather-alt"></i></button>';
-    domString += '<button type="button" class="delete-crew col-4 btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i></button>';
+    domString += '<button type="button" class="edit-crew btn-default btn-lg crudButtonColor glowing"><i class="fas fa-feather-alt"></i> Edit Crew</button>';
+    domString += '<button type="button" class="delete-crew btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> Delete Crew</button>';
     domString += '</div>';
     domString += '<div class="card-footer text-muted">';
     domString += '</div>';

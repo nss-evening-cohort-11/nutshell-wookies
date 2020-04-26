@@ -79,7 +79,7 @@ const buildDestinationsContainer = () => {
       domString += '<h1 class="headingDisplay softEmboss col-8"><p class="typewriter">Destinations</p></h1>';
       const user = firebase.auth().currentUser;
       if (user !== null) {
-        domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg crudButtonColor test glowing mt-5 col-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-calendar-plus"></i></button>';
+        domString += '<button id="button-add-destination" type="button" class="btn-default btn-lg buttonHeadingDisplay test glowing col-2" data-toggle="modal" data-target="#modalAddDestination"><i class="fas fa-plus"></i> Destination</button>';
       }
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';

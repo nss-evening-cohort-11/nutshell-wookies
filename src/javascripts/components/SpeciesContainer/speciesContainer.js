@@ -73,7 +73,7 @@ const buildSpeciesContainer = () => {
   domString += '<h1 class="headingDisplay softEmboss col-8"><p class="typewriter">Species</p></h1>';
   const user = firebase.auth().currentUser;
   if (user != null) {
-    domString += '<button id="add-species-button" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 col-2" data-toggle="modal" data-target="#modalAddSpecies"><i class="fas fa-calendar-plus"></i></button>';
+    domString += '<button id="add-species-button" type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2" data-toggle="modal" data-target="#modalAddSpecies"><i class="fas fa-calendar-plus"></i></button>';
     domString += '</div>';
   }
   domString += '<div class="d-flex flex-wrap justify-content-center">';
