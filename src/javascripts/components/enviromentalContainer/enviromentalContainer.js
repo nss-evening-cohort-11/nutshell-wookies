@@ -83,7 +83,7 @@ const buildReadings = () => {
       domString += '<h1 class="headingDisplay softEmboss col-8"><p class = "typewriter">Enviromental Readings</p></h1>';
       const user = firebase.auth().currentUser;
       if (user !== null) {
-        domString += '<button type="button" class="col-2 mt-5 btn-default btn-lg crudButtonColor glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add"><i class="fas fa-calendar-plus"></i></button>';
+        domString += '<button type="button" class="col-2 btn-default btn-lg buttonHeadingDisplay glowing data-target="#modalAddEnviroment" id="button-add-enviroment" value="Add"><i class="fas fa-calendar-plus"></i></button>';
         // domString += '<button id="button-add-enviroment" type="button" class="btn-default btn-lg crudButtonColor test glowing mt-5 col-2" data-toggle="modal" data-target="#modalAddEnviroment"><i class="fas fa-calendar-plus"></i></button>'
       }
       domString += '</div>';

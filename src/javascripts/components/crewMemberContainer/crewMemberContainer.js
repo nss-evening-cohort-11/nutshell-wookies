@@ -78,7 +78,7 @@ const buildCrewContainer = () => {
       domString += '<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">Crew Members</p></h1>';
       const user = firebase.auth().currentUser;
       if (user != null) {
-        domString += '<button id="button-add-crew" type="button" class="btn-default btn-lg crudButtonColor glowing mt-5 col-2" data-toggle="modal" data-target="#modalAddCrew"><i class="fas fa-calendar-plus"></i></button>';
+        domString += '<button id="button-add-crew" type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2" data-toggle="modal" data-target="#modalAddCrew"><i class="fas fa-plus"></i> Crew Member</button>';
       }
       domString += '</div>';
       domString += '<div class="d-flex flex-column">';

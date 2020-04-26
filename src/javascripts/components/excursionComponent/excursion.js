@@ -9,6 +9,7 @@ const buildExcursion = () => {
       domString += '<div class="pageDisplay">';
       domString += '<div class="row">';
       domString += '<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">Excursions</p></h1>';
+      domString += '<button type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2"><i class="fas fa-plus"></i> Excursion</button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap justify-content-center">';
       excursions.forEach((makeExcursionCardsInfo) => {

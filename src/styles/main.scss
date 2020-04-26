@@ -47,7 +47,23 @@ body {
   padding: 15px;
   margin: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.buttonHeadingDisplay {
+  background-color: $color8-copper-green;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $color6-ivory;
+  border-radius: 20px;
+  text-shadow: 0px 0px 2px $color6-ivory;
+  border: 2px solid $color3-copper;
+  padding: 15px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .softEmboss {
@@ -56,7 +72,7 @@ body {
 }
 
 .glowing {
-  text-shadow: 0px 0px 6px $color6-ivory;
+  text-shadow: 0px 0px 2px $color6-ivory;
 }
 
 .cardDisplay {
@@ -88,10 +104,35 @@ body {
   border-radius: 20px;
   padding-bottom: 20px;
   height: 50px;
-  width: 100px;
+  width: 200px;
   margin: 10px;
   border: 2px solid $color3-copper;
-  font-size: 1.5em;
+}
+
+.excursionCrudButtonColor {
+  background-color: $color8-copper-green;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $color6-ivory;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  height: 75px;
+  margin: 10px;
+  border: 2px solid $color3-copper;
+}
+
+.excursionRowCrudButtonColor {
+  background-color: $color8-copper-green;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $color6-ivory;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid $color3-copper;
 }
 
 .buttonSaveEdit {
@@ -225,9 +266,6 @@ a:hover {
   background-color: $color2-orange;
   box-shadow: 3px 5px 5px $color3-copper;
   border-radius: 20px;
-  p {
-    padding: 5px;
-  }
 }
 
 
