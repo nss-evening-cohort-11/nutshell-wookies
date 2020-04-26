@@ -2,6 +2,10 @@ import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
 import excursionCards from '../excursionCards/excursionCards';
 
+const editExcursionEvent = () => {
+  console.error('testing button');
+};
+
 const deleteExcursionEvent = (e) => {
   const excursionId = e.target.closest('.excursionCard').id;
   excursionData.removeExcursion(excursionId)
@@ -33,6 +37,7 @@ const buildExcursion = () => {
 
 const excursionEvents = () => {
   $('body').on('click', '.deleteExcursion', deleteExcursionEvent);
+  $('body').on('click', '.editExcursion', editExcursionEvent);
 };
 
 export default { buildExcursion, excursionEvents };
