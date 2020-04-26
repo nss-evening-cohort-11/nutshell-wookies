@@ -10,7 +10,7 @@ const buildExcursion = () => {
       domString += '<div class="row">';
       domString += '<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">Excursions</p></h1>';
       domString += '</div>';
-      domString += '<div class="d-flex flex-column">';
+      domString += '<div class="d-flex flex-wrap justify-content-center">';
       excursions.forEach((makeExcursionCardsInfo) => {
         domString += excursionCards.buildExcursionCards(makeExcursionCardsInfo);
       });
