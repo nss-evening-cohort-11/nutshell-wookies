@@ -8,7 +8,7 @@ const buildExcursionCards = (excursionCardInfo) => {
   domString += '<button type="button" class="col-5 btn-default btn-lg excursionCrudButtonColor glowing"><i class="fas fa-plus"></i> Environment Reading</button>';
   domString += '<button type="button" class="col-5 btn-default btn-lg excursionCrudButtonColor glowing"><i class="fas fa-plus"></i> Species Seen </button>';
   domString += '<button type="button" class="col-11 btn-default btn-lg excursionRowCrudButtonColor glowing"><i class="fas fa-feather-alt"></i> View Excursion </button>';
-  domString += '<button type="button" class="col-11 btn-default btn-lg excursionRowCrudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> Delete Excursion</button>';
+  domString += '<button type="button" class="deleteExcursion col-11 btn-default btn-lg excursionRowCrudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> Delete Excursion</button>';
   domString += '</div>';
   domString += '</div>';
 
