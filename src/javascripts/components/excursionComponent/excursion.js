@@ -2,6 +2,7 @@ import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
 import excursionCards from '../excursionCards/excursionCards';
 import addExcursion from '../addExcursion/addExcursion';
+import addSpeciesExcursion from '../addSpeciesExcursion/addSpeciesExcursion';
 
 const deleteExcursionEvent = (e) => {
   const excursionId = e.target.closest('.excursionCard').id;
@@ -51,6 +52,7 @@ const excursionEvents = () => {
   $('body').on('click', '.deleteExcursion', deleteExcursionEvent);
   $('body').on('click', '#add-new-excursions-btn', addExcursion.newExcursionForm);
   $('body').on('click', '#save-new-excursion-btn', saveNewExcursion);
+  $('body').on('click', '#add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
 };
 
 export default { buildExcursion, excursionEvents };
