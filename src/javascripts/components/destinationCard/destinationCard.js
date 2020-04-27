@@ -11,8 +11,8 @@ const buildDestinationCard = (destination) => {
   const user = firebase.auth().currentUser;
   if (user !== null) {
     domString += '<div class="row justify-content-around">';
-    domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing edit-destination"><i class="fas fa-feather-alt"></i></button>';
-    domString += '<button type="button" class="col-4 btn-default btn-lg crudButtonColor glowing delete-destination"><i class="fas fa-skull-crossbones"></i></button>';
+    domString += '<button type="button" class="btn-default btn-lg crudButtonColor glowing edit-destination"><i class="fas fa-feather-alt"></i> Destination</button>';
+    domString += '<button type="button" class="btn-default btn-lg crudButtonColor glowing delete-destination"><i class="fas fa-skull-crossbones"></i> Destination</button>';
     domString += '</div>';
   }
   domString += '</div>';
