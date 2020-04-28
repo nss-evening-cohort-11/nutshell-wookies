@@ -21,4 +21,13 @@ const getExcursion = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getExcursion, removeExcursion };
+const addExcursion = (newExcursion) => axios.post(`${baseUrl}/excursions.json`, newExcursion);
+
+const editExcursion = (updatedExcursion, excursionId) => axios.post(`${baseUrl}/excursions/${excursionId}.json`, updatedExcursion);
+
+export default {
+  getExcursion,
+  removeExcursion,
+  addExcursion,
+  editExcursion,
+};
