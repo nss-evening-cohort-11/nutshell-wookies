@@ -1,0 +1,58 @@
+{
+	"envReadExcursion1": {
+		"excursionId": "excursion1",
+		"envReadingId": "envReading1"
+  },
+  "envReadExcursion2": {
+		"excursionId": "excursion2",
+		"envReadingId": "envReading2"
+  },
+  "envReadExcursion3": {
+		"excursionId": "excursion3",
+		"envReadingId": "envReading3"
+  },
+  "envReadExcursion4": {
+		"excursionId": "excursion4",
+		"envReadingId": "envReading4"
+  },
+  "envReadExcursion5": {
+		"excursionId": "excursion5",
+		"envReadingId": "envReading5"
+  },
+  "envReadExcursion6": {
+		"excursionId": "excursion6",
+		"envReadingId": "envReading6"
+  },
+  "envReadExcursion7": {
+		"excursionId": "excursion7",
+		"envReadingId": "envReading7"
+  },
+  "envReadExcursion8": {
+		"excursionId": "excursion8",
+		"envReadingId": "envReading8"
+  },
+  "envReadExcursion9": {
+		"excursionId": "excursion1",
+		"envReadingId": "envReading"
+  },
+  "envReadExcursion10": {
+		"excursionId": "excursion1",
+		"envReadingId": "envReading1"
+  },
+  "envReadExcursion11": {
+		"excursionId": "excursion1",
+		"envReadingId": "envReading2"
+  },
+  "envReadExcursion12": {
+		"excursionId": "excursion3",
+		"envReadingId": "envReading4"
+  },
+  "envReadExcursion13": {
+		"excursionId": "excursion5",
+		"envReadingId": "envReading6"
+  },
+  "envReadExcursion14": {
+		"excursionId": "excursion7",
+		"envReadingId": "envReading8"
+  }
+}
