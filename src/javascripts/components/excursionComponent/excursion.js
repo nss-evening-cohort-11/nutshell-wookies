@@ -1,9 +1,12 @@
 import excursionData from '../../helpers/data/excursionData';
 import speciesExcursionData from '../../helpers/data/speciesExcursionData';
-import utils from '../../helpers/utils';
-import excursionCards from '../excursionCards/excursionCards';
+
 import addExcursion from '../addExcursion/addExcursion';
 import addSpeciesExcursion from '../addSpeciesExcursion/addSpeciesExcursion';
+import excursionCards from '../excursionCards/excursionCards';
+import singleExcursionView from '../singleExcursion/singleExcursion';
+
+import utils from '../../helpers/utils';
 
 // Delete an Excursion
 const deleteExcursionEvent = (e) => {
@@ -68,10 +71,11 @@ const buildExcursion = () => {
 };
 
 const excursionEvents = () => {
+  $('body').on('click', '.single-view-excursion-btn', singleExcursionView.buildSingleViewExcursion);
   $('body').on('click', '.deleteExcursion', deleteExcursionEvent);
   $('body').on('click', '#add-new-excursions-btn', addExcursion.newExcursionForm);
   $('body').on('click', '#save-new-excursion-btn', saveNewExcursion);
-  $('body').on('click', '#add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
+  $('body').on('click', '.add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
   $('body').on('click', '#add-species-excursion-btn', saveSpeciesExcursion);
 };
 
