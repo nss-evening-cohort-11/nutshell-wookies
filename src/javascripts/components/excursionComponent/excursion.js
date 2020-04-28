@@ -77,6 +77,7 @@ const excursionEvents = () => {
   $('body').on('click', '#save-new-excursion-btn', saveNewExcursion);
   $('body').on('click', '.add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
   $('body').on('click', '#add-species-excursion-btn', saveSpeciesExcursion);
+  $('body').on('click', '#close-single-view-excursion', singleExcursionView.closeSingleView);
 };
 
 export default { buildExcursion, excursionEvents };
