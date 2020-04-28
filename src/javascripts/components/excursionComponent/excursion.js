@@ -1,4 +1,5 @@
 import excursionData from '../../helpers/data/excursionData';
+import speciesExcursionData from '../../helpers/data/speciesExcursionData';
 import utils from '../../helpers/utils';
 import excursionCards from '../excursionCards/excursionCards';
 import addExcursion from '../addExcursion/addExcursion';
@@ -37,8 +38,11 @@ const saveSpeciesExcursion = (e) => {
     excursionId: theExcursionId,
     speciesId: $('#species-id').val(),
   };
-  console.error('new species excursion', newSpeciesExcursion);
-  $('#add-species-excursion-modal').modal('hide');
+  speciesExcursionData.addSpeciesExcursion(newSpeciesExcursion)
+    .then(() => {
+      $('#add-species-excursion-modal').modal('hide');
+    })
+    .catch();
 };
 
 // Build all Excursions
