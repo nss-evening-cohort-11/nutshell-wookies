@@ -1,8 +1,9 @@
-import utils from '../../helpers/utils';
-
 const buildSpeciesExcursionCards = () => {
-  const domString = '<h3>Species</h3>';
-  utils.printToDom('single-view-excursion-species', domString);
+  let domString = '';
+  domString += '<div id="single-view-species-excursion">';
+  domString += '<h2>Species Seen</h2>';
+  domString += '</div>';
+  return domString;
 };
 
 export default { buildSpeciesExcursionCards };

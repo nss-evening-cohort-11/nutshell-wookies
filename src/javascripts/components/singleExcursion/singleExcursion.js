@@ -1,4 +1,4 @@
-// import singleViewExcursionSpecies from '../singleViewExcursionSpecies/singleViewExcursionSpecies';
+import singleViewExcursionSpecies from '../singleViewExcursionSpecies/singleViewExcursionSpecies';
 
 import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
@@ -29,14 +29,18 @@ const closeSingleView = () => {
 const buildSingleViewExcursion = (e) => {
   revealSingleView();
   const excursionId = e.target.closest('.card').id;
-  console.error(excursionId);
   excursionData.getSingleExcursion(excursionId)
     .then((resp) => {
       const excursion = resp.data;
       let domString = '';
-      domString += '<div class="d-flex flex-wrap">';
-      domString += '<button class="btn btn-info m-3" id="close-single-view-excursion"><i class="fas fa-window-close"></i></button>';
-      domString += `<h2>${excursion.excursionName}</h2>`;
+      domString += '<div class="pageDisplay">';
+      domString += '<div class="row">';
+      domString += `<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">${excursion.excursionName}</p></h1>`;
+      domString += '<button type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2" id="close-single-view-excursion"><i class="fas fa-window-close"></i></button>';
+      domString += '</div>';
+      domString += '<div class="d-flex flex-wrap justify-content-center">';
+      domString += singleViewExcursionSpecies.buildSpeciesExcursionCards();
+      domString += '</div>';
       domString += '</div>';
       utils.printToDom('single-view-excursion', domString);
     })
