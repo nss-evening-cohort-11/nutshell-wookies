@@ -24,7 +24,7 @@ const deleteExcursionEvent = (e) => {
 const saveNewExcursion = (e) => {
   e.preventDefault();
   const newExcursion = {
-    name: $('#new-excursion-name').val(),
+    excursionName: $('#new-excursion-name').val(),
     date: $('#new-excursion-date').val(),
   };
   excursionData.addExcursion(newExcursion)
