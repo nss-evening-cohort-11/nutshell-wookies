@@ -29,7 +29,7 @@ const getAvailEnvReadings = (excursionId) => new Promise((resolve, reject) => {
         .then((envReadingExcursion) => {
           const availEnvReadings = [];
           envReadings.forEach((reading) => {
-            const exists = envReadingExcursion.find((x) => x.envReadingId === reading.id);
+            const exists = envReadingExcursion.find((x) => x.envirReadingId === reading.id);
             if (exists === undefined) {
               availEnvReadings.push(reading);
             }
