@@ -49,7 +49,7 @@ const saveSpeciesExcursion = (e) => {
 // adds a new environmental reading to an excursion
 const saveEnvReadingsExcursion = (e) => {
   e.preventDefault();
-  const theExcursionId = $('.add-envir-read-excursion-form-tag').data('excursion-id');
+  const theExcursionId = $('#add-envir-read-excursion-form').data('excursion-id');
   const newEnvReadingExcursion = {
     excursionId: theExcursionId,
     envirReadingId: $('#envir-reading-id').val(),

@@ -6,10 +6,10 @@ const addEnvirReadingExcursionForm = (e) => {
   smash.getAvailEnvReadings(excursionId)
     .then((readings) => {
       let domString = '';
-      domString += `<form class="add-envir-read-excursion-form" data-excursion-id="${excursionId}>`;
+      domString += `<form id="add-envir-read-excursion-form" data-excursion-id="${excursionId}">`;
       domString += '<div class="form-group">';
       domString += '<label for="">Log Readings </label>';
-      domString += '<select class="form-control" id="#envir-reading-id">';
+      domString += '<select class="form-control" id="envir-reading-id">';
       readings.forEach((reading) => {
         domString += `<option value="${reading.id}">${reading.destinationId}, ${reading.TimeStamp}</option>`;
       });
