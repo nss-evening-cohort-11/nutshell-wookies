@@ -11,7 +11,7 @@ const editExcursionEvent = () => {
 };
 
 const deleteExcursionEvent = (e) => {
-  const excursionId = e.target.closest('.excursionToEdit').id;
+  const excursionId = e.target.closest('.excursionCard').id;
   excursionData.removeExcursion(excursionId)
     // eslint-disable-next-line no-use-before-define
     .then(() => buildExcursion())
