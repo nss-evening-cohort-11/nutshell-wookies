@@ -60,7 +60,9 @@
 
   <div class="fullPage hide" id="excursion"></div>
   <!-- EXCURSIONS SINGLE VIEW -->
-  
+  <div id="single-view-excursion">
+    <div id="single-view-excursion-envir-read"  class="fullPage hide"></div>
+  </div>
 
   <div class="fullPage hide" id="destinations"></div>
   <div class="fullPage hide" id="envReadings"></div>
@@ -422,6 +424,27 @@
   </div>
 </div>
 <!-- End modal for Add speciesExcursion-->
+<!-- Modal for Add envirReadingExcursion -->
+<div class="modal fade" id="add-envir-read-excursion-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modalDisplay">
+      <div class="modal-header">
+        <h5 class="modal-title">Log Readings on the Excursion?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="add-envir-read-excursion-modal-form"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn buttonSaveEdit glowing" data-dismiss="modal">Close</button>
+        <button type="button" class="btn buttonSaveEdit glowing" id="save-envir-read-excursion-btn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal for Add envirReadingExcursion-->
 
 <!-- FOOTER BELOW -->
 <div id="footer" class="footer fixed-bottom">
