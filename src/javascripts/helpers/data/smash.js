@@ -49,7 +49,7 @@ const getAvailEnvReadings = (excursionId) => new Promise((resolve, reject) => {
         .then((envReadingExcursion) => {
           const availEnvReadings = [];
           envReadings.forEach((reading) => {
-            const exists = envReadingExcursion.find((x) => x.envReadingId === reading.id);
+            const exists = envReadingExcursion.find((x) => x.envirReadingId === reading.id);
             if (exists === undefined) {
               availEnvReadings.push(reading);
             }
@@ -60,4 +60,25 @@ const getAvailEnvReadings = (excursionId) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getAvailSpecies, getSpeciesinExcursion, getAvailEnvReadings };
+const getEnvirReadingInExcursion = (excursionId) => new Promise((resolve, reject) => {
+  envReadingsData.getEnvironmentalData()
+    .then((readings) => {
+      envirReadingExcursionData.getEnvirReadingExcursionbyExcursionId(excursionId)
+        .then((envirReadExcursion) => {
+          const availReadings = [];
+          readings.forEach((reading) => {
+            const exists = envirReadExcursion.find((x) => x.envirReadingId === reading.id);
+            if (exists !== undefined) {
+              const newReading = { ...reading };
+              newReading.envirReadExcursionId = envirReadExcursion.id;
+              availReadings.push(newReading);
+            }
+          });
+          resolve(availReadings);
+        });
+    })
+    .catch((err) => reject(err));
+});
+export default {
+  getAvailSpecies, getAvailEnvReadings, getEnvirReadingInExcursion, getSpeciesinExcursion,
+};
