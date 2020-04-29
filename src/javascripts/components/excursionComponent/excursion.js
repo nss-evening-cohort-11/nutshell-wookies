@@ -4,10 +4,23 @@ import excursionCards from '../excursionCards/excursionCards';
 import addExcursion from '../addExcursion/addExcursion';
 import editExcursion from '../editExcursion/editExcursion';
 
-const editExcursionEvent = () => {
-  // e.preventDefault();
-  // const excursionId = $('.excursionEdit').data('id');
-  console.error('testing button');
+const editExcursionEvent = (e) => {
+  e.preventDefault();
+  const excursionId = $('#excursionEdit').data('id');
+  console.error('testing excursion ID', excursionId);
+  const updateExcursion = {
+    excursionName: $('#excursionChange').val(),
+    date: $('#editExcursionDate').val(),
+  };
+  console.error('testing update excursion', updateExcursion);
+  excursionData.updateExcursion(updateExcursion, excursionId)
+    .then(() => {
+      // document.getElementById('excursionEdit').reset();
+      $('#edit-excursion-modal').modal('hide');
+      // eslint-disable-next-line no-use-before-define
+      buildExcursion();
+    })
+    .catch((err) => console.error('edit excursion failed', err));
 };
 
 const deleteExcursionEvent = (e) => {

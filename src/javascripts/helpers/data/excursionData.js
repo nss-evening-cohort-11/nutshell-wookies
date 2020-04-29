@@ -23,7 +23,7 @@ const getExcursion = () => new Promise((resolve, reject) => {
 
 const addExcursion = (newExcursion) => axios.post(`${baseUrl}/excursions.json`, newExcursion);
 
-const editExcursion = (updatedExcursion, excursionId) => axios.post(`${baseUrl}/excursions/${excursionId}.json`, updatedExcursion);
+const updateExcursion = (updatedExcursion, excursionId) => axios.put(`${baseUrl}/excursions/${excursionId}.json`, updatedExcursion);
 
 const getExcursionInfo = (excursionId) => axios.get(`${baseUrl}/excursions/${excursionId}.json`);
 
@@ -31,6 +31,6 @@ export default {
   getExcursion,
   removeExcursion,
   addExcursion,
-  editExcursion,
+  updateExcursion,
   getExcursionInfo,
 };
