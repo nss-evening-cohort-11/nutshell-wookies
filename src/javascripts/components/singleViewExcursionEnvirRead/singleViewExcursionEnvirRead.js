@@ -6,7 +6,7 @@ const buildAllEnvExcursionCards = () => {
   envReadingsData.getEnvironmentalData()
     .then((envReading) => {
       let domString = '';
-      domString += `<div class="text-center envReadExcursionContainer" data-id=${excursionId}>`;
+      domString += '<div class="text-center envReadExcursionContainer" data-id=${}>';
       domString += '<h2 class="mt-3"> Environmental Reading </h2>';
       domString += '</div>';
       domString += '<div class="container-fluid d-flex flex-wrap col-9">';
