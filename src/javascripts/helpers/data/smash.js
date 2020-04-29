@@ -39,4 +39,24 @@ const getAvailEnvReadings = (excursionId) => new Promise((resolve, reject) => {
     })
     .catch((err) => reject(err));
 });
-export default { getAvailSpecies, getAvailEnvReadings };
+
+const getEnvirReadingInExcursion = (excursionId) => new Promise((resolve, reject) => {
+  envReadingsData.getEnvironmentalData()
+    .then((readings) => {
+      envirReadingExcursionData.getEnvirReadingExcursionbyExcursionId(excursionId)
+        .then((envirReadExcursion) => {
+          const availReadings = [];
+          readings.forEach((reading) => {
+            const exists = envirReadExcursion.find((x) => x.envirReadingId === reading.id);
+            if (exists !== undefined) {
+              const newReading = { ...reading };
+              newReading.envirReadExcursionId = envirReadExcursion.id;
+              availReadings.push(newReading);
+            }
+          });
+          resolve(availReadings);
+        });
+    })
+    .catch((err) => reject(err));
+});
+export default { getAvailSpecies, getAvailEnvReadings, getEnvirReadingInExcursion };
