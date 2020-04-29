@@ -1,5 +1,8 @@
 import speciesData from './speciesData';
 import speciesExcursionData from './speciesExcursionData';
+import envReadingsData from './envReadings';
+import envirReadingExcursionData from './envirReadingExcursionData';
+
 
 const getAvailSpecies = (excursionId) => new Promise((resolve, reject) => {
   speciesData.getAllSpecies()
@@ -39,4 +42,22 @@ const getSpeciesinExcursion = (excursionId) => new Promise((resolve, reject) => 
     .catch((err) => reject(err));
 });
 
-export default { getAvailSpecies, getSpeciesinExcursion };
+const getAvailEnvReadings = (excursionId) => new Promise((resolve, reject) => {
+  envReadingsData.getEnvironmentalData()
+    .then((envReadings) => {
+      envirReadingExcursionData.getEnvirReadingExcursionbyExcursionId(excursionId)
+        .then((envReadingExcursion) => {
+          const availEnvReadings = [];
+          envReadings.forEach((reading) => {
+            const exists = envReadingExcursion.find((x) => x.envReadingId === reading.id);
+            if (exists === undefined) {
+              availEnvReadings.push(reading);
+            }
+          });
+          resolve(availEnvReadings);
+        });
+    })
+    .catch((err) => reject(err));
+});
+
+export default { getAvailSpecies, getSpeciesinExcursion, getAvailEnvReadings };

@@ -8,6 +8,9 @@ import singleExcursionView from '../singleExcursion/singleExcursion';
 
 import utils from '../../helpers/utils';
 
+import envirReadingData from '../../helpers/data/envirReadingExcursionData';
+import addEnvReadExcursion from '../addEnvirReadingExcursion/addEnvirReadingExcursion';
+
 // Delete an Excursion
 const deleteExcursionEvent = (e) => {
   const excursionId = e.target.closest('.excursionCard').id;
@@ -47,6 +50,20 @@ const saveSpeciesExcursion = (e) => {
     })
     .catch();
 };
+// adds a new environmental reading to an excursion
+const saveEnvReadingsExcursion = (e) => {
+  e.preventDefault();
+  const theExcursionId = $('#add-envir-read-excursion-form').data('excursion-id');
+  const newEnvReadingExcursion = {
+    excursionId: theExcursionId,
+    envirReadingId: $('#envir-reading-id').val(),
+  };
+  envirReadingData.addEnvReadingExcursion(newEnvReadingExcursion)
+    .then(() => {
+      $('#add-envir-read-excursion-modal').modal('hide');
+    })
+    .catch();
+};
 
 // Build all Excursions
 const buildExcursion = () => {
@@ -78,6 +95,8 @@ const excursionEvents = () => {
   $('body').on('click', '.add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
   $('body').on('click', '#add-species-excursion-btn', saveSpeciesExcursion);
   $('body').on('click', '#close-single-view-excursion', singleExcursionView.closeSingleView);
+  $('body').on('click', '#save-envir-read-excursion-btn', saveEnvReadingsExcursion);
+  $('body').on('click', '#add-envir-reading-modal', addEnvReadExcursion.addEnvirReadingExcursionForm);
 };
 
 export default { buildExcursion, excursionEvents };
