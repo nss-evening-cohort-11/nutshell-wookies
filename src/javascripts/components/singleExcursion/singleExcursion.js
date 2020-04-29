@@ -41,7 +41,6 @@ const buildSingleViewExcursion = (e) => {
       domString += '<div id="build-the-dang-cards"></div>';
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '</div>';
-      console.error('domString val =', domString);
       utils.printToDom('single-view-excursion', domString);
     })
     .catch((err) => console.error('could not get singe excursion', err));
