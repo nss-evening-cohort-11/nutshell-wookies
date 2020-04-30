@@ -12,6 +12,7 @@ const buttonClick = (e) => {
   e.preventDefault();
   const page = e.target.id;
   if (page === 'dashboard') {
+    $('#single-view-excursion').addClass('hide');
     $('#excursion').addClass('hide');
     $('#crew').addClass('hide');
     $('#destinations').addClass('hide');
@@ -19,6 +20,7 @@ const buttonClick = (e) => {
     $('#species').addClass('hide');
     $('#dashboard').removeClass('hide');
   } else if (page === 'excursionLink') {
+    $('#single-view-excursion').addClass('hide');
     $('#dashboard').addClass('hide');
     $('#excursion').removeClass('hide');
     $('#destinations').addClass('hide');
@@ -26,6 +28,7 @@ const buttonClick = (e) => {
     $('#crew').addClass('hide');
     $('#species').addClass('hide');
   } else if (page === 'crewLink') {
+    $('#single-view-excursion').addClass('hide');
     $('#dashboard').addClass('hide');
     $('#excursion').addClass('hide');
     $('#destinations').addClass('hide');
@@ -33,6 +36,7 @@ const buttonClick = (e) => {
     $('#crew').removeClass('hide');
     $('#species').addClass('hide');
   } else if (page === 'destinationsLink') {
+    $('#single-view-excursion').addClass('hide');
     $('#dashboard').addClass('hide');
     $('#excursion').addClass('hide');
     $('#crew').addClass('hide');
@@ -40,6 +44,7 @@ const buttonClick = (e) => {
     $('#destinations').removeClass('hide');
     $('#species').addClass('hide');
   } else if (page === 'envReadingsLink') {
+    $('#single-view-excursion').addClass('hide');
     $('#dashboard').addClass('hide');
     $('#excursion').addClass('hide');
     $('#crew').addClass('hide');
@@ -47,6 +52,7 @@ const buttonClick = (e) => {
     $('#envReadings').removeClass('hide');
     $('#species').addClass('hide');
   } else if (page === 'speciesLink') {
+    $('#single-view-excursion').addClass('hide');
     $('#dashboard').addClass('hide');
     $('#excursion').addClass('hide');
     $('#crew').addClass('hide');
