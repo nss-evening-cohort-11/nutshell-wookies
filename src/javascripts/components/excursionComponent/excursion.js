@@ -1,8 +1,16 @@
 import excursionData from '../../helpers/data/excursionData';
-import utils from '../../helpers/utils';
-import excursionCards from '../excursionCards/excursionCards';
+import speciesExcursionData from '../../helpers/data/speciesExcursionData';
+
 import addExcursion from '../addExcursion/addExcursion';
 import editExcursion from '../editExcursion/editExcursion';
+import addSpeciesExcursion from '../addSpeciesExcursion/addSpeciesExcursion';
+import excursionCards from '../excursionCards/excursionCards';
+import singleExcursionView from '../singleExcursion/singleExcursion';
+
+import utils from '../../helpers/utils';
+
+import envirReadingData from '../../helpers/data/envirReadingExcursionData';
+import addEnvReadExcursion from '../addEnvirReadingExcursion/addEnvirReadingExcursion';
 
 const editExcursionEvent = (e) => {
   e.preventDefault();
@@ -23,6 +31,7 @@ const editExcursionEvent = (e) => {
     .catch((err) => console.error('edit excursion failed', err));
 };
 
+// Delete an Excursion
 const deleteExcursionEvent = (e) => {
   const excursionId = e.target.closest('.excursionCard').id;
   excursionData.removeExcursion(excursionId)
@@ -31,10 +40,11 @@ const deleteExcursionEvent = (e) => {
     .catch((err) => console.error('Delete Excursion Event not working', err));
 };
 
+// Save a new Excursion
 const saveNewExcursion = (e) => {
   e.preventDefault();
   const newExcursion = {
-    name: $('#new-excursion-name').val(),
+    excursionName: $('#new-excursion-name').val(),
     date: $('#new-excursion-date').val(),
   };
   excursionData.addExcursion(newExcursion)
@@ -46,6 +56,36 @@ const saveNewExcursion = (e) => {
     .catch((err) => console.error('could not add excursion', err));
 };
 
+// add a new species to an excursion
+const saveSpeciesExcursion = (e) => {
+  e.preventDefault();
+  const theExcursionId = $('.add-species-excursion-form-tag').data('excursion-id');
+  const newSpeciesExcursion = {
+    excursionId: theExcursionId,
+    speciesId: $('#species-id').val(),
+  };
+  speciesExcursionData.addSpeciesExcursion(newSpeciesExcursion)
+    .then(() => {
+      $('#add-species-excursion-modal').modal('hide');
+    })
+    .catch();
+};
+// adds a new environmental reading to an excursion
+const saveEnvReadingsExcursion = (e) => {
+  e.preventDefault();
+  const theExcursionId = $('#add-envir-read-excursion-form').data('excursion-id');
+  const newEnvReadingExcursion = {
+    excursionId: theExcursionId,
+    envirReadingId: $('#envir-reading-id').val(),
+  };
+  envirReadingData.addEnvReadingExcursion(newEnvReadingExcursion)
+    .then(() => {
+      $('#add-envir-read-excursion-modal').modal('hide');
+    })
+    .catch();
+};
+
+// Build all Excursions
 const buildExcursion = () => {
   excursionData.getExcursion()
     .then((excursions) => {
@@ -68,14 +108,17 @@ const buildExcursion = () => {
 };
 
 const excursionEvents = () => {
-  // delete
+  $('body').on('click', '.single-view-excursion-btn', singleExcursionView.buildSingleViewExcursion);
   $('body').on('click', '.deleteExcursion', deleteExcursionEvent);
-  // edit
   $('body').on('click', '.editExcursion', editExcursion.editExcursionCards);
   $('body').on('click', '#saveEditExcursion', editExcursionEvent);
-  // add
   $('body').on('click', '#add-new-excursions-btn', addExcursion.newExcursionForm);
   $('body').on('click', '#save-new-excursion-btn', saveNewExcursion);
+  $('body').on('click', '.add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
+  $('body').on('click', '#add-species-excursion-btn', saveSpeciesExcursion);
+  $('body').on('click', '#close-single-view-excursion', singleExcursionView.closeSingleView);
+  $('body').on('click', '#save-envir-read-excursion-btn', saveEnvReadingsExcursion);
+  $('body').on('click', '#add-envir-reading-modal', addEnvReadExcursion.addEnvirReadingExcursionForm);
 };
 
 export default { buildExcursion, excursionEvents };
