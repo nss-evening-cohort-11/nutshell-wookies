@@ -41,11 +41,11 @@ const deleteExcursionEvent = (e) => {
 // Save a new Excursion
 const saveNewExcursion = (e) => {
   e.preventDefault();
-  const addNewExcursion = {
+  const newExcursion = {
     excursionName: $('#new-excursion-name').val(),
     date: $('#new-excursion-date').val(),
   };
-  excursionData.addExcursion(addNewExcursion)
+  excursionData.addExcursion(newExcursion)
     .then(() => {
       $('#add-excursion-modal').modal('hide');
       // eslint-disable-next-line no-use-before-define
