@@ -1,0 +1,58 @@
+{
+	"crewMembersExcursion1": {
+		"excursionId": "excursion1",
+		"crewMembersId": "crew1"
+  },
+  "crewMembersExcursion2": {
+		"excursionId": "excursion2",
+		"crewMembersId": "crew2"
+  },
+  "crewMembersExcursion3": {
+		"excursionId": "excursion3",
+		"crewMembersId": "crew3"
+  },
+  "crewMembersExcursion4": {
+		"excursionId": "excursion4",
+		"crewMembersId": "crew4"
+  },
+  "crewMembersExcursion5": {
+		"excursionId": "excursion5",
+		"crewMembersId": "crew5"
+  },
+  "crewMembersExcursion6": {
+		"excursionId": "excursion6",
+		"crewMembersId": "crew6"
+  },
+  "crewMembersExcursion7": {
+		"excursionId": "excursion7",
+		"crewMembersId": "crew7"
+  },
+  "crewMembersExcursion8": {
+		"excursionId": "excursion8",
+		"crewMembersId": "crew8"
+  },
+  "crewMembersExcursion9": {
+		"excursionId": "excursion1",
+		"crewMembersId": "crew4"
+  },
+  "crewMembersExcursion10": {
+		"excursionId": "excursion1",
+		"crewMembersId": "crew5"
+  },
+  "crewMembersExcursion11": {
+		"excursionId": "excursion1",
+		"crewMembersId": "crew6"
+  },
+  "crewMembersExcursion12": {
+		"excursionId": "excursion3",
+		"crewMembersId": "crew1"
+  },
+  "crewMembersExcursion13": {
+		"excursionId": "excursion5",
+		"crewMembersId": "crew2"
+  },
+  "crewMembersExcursion14": {
+		"excursionId": "excursion7",
+		"crewMembersId": "crew3"
+  }
+}

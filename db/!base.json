@@ -4,5 +4,7 @@
   "envReadings": "michele",
   "species": "john",
   "excursions": "excursions",
-  "speciesExcursion": "speciesExcursionVal"
+  "speciesExcursion": "speciesExcursionVal",
+  "crewMembersExcursion": "Chris",
+  "envReadExcursion": "reading"
 }
