@@ -29,6 +29,7 @@ const updateExcursion = (updatedExcursion, excursionId) => axios.put(`${baseUrl}
 
 const getExcursionInfo = (excursionId) => axios.get(`${baseUrl}/excursions/${excursionId}.json`);
 
+
 export default {
   getExcursion,
   removeExcursion,
