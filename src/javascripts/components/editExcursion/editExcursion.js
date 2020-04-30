@@ -4,7 +4,6 @@ import excursionData from '../../helpers/data/excursionData';
 const editExcursionCards = (e) => {
   const excursionId = e.target.closest('.card').id;
   $('#edit-excursion-modal').modal('show');
-  console.error('edit excursion', excursionId);
   excursionData.getExcursionInfo(excursionId)
     .then((resp) => {
       const excursionPlaceholder = resp.data;

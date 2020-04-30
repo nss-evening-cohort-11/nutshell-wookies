@@ -15,12 +15,10 @@ import addEnvReadExcursion from '../addEnvirReadingExcursion/addEnvirReadingExcu
 const editExcursionEvent = (e) => {
   e.preventDefault();
   const excursionId = $('#excursionEdit').data('id');
-  console.error('testing excursion ID', excursionId);
   const updateExcursion = {
     excursionName: $('#excursionChange').val(),
     date: $('#editExcursionDate').val(),
   };
-  console.error('testing update excursion', updateExcursion);
   excursionData.updateExcursion(updateExcursion, excursionId)
     .then(() => {
       // document.getElementById('excursionEdit').reset();
