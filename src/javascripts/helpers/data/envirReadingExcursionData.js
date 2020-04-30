@@ -18,5 +18,6 @@ const getEnvirReadingExcursionbyExcursionId = (excursionId) => new Promise((reso
 });
 
 const addEnvReadingExcursion = (newEnvReadingExcursion) => axios.post(`${baseUrl}/envReadExcursion.json`, newEnvReadingExcursion);
+const deleteEnvirReadExcursion = (envirReadExcursionId) => axios.delete(`${baseUrl}/envReadExcursion/${envirReadExcursionId}.json`);
 
-export default { getEnvirReadingExcursionbyExcursionId, addEnvReadingExcursion };
+export default { getEnvirReadingExcursionbyExcursionId, addEnvReadingExcursion, deleteEnvirReadExcursion };

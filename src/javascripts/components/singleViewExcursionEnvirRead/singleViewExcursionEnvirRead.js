@@ -1,4 +1,5 @@
 import smash from '../../helpers/data/smash';
+import envirReadingExcursionData from '../../helpers/data/envirReadingExcursionData';
 import envReadExcursionComponent from '../singleEnvirReadCard/singleEnvirReadCard';
 import utils from '../../helpers/utils';
 
@@ -14,7 +15,18 @@ const buildAllEnvExcursionCards = (excursionId) => {
       domString += '</div>';
       utils.printToDom('single-view-excursion-envir-read', domString);
     })
-    .catch((err) => console.error('no souvenirs for you', err));
+    .catch((err) => console.error('no env readings for you', err));
+};
+const removeEnvirReadExcursion = (e) => {
+  envirReadingExcursionData.deleteEnvirReadExcursion(e)
+    .then(() => {
+      buildAllEnvExcursionCards();
+      utils.printToDom('single-view-excursion-envir-read', '');
+    })
+    .catch((err) => console.error('cannot delete', err));
+};
+const envExcursionEvent = () => {
+  $('body').on('click', '#envirReadExcursionId', removeEnvirReadExcursion);
 };
 
-export default { buildAllEnvExcursionCards };
+export default { buildAllEnvExcursionCards, envExcursionEvent };

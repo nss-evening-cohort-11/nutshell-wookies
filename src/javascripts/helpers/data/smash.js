@@ -70,11 +70,13 @@ const getEnvirReadingInExcursion = (excursionId) => new Promise((resolve, reject
             const exists = envirReadExcursion.find((x) => x.envirReadingId === reading.id);
             if (exists !== undefined) {
               const newReading = { ...reading };
-              newReading.envirReadExcursionId = envirReadExcursion.id;
-              availReadings.push(newReading);
+              envirReadExcursion.forEach((envirReadEx) => {
+                newReading.envirReadExcursionId = envirReadEx.id;
+                availReadings.push(newReading);
+              });
             }
+            resolve(availReadings);
           });
-          resolve(availReadings);
         });
     })
     .catch((err) => reject(err));
