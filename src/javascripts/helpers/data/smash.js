@@ -30,12 +30,15 @@ const getSpeciesinExcursion = (excursionId) => new Promise((resolve, reject) => 
           const availSpecies = [];
           species.forEach((creature) => {
             const exists = speciesExcursion.find((x) => x.speciesId === creature.id);
-            if (exists !== undefined) {
+            if (exists) {
               const newCreature = { ...creature };
+              // the below line is trying to create an array of objects/ids and is returning undefined with '.id' attached
               newCreature.speciesExcursionId = speciesExcursion.id;
+              console.error('new creature', newCreature);
               availSpecies.push(newCreature);
             }
           });
+          console.error('available species', availSpecies);
           resolve(availSpecies);
         });
     })

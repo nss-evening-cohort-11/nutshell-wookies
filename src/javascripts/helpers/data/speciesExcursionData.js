@@ -12,6 +12,7 @@ const getSpeciesExcursionbyExcursionId = (excursionId) => new Promise((resolve, 
         allSpeciesExcursions[speciesExcursionId].id = speciesExcursionId;
         speciesExcursions.push(allSpeciesExcursions[speciesExcursionId]);
       });
+      console.error('speciesExcursions', speciesExcursions);
       resolve(speciesExcursions);
     })
     .catch((err) => reject(err));
