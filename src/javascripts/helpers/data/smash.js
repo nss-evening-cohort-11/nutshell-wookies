@@ -16,11 +16,9 @@ const getCrewInExcursion = (excursionId) => new Promise((resolve, reject) => {
             const exists = crewExcursion.find((x) => x.crewMembersId === person.id);
             if (exists !== undefined) {
               const newPerson = { ...person };
-              console.error('person', person);
               availCrew.push(newPerson);
             }
           });
-          console.error('available crew', availCrew);
           resolve(availCrew);
         });
     })

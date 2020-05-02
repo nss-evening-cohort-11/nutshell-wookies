@@ -5,7 +5,6 @@ import crewExcursionCards from '../crewExcursionCards/crewExcursionCards';
 const buildCrewMemberExcursionCards = (excursionId) => {
   smash.getCrewInExcursion(excursionId)
     .then((crew) => {
-      console.error('excursion id', excursionId);
       let domString = '';
       domString += '<div id="single-view-crew-excursion">';
       domString += '<h2>Crew</h2>';
