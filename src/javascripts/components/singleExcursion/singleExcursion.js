@@ -55,4 +55,8 @@ const buildSingleViewExcursion = (e) => {
     .catch((err) => console.error('could not get single excursion', err));
 };
 
-export default { buildSingleViewExcursion, closeSingleView };
+const singleExcursionEvents = () => {
+  $('body').on('click', '.delete-species-excursion-btn', singleViewExcursionSpecies.removeSpeciesExcursion);
+};
+
+export default { buildSingleViewExcursion, closeSingleView, singleExcursionEvents };

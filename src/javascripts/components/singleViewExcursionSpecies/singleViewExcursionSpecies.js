@@ -7,8 +7,6 @@ import utils from '../../helpers/utils';
 const removeSpeciesExcursion = (e) => {
   const excursionId = e.target.closest('.pageDisplay').dataset.id;
   const speciesExcursionId = e.target.closest('.card').id;
-  console.error('excursionId', excursionId);
-  console.error('speciesExcursionId', speciesExcursionId);
   speciesExcursionData.deleteSpeciesExcursion(speciesExcursionId)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
@@ -34,8 +32,5 @@ const buildSpeciesExcursionView = (excursionId) => {
     .catch((err) => console.error('could not get available species', err));
 };
 
-const speciesExcursionEvents = () => {
-  $('body').on('click', '.delete-species-excursion-btn', removeSpeciesExcursion);
-};
 
-export default { buildSpeciesExcursionView, speciesExcursionEvents };
+export default { buildSpeciesExcursionView, removeSpeciesExcursion };
