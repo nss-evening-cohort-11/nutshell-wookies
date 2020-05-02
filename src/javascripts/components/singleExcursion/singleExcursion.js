@@ -1,9 +1,11 @@
 import singleViewExcursionSpecies from '../singleViewExcursionSpecies/singleViewExcursionSpecies';
 import singleViewExcursionEnvReading from '../singleViewExcursionEnvirRead/singleViewExcursionEnvirRead';
-import excursionData from '../../helpers/data/excursionData';
-import utils from '../../helpers/utils';
 import singleViewExcursionCrew from '../singleViewExcursionCrew/singleViewExcursionCrew';
 import singleViewDestination from '../singleViewDestination/singleViewDestination';
+
+import excursionData from '../../helpers/data/excursionData';
+import utils from '../../helpers/utils';
+
 
 // reveal single view excursion
 const revealSingleView = () => {
@@ -56,4 +58,8 @@ const buildSingleViewExcursion = (e) => {
     .catch((err) => console.error('could not get single excursion', err));
 };
 
-export default { buildSingleViewExcursion, closeSingleView };
+const singleExcursionEvents = () => {
+  $('body').on('click', '.delete-species-excursion-btn', singleViewExcursionSpecies.removeSpeciesExcursion);
+};
+
+export default { buildSingleViewExcursion, closeSingleView, singleExcursionEvents };
