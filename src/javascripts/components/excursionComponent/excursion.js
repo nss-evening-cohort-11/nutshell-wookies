@@ -2,6 +2,7 @@ import excursionData from '../../helpers/data/excursionData';
 import speciesExcursionData from '../../helpers/data/speciesExcursionData';
 
 import addExcursion from '../addExcursion/addExcursion';
+import editExcursion from '../editExcursion/editExcursion';
 import addSpeciesExcursion from '../addSpeciesExcursion/addSpeciesExcursion';
 import excursionCards from '../excursionCards/excursionCards';
 import singleExcursionView from '../singleExcursion/singleExcursion';
@@ -10,6 +11,23 @@ import utils from '../../helpers/utils';
 
 import envirReadingData from '../../helpers/data/envirReadingExcursionData';
 import addEnvReadExcursion from '../addEnvirReadingExcursion/addEnvirReadingExcursion';
+
+const editExcursionEvent = (e) => {
+  e.preventDefault();
+  const excursionId = $('#excursionEdit').data('id');
+  const updateExcursion = {
+    excursionName: $('#excursionChange').val(),
+    date: $('#editExcursionDate').val(),
+  };
+  excursionData.updateExcursion(updateExcursion, excursionId)
+    .then(() => {
+      // document.getElementById('excursionEdit').reset();
+      $('#edit-excursion-modal').modal('hide');
+      // eslint-disable-next-line no-use-before-define
+      buildExcursion();
+    })
+    .catch((err) => console.error('edit excursion failed', err));
+};
 
 // Delete an Excursion
 const deleteExcursionEvent = (e) => {
@@ -24,7 +42,7 @@ const deleteExcursionEvent = (e) => {
 const saveNewExcursion = (e) => {
   e.preventDefault();
   const newExcursion = {
-    name: $('#new-excursion-name').val(),
+    excursionName: $('#new-excursion-name').val(),
     date: $('#new-excursion-date').val(),
   };
   excursionData.addExcursion(newExcursion)
@@ -90,6 +108,8 @@ const buildExcursion = () => {
 const excursionEvents = () => {
   $('body').on('click', '.single-view-excursion-btn', singleExcursionView.buildSingleViewExcursion);
   $('body').on('click', '.deleteExcursion', deleteExcursionEvent);
+  $('body').on('click', '.editExcursion', editExcursion.editExcursionCards);
+  $('body').on('click', '#saveEditExcursion', editExcursionEvent);
   $('body').on('click', '#add-new-excursions-btn', addExcursion.newExcursionForm);
   $('body').on('click', '#save-new-excursion-btn', saveNewExcursion);
   $('body').on('click', '.add-species-modal', addSpeciesExcursion.addSpeciesExcursionForm);
