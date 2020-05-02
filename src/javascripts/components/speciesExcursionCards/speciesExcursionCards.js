@@ -8,6 +8,9 @@ const buildSpeciesExcursionCards = (species) => {
   <p class="card-text">Color: ${species.color}</p>
   <p class="card-text">Depth: ${species.depth}</p>
   <p class="card-text">Location: ${species.location}</p>
+  <div class="text-center">
+  <button type="button" class="delete-button btn-default btn-lg crudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> Species</button>
+  </div>
   </div>`;
   return domString;
 };
