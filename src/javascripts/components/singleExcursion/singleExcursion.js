@@ -2,6 +2,7 @@ import singleViewExcursionSpecies from '../singleViewExcursionSpecies/singleView
 import singleViewExcursionEnvReading from '../singleViewExcursionEnvirRead/singleViewExcursionEnvirRead';
 import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
+import singleViewExcursionCrew from '../singleViewExcursionCrew/singleViewExcursionCrew';
 
 // reveal single view excursion
 const revealSingleView = () => {
@@ -38,6 +39,8 @@ const buildSingleViewExcursion = (e) => {
       domString += `<h1 class="col-8 headingDisplay softEmboss"><p class="typewriter">${excursion.excursionName}</p></h1>`;
       domString += '<button type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2" id="close-single-view-excursion"><i class="fas fa-window-close"></i></button>';
       domString += '</div>';
+      domString += '<div id="single-view-crew"></div>';
+      domString += singleViewExcursionCrew.buildCrewMemberExcursionCards(excursionId);
       domString += '<div id="build-the-dang-cards"></div>';
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '<div id="single-view-excursion-envir-read"></div>';
