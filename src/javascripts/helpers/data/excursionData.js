@@ -25,9 +25,15 @@ const getSingleExcursion = (excursionId) => axios.get(`${baseUrl}/excursions/${e
 
 const addExcursion = (newExcursion) => axios.post(`${baseUrl}/excursions.json`, newExcursion);
 
+const updateExcursion = (updatedExcursion, excursionId) => axios.put(`${baseUrl}/excursions/${excursionId}.json`, updatedExcursion);
+
+const getExcursionInfo = (excursionId) => axios.get(`${baseUrl}/excursions/${excursionId}.json`);
+
 export default {
   getExcursion,
   removeExcursion,
   addExcursion,
+  updateExcursion,
+  getExcursionInfo,
   getSingleExcursion,
 };
