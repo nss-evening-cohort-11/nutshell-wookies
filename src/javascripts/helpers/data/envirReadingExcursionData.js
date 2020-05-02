@@ -8,11 +8,13 @@ const getEnvirReadingExcursionbyExcursionId = (excursionId) => new Promise((reso
     .then((response) => {
       const allEnvReadingExcursions = response.data;
       const envReadingExcursions = [];
-      Object.keys(allEnvReadingExcursions).forEach((envReadingExcursionsId) => {
-        allEnvReadingExcursions[envReadingExcursionsId].id = envReadingExcursionsId;
-        envReadingExcursions.push(allEnvReadingExcursions[envReadingExcursionsId]);
-      });
-      resolve(envReadingExcursions);
+      if (allEnvReadingExcursions) {
+        Object.keys(allEnvReadingExcursions).forEach((envReadingExcursionsId) => {
+          allEnvReadingExcursions[envReadingExcursionsId].id = envReadingExcursionsId;
+          envReadingExcursions.push(allEnvReadingExcursions[envReadingExcursionsId]);
+        });
+        resolve(envReadingExcursions);
+      }
     })
     .catch((err) => reject(err));
 });
