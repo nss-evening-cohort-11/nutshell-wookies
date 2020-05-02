@@ -17,4 +17,6 @@ const getCrewByExcursionId = (excursionId) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getCrewByExcursionId };
+const addCrewExcursion = (newCrewExcursion) => axios.post(`${baseUrl}/crewMembersExcursion.json`, newCrewExcursion);
+
+export default { getCrewByExcursionId, addCrewExcursion };

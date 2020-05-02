@@ -6,20 +6,38 @@ import crewExcursionData from './crewExcursionData';
 import crewData from './crewData';
 
 
-const getCrewInExcursion = (excursionId) => new Promise((resolve, reject) => {
-  crewData.getAllCrew()
+const getAvailCrew = (excursionId) => new Promise((resolve, reject) => {
+  crewData.getAllSpecies()
     .then((crew) => {
       crewExcursionData.getCrewByExcursionId(excursionId)
         .then((crewExcursion) => {
           const availCrew = [];
           crew.forEach((person) => {
-            const exists = crewExcursion.find((x) => x.crewMembersId === person.id);
-            if (exists !== undefined) {
-              const newPerson = { ...person };
-              availCrew.push(newPerson);
+            const exists = crewExcursion.find((x) => x.speciesId === person.id);
+            if (exists === undefined) {
+              availCrew.push(person);
             }
           });
           resolve(availCrew);
+        });
+    })
+    .catch((err) => reject(err));
+});
+
+const getCrewInExcursion = (excursionId) => new Promise((resolve, reject) => {
+  crewData.getAllCrew()
+    .then((crew) => {
+      crewExcursionData.getCrewByExcursionId(excursionId)
+        .then((crewExcursion) => {
+          const availCrewExcursion = [];
+          crew.forEach((person) => {
+            const exists = crewExcursion.find((x) => x.crewMembersId === person.id);
+            if (exists !== undefined) {
+              const newPerson = { ...person };
+              availCrewExcursion.push(newPerson);
+            }
+          });
+          resolve(availCrewExcursion);
         });
     })
     .catch((err) => reject(err));
@@ -106,4 +124,5 @@ export default {
   getEnvirReadingInExcursion,
   getSpeciesinExcursion,
   getCrewInExcursion,
+  getAvailCrew,
 };

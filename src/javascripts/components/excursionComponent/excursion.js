@@ -6,11 +6,13 @@ import editExcursion from '../editExcursion/editExcursion';
 import addSpeciesExcursion from '../addSpeciesExcursion/addSpeciesExcursion';
 import excursionCards from '../excursionCards/excursionCards';
 import singleExcursionView from '../singleExcursion/singleExcursion';
+import addCrewToExcursion from '../addCrewToExcursion/addCrewToExcursion';
 
 import utils from '../../helpers/utils';
 
 import envirReadingData from '../../helpers/data/envirReadingExcursionData';
 import addEnvReadExcursion from '../addEnvirReadingExcursion/addEnvirReadingExcursion';
+import crewExcursionData from '../../helpers/data/crewExcursionData';
 
 const editExcursionEvent = (e) => {
   e.preventDefault();
@@ -52,6 +54,20 @@ const saveNewExcursion = (e) => {
       buildExcursion();
     })
     .catch((err) => console.error('could not add excursion', err));
+};
+// add new crew to excursion
+const saveCrewExcursion = (e) => {
+  e.preventDefault();
+  const theExcursionId = $('#add-crew-excursion-modal-form').data('excursion-id');
+  const newCrewExcursion = {
+    excursionId: theExcursionId,
+    crewId: $('#crew-id').val(),
+  };
+  crewExcursionData.addCrewExcursion(newCrewExcursion)
+    .then(() => {
+      $('#add-crew-excursion-modal').modal('hide');
+    })
+    .catch();
 };
 
 // add a new species to an excursion
@@ -117,6 +133,8 @@ const excursionEvents = () => {
   $('body').on('click', '#close-single-view-excursion', singleExcursionView.closeSingleView);
   $('body').on('click', '#save-envir-read-excursion-btn', saveEnvReadingsExcursion);
   $('body').on('click', '#add-envir-reading-modal', addEnvReadExcursion.addEnvirReadingExcursionForm);
+  $('body').on('click', '#add-crew-excursion-modal', addCrewToExcursion.addCrewToExcursionForm);
+  $('body').on('click', '#save-crew-excursion-btn', saveCrewExcursion);
 };
 
 export default { buildExcursion, excursionEvents };
