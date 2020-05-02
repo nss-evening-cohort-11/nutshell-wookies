@@ -55,7 +55,6 @@ const getSpeciesinExcursion = (excursionId) => new Promise((resolve, reject) => 
             newCreature.speciesExcursionId = speciesEx.id;
             availSpecies.push(newCreature);
           });
-          console.error('available species', availSpecies);
           resolve(availSpecies);
         });
     })

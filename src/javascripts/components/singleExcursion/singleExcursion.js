@@ -1,8 +1,10 @@
 import singleViewExcursionSpecies from '../singleViewExcursionSpecies/singleViewExcursionSpecies';
 import singleViewExcursionEnvReading from '../singleViewExcursionEnvirRead/singleViewExcursionEnvirRead';
+import singleViewExcursionCrew from '../singleViewExcursionCrew/singleViewExcursionCrew';
+
 import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
-import singleViewExcursionCrew from '../singleViewExcursionCrew/singleViewExcursionCrew';
+
 
 // reveal single view excursion
 const revealSingleView = () => {
