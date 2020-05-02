@@ -1,7 +1,7 @@
 
 const buildSingleEnvReadExcursionCard = (reading) => {
   let domString = '';
-  domString += `<div class ="card cardDisplay" id="${reading.id}" >`;
+  domString += `<div class ="card cardDisplay" id="${reading.envirReadExcursionId}" >`;
   domString += `<img id="envUrl" src="${reading.Url}>`;
   domString += '<div class="row" id="env-card-read">';
   domString += `<h2>${reading.destinationId}</h2>`;

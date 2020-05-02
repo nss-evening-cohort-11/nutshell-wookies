@@ -3,6 +3,17 @@ import envirReadingExcursionData from '../../helpers/data/envirReadingExcursionD
 import envReadExcursionComponent from '../singleEnvirReadCard/singleEnvirReadCard';
 import utils from '../../helpers/utils';
 
+const removeEnvirReadExcursion = (e) => {
+  const excursionId = e.target.closest('.pageDisplay').dataset.id;
+  const envirReadExcursionId = e.target.closest('.card').id;
+  envirReadingExcursionData.deleteEnvirReadExcursion(envirReadExcursionId)
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      buildAllEnvExcursionCards(excursionId);
+    })
+    .catch((err) => console.error('cannot delete', err));
+};
+
 const buildAllEnvExcursionCards = (excursionId) => {
   smash.getEnvirReadingInExcursion(excursionId)
     .then((envReading) => {
@@ -17,15 +28,7 @@ const buildAllEnvExcursionCards = (excursionId) => {
     })
     .catch((err) => console.error('no env readings for you', err));
 };
-const removeEnvirReadExcursion = (e) => {
-  const excursionId = e.target.closest('.pageDisplay').dataset.id;
-  const envirReadExcursionId = e.target.id;
-  envirReadingExcursionData.deleteEnvirReadExcursion(envirReadExcursionId)
-    .then(() => {
-      buildAllEnvExcursionCards(excursionId);
-    })
-    .catch((err) => console.error('cannot delete', err));
-};
+
 const envExcursionEvent = () => {
   $('body').on('click', '.delete-envir-read-excursion-btn', removeEnvirReadExcursion);
 };
