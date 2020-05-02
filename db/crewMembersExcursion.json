@@ -1,0 +1,14 @@
+{
+	"crewMembersExcursion1": {
+		"excursionId": "excursion1",
+		"crewMembersId": "crew1"
+	},
+	"crewMembersExcursion2": {
+		"excursionId": "excursion2",
+		"crewMembersId": "crew1"
+	},
+	"crewMembersExcursion3": {
+		"excursionId": "excursion2",
+		"crewMembersId": "crew2"
+  }
+}
