@@ -20,7 +20,7 @@ const buildSingleEnvReadExcursionCard = (reading) => {
   domString += `<div class="col-4 col-sm-6"> ${reading.Current}</div>`;
   domString += '<div class="col-8 col-sm-6">Pressure:</div>';
   domString += `<div class="col-4 col-sm-6">${reading.Pressure}</div>`;
-  domString += `<button type="button" id="${reading.envirReadExcursionId}" class="col-11 btn-default btn-lg excursionRowCrudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> </button>`;
+  domString += `<button type="button" id="${reading.envirReadExcursionId}" class="delete-envir-read-excursion-btn col-11 btn-default btn-lg excursionRowCrudButtonColor glowing"><i class="fas fa-skull-crossbones"></i> </button>`;
   domString += '</div>';
   domString += '</div>';
   return domString;

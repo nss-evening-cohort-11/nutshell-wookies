@@ -18,15 +18,16 @@ const buildAllEnvExcursionCards = (excursionId) => {
     .catch((err) => console.error('no env readings for you', err));
 };
 const removeEnvirReadExcursion = (e) => {
-  envirReadingExcursionData.deleteEnvirReadExcursion(e)
+  const excursionId = e.target.closest('.pageDisplay').dataset.id;
+  const envirReadExcursionId = e.target.id;
+  envirReadingExcursionData.deleteEnvirReadExcursion(envirReadExcursionId)
     .then(() => {
-      buildAllEnvExcursionCards();
-      utils.printToDom('single-view-excursion-envir-read', '');
+      buildAllEnvExcursionCards(excursionId);
     })
     .catch((err) => console.error('cannot delete', err));
 };
 const envExcursionEvent = () => {
-  $('body').on('click', '#envirReadExcursionId', removeEnvirReadExcursion);
+  $('body').on('click', '.delete-envir-read-excursion-btn', removeEnvirReadExcursion);
 };
 
 export default { buildAllEnvExcursionCards, envExcursionEvent };
