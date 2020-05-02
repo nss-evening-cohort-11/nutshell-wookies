@@ -8,10 +8,12 @@ const getSpeciesExcursionbyExcursionId = (excursionId) => new Promise((resolve, 
     .then((response) => {
       const allSpeciesExcursions = response.data;
       const speciesExcursions = [];
-      Object.keys(allSpeciesExcursions).forEach((speciesExcursionId) => {
-        allSpeciesExcursions[speciesExcursionId].id = speciesExcursionId;
-        speciesExcursions.push(allSpeciesExcursions[speciesExcursionId]);
-      });
+      if (allSpeciesExcursions) {
+        Object.keys(allSpeciesExcursions).forEach((speciesExcursionId) => {
+          allSpeciesExcursions[speciesExcursionId].id = speciesExcursionId;
+          speciesExcursions.push(allSpeciesExcursions[speciesExcursionId]);
+        });
+      }
       resolve(speciesExcursions);
     })
     .catch((err) => reject(err));
@@ -19,4 +21,6 @@ const getSpeciesExcursionbyExcursionId = (excursionId) => new Promise((resolve, 
 
 const addSpeciesExcursion = (newSpeciesExcursion) => axios.post(`${baseUrl}/speciesExcursion.json`, newSpeciesExcursion);
 
-export default { getSpeciesExcursionbyExcursionId, addSpeciesExcursion };
+const deleteSpeciesExcursion = (speciesExcursionId) => axios.delete(`${baseUrl}/speciesExcursion/${speciesExcursionId}.json`);
+
+export default { getSpeciesExcursionbyExcursionId, addSpeciesExcursion, deleteSpeciesExcursion };
