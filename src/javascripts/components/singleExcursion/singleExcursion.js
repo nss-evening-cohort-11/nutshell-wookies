@@ -43,7 +43,7 @@ const buildSingleViewExcursion = (e) => {
       domString += '<button type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2" id="close-single-view-excursion"><i class="fas fa-window-close"></i></button>';
       domString += '</div>';
       domString += '<div id="singleViewDestination"></div>';
-      singleViewDestination.viewExcursionDestination();
+      singleViewDestination.viewExcursionDestination(excursionId);
       domString += '<div id="single-view-crew"></div>';
       domString += singleViewExcursionCrew.buildCrewMemberExcursionCards(excursionId);
       domString += '<div id="build-the-dang-cards"></div>';
