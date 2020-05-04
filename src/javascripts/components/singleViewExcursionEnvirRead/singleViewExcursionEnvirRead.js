@@ -74,7 +74,7 @@ const buildAllEnvExcursionCards = (excursionId) => {
       domString += '<div id="chartCurrentDiv"></div>';
       domString += '</div>';
       utils.printToDom('single-view-excursion-envir-read', domString);
-      barChart.buildChart('chartDepthDiv', createChart(envReading, 'Temperature'), 'Depth');
+      barChart.buildChart('chartDepthDiv', createChart(envReading, 'Depth'), 'Depth');
       barChart.buildChart('chartTempDiv', chartData, 'Temperature');
       barChart.buildChart('chartCurrentDiv', chartData, 'Current');
     })
