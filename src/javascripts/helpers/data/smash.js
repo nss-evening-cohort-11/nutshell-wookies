@@ -49,13 +49,11 @@ const getSpeciesinExcursion = (excursionId) => new Promise((resolve, reject) => 
       speciesExcursionData.getSpeciesExcursionbyExcursionId(excursionId)
         .then((speciesExcursion) => {
           const availSpecies = [];
-          species.forEach((creature) => {
-            const exists = speciesExcursion.find((x) => x.speciesId === creature.id);
-            if (exists !== undefined) {
-              const newCreature = { ...creature };
-              newCreature.speciesExcursionId = speciesExcursion.id;
-              availSpecies.push(newCreature);
-            }
+          speciesExcursion.forEach((speciesEx) => {
+            const selectedSpecies = species.find((x) => speciesEx.speciesId === x.id);
+            const newCreature = { ...selectedSpecies };
+            newCreature.speciesExcursionId = speciesEx.id;
+            availSpecies.push(newCreature);
           });
           resolve(availSpecies);
         });

@@ -7,6 +7,7 @@ import speciesContainer from '../../components/SpeciesContainer/speciesContainer
 import crewMemberContainer from '../../components/crewMemberContainer/crewMemberContainer';
 import excursionComponent from '../../components/excursionComponent/excursion';
 import singleViewEnvEx from '../../components/singleViewExcursionEnvirRead/singleViewExcursionEnvirRead';
+import singleExcursion from '../../components/singleExcursion/singleExcursion';
 
 const loginButton = $('#navbar-login-button');
 const logoutButton = $('#navbar-logout-button');
@@ -35,6 +36,7 @@ const checkLoginStatus = () => {
     crewMemberContainer.buildCrewContainer();
     excursionComponent.buildExcursion();
     singleViewEnvEx.envExcursionEvent();
+    singleExcursion.singleExcursionEvents();
   });
 };
 
