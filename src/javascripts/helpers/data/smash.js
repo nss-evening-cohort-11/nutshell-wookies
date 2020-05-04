@@ -11,11 +11,9 @@ const getAvailCrew = (excursionId) => new Promise((resolve, reject) => {
     .then((crew) => {
       crewExcursionData.getCrewByExcursionId(excursionId)
         .then((crewExcursions) => {
-          console.error('crew excursion', crewExcursions);
           const availCrew = [];
           crew.forEach((person) => {
             const exists = crewExcursions.find((x) => x.crewMembersId === person.id);
-            console.error(exists);
             if (exists === undefined) {
               availCrew.push(person);
             }

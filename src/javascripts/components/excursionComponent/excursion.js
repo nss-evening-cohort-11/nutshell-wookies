@@ -61,7 +61,7 @@ const saveCrewExcursion = (e) => {
   const theExcursionId = $('#add-crew-excursion-form').data('excursion-id');
   const newCrewExcursion = {
     excursionId: theExcursionId,
-    crewId: $('#crew-id').val(),
+    crewMembersId: $('#crew-id').val(),
   };
   crewExcursionData.addCrewExcursion(newCrewExcursion)
     .then(() => {
