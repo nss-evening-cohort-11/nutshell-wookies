@@ -4,6 +4,7 @@ import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
 import singleViewExcursionCrew from '../singleViewExcursionCrew/singleViewExcursionCrew';
 
+
 // reveal single view excursion
 const revealSingleView = () => {
   $('#single-view-excursion').removeClass('hide');
@@ -45,10 +46,7 @@ const buildSingleViewExcursion = (e) => {
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '<div id="single-view-excursion-envir-read"></div>';
       singleViewExcursionEnvReading.buildAllEnvExcursionCards(excursionId);
-      domString += '<div id="chartdiv"></div>';
       domString += '</div>';
-
-
       utils.printToDom('single-view-excursion', domString);
     })
     .catch((err) => console.error('could not get single excursion', err));
