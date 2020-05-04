@@ -81,8 +81,8 @@ const buildAllEnvExcursionCards = (excursionId) => {
     .catch((err) => console.error('no env readings for you', err));
 };
 
-const envExcursionEvent = () => {
-  $('body').on('click', '.delete-envir-read-excursion-btn', removeEnvirReadExcursion);
-};
+// const envExcursionEvent = () => {
+//   $('body').on('click', '.delete-envir-read-excursion-btn', removeEnvirReadExcursion);
+// };
 
-export default { buildAllEnvExcursionCards, envExcursionEvent };
+export default { buildAllEnvExcursionCards, removeEnvirReadExcursion };

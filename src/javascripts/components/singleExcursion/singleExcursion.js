@@ -5,8 +5,6 @@ import singleViewExcursionCrew from '../singleViewExcursionCrew/singleViewExcurs
 import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
 
-
-
 // reveal single view excursion
 const revealSingleView = () => {
   $('#single-view-excursion').removeClass('hide');
@@ -56,6 +54,7 @@ const buildSingleViewExcursion = (e) => {
 
 const singleExcursionEvents = () => {
   $('body').on('click', '.delete-species-excursion-btn', singleViewExcursionSpecies.removeSpeciesExcursion);
+  $('body').on('click', '.delete-envir-read-excursion-btn', singleViewExcursionEnvReading.removeEnvirReadExcursion);
 };
 
 export default { buildSingleViewExcursion, closeSingleView, singleExcursionEvents };
