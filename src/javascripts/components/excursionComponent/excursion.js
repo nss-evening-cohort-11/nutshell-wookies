@@ -55,10 +55,10 @@ const saveNewExcursion = (e) => {
     })
     .catch((err) => console.error('could not add excursion', err));
 };
-// add new crew to excursion
+// save new crew to excursion
 const saveCrewExcursion = (e) => {
   e.preventDefault();
-  const theExcursionId = $('#add-crew-excursion-modal-form').data('excursion-id');
+  const theExcursionId = $('#add-crew-excursion-form').data('excursion-id');
   const newCrewExcursion = {
     excursionId: theExcursionId,
     crewId: $('#crew-id').val(),
