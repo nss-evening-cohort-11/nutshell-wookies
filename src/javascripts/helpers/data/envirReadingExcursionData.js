@@ -8,15 +8,18 @@ const getEnvirReadingExcursionbyExcursionId = (excursionId) => new Promise((reso
     .then((response) => {
       const allEnvReadingExcursions = response.data;
       const envReadingExcursions = [];
-      Object.keys(allEnvReadingExcursions).forEach((envReadingExcursionsId) => {
-        allEnvReadingExcursions[envReadingExcursionsId].id = envReadingExcursionsId;
-        envReadingExcursions.push(allEnvReadingExcursions[envReadingExcursionsId]);
-      });
-      resolve(envReadingExcursions);
+      if (allEnvReadingExcursions) {
+        Object.keys(allEnvReadingExcursions).forEach((envReadingExcursionsId) => {
+          allEnvReadingExcursions[envReadingExcursionsId].id = envReadingExcursionsId;
+          envReadingExcursions.push(allEnvReadingExcursions[envReadingExcursionsId]);
+        });
+        resolve(envReadingExcursions);
+      }
     })
     .catch((err) => reject(err));
 });
 
 const addEnvReadingExcursion = (newEnvReadingExcursion) => axios.post(`${baseUrl}/envReadExcursion.json`, newEnvReadingExcursion);
+const deleteEnvirReadExcursion = (envirReadExcursionId) => axios.delete(`${baseUrl}/envReadExcursion/${envirReadExcursionId}.json`);
 
-export default { getEnvirReadingExcursionbyExcursionId, addEnvReadingExcursion };
+export default { getEnvirReadingExcursionbyExcursionId, addEnvReadingExcursion, deleteEnvirReadExcursion };

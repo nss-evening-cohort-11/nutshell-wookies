@@ -47,6 +47,7 @@ const buildSingleViewExcursion = (e) => {
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '<div id="single-view-excursion-envir-read"></div>';
       singleViewExcursionEnvReading.buildAllEnvExcursionCards(excursionId);
+      domString += '<div id="chartdiv"></div>';
       domString += '</div>';
 
 

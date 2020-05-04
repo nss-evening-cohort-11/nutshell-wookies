@@ -85,15 +85,13 @@ const getEnvirReadingInExcursion = (excursionId) => new Promise((resolve, reject
       envirReadingExcursionData.getEnvirReadingExcursionbyExcursionId(excursionId)
         .then((envirReadExcursion) => {
           const availReadings = [];
-          readings.forEach((reading) => {
-            const exists = envirReadExcursion.find((x) => x.envirReadingId === reading.id);
-            if (exists !== undefined) {
-              const newReading = { ...reading };
-              newReading.envirReadExcursionId = envirReadExcursion.id;
-              availReadings.push(newReading);
-            }
+          envirReadExcursion.forEach((envirReadEx) => {
+            const selectedReading = readings.find((x) => envirReadEx.envirReadingId === x.id);
+            const newReading = { ...selectedReading };
+            newReading.envirReadExcursionId = envirReadEx.id;
+            availReadings.push(newReading);
+            resolve(availReadings);
           });
-          resolve(availReadings);
         });
     })
     .catch((err) => reject(err));
