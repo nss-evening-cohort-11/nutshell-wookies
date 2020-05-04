@@ -133,7 +133,7 @@ const excursionEvents = () => {
   $('body').on('click', '#close-single-view-excursion', singleExcursionView.closeSingleView);
   $('body').on('click', '#save-envir-read-excursion-btn', saveEnvReadingsExcursion);
   $('body').on('click', '#add-envir-reading-modal', addEnvReadExcursion.addEnvirReadingExcursionForm);
-  $('body').on('click', '#add-crew-excursion-modal', addCrewToExcursion.addCrewToExcursionForm);
+  $('body').on('click', '#add-crew-member', addCrewToExcursion.addCrewToExcursionForm);
   $('body').on('click', '#save-crew-excursion-btn', saveCrewExcursion);
 };
 

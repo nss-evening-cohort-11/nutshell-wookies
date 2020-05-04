@@ -7,13 +7,13 @@ import crewData from './crewData';
 
 
 const getAvailCrew = (excursionId) => new Promise((resolve, reject) => {
-  crewData.getAllSpecies()
+  crewData.getAllCrew()
     .then((crew) => {
       crewExcursionData.getCrewByExcursionId(excursionId)
         .then((crewExcursion) => {
           const availCrew = [];
           crew.forEach((person) => {
-            const exists = crewExcursion.find((x) => x.speciesId === person.id);
+            const exists = crewExcursion.find((x) => x.crewMembersId === person.id);
             if (exists === undefined) {
               availCrew.push(person);
             }

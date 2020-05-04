@@ -8,10 +8,10 @@ const addCrewToExcursionForm = (e) => {
       let domString = '';
       domString += `<form id="add-crew-excursion-form" data-excursion-id="${excursionId}">`;
       domString += '<div class="form-group">';
-      domString += '<label for="">Crew </label>';
+      domString += '<label for="">Select Crew Member Below </label>';
       domString += '<select class="form-control" id="crew-id">';
       persons.forEach((person) => {
-        domString += `<option value="${person.id}">${person.destinationId}, ${person.TimeStamp}</option>`;
+        domString += `<option value="${person.id}">${person.firstName} ${person.lastName} (${person.title})</option>`;
       });
       domString += '</select>';
       domString += '</div>';
