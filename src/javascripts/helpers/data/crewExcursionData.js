@@ -8,10 +8,12 @@ const getCrewByExcursionId = (excursionId) => new Promise((resolve, reject) => {
     .then((response) => {
       const allCrewExcursions = response.data;
       const crewExcursions = [];
-      Object.keys(allCrewExcursions).forEach((crewExcursionId) => {
-        allCrewExcursions[crewExcursionId].id = crewExcursionId;
-        crewExcursions.push(allCrewExcursions[crewExcursionId]);
-      });
+      if (allCrewExcursions) {
+        Object.keys(allCrewExcursions).forEach((crewExcursionId) => {
+          allCrewExcursions[crewExcursionId].id = crewExcursionId;
+          crewExcursions.push(allCrewExcursions[crewExcursionId]);
+        });
+      }
       resolve(crewExcursions);
     })
     .catch((err) => reject(err));
@@ -19,4 +21,6 @@ const getCrewByExcursionId = (excursionId) => new Promise((resolve, reject) => {
 
 const addCrewExcursion = (newCrewExcursion) => axios.post(`${baseUrl}/crewMembersExcursion.json`, newCrewExcursion);
 
-export default { getCrewByExcursionId, addCrewExcursion };
+const deleteCrewExcursion = (crewExcursionId) => axios.delete(`${baseUrl}/crewMembersExcursion/${crewExcursionId}.json`);
+
+export default { getCrewByExcursionId, addCrewExcursion, deleteCrewExcursion };
