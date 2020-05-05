@@ -52,6 +52,7 @@ const buildSingleViewExcursion = (e) => {
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '<div id="single-view-excursion-envir-read"></div>';
       singleViewExcursionEnvReading.buildAllEnvExcursionCards(excursionId);
+      domString += '<div id="chartdiv"></div>';
       domString += '</div>';
 
 
@@ -62,6 +63,7 @@ const buildSingleViewExcursion = (e) => {
 
 const singleExcursionEvents = () => {
   $('body').on('click', '.delete-species-excursion-btn', singleViewExcursionSpecies.removeSpeciesExcursion);
+  $('body').on('click', '.delete-crew-excursion-btn', singleViewExcursionCrew.removeCrewFromExcursion);
 };
 
 export default { buildSingleViewExcursion, closeSingleView, singleExcursionEvents };

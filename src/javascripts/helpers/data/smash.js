@@ -6,20 +6,37 @@ import crewExcursionData from './crewExcursionData';
 import crewData from './crewData';
 
 
+const getAvailCrew = (excursionId) => new Promise((resolve, reject) => {
+  crewData.getAllCrew()
+    .then((crew) => {
+      crewExcursionData.getCrewByExcursionId(excursionId)
+        .then((crewExcursions) => {
+          const availCrew = [];
+          crew.forEach((person) => {
+            const exists = crewExcursions.find((x) => x.crewMembersId === person.id);
+            if (exists === undefined) {
+              availCrew.push(person);
+            }
+          });
+          resolve(availCrew);
+        });
+    })
+    .catch((err) => reject(err));
+});
+
 const getCrewInExcursion = (excursionId) => new Promise((resolve, reject) => {
   crewData.getAllCrew()
     .then((crew) => {
       crewExcursionData.getCrewByExcursionId(excursionId)
         .then((crewExcursion) => {
-          const availCrew = [];
-          crew.forEach((person) => {
-            const exists = crewExcursion.find((x) => x.crewMembersId === person.id);
-            if (exists !== undefined) {
-              const newPerson = { ...person };
-              availCrew.push(newPerson);
-            }
+          const availCrewExcursion = [];
+          crewExcursion.forEach((crewEx) => {
+            const selectedCrew = crew.find((x) => crewEx.crewMembersId === x.id);
+            const newPerson = { ...selectedCrew };
+            newPerson.crewExcursionId = crewEx.id;
+            availCrewExcursion.push(newPerson);
           });
-          resolve(availCrew);
+          resolve(availCrewExcursion);
         });
     })
     .catch((err) => reject(err));
@@ -85,15 +102,13 @@ const getEnvirReadingInExcursion = (excursionId) => new Promise((resolve, reject
       envirReadingExcursionData.getEnvirReadingExcursionbyExcursionId(excursionId)
         .then((envirReadExcursion) => {
           const availReadings = [];
-          readings.forEach((reading) => {
-            const exists = envirReadExcursion.find((x) => x.envirReadingId === reading.id);
-            if (exists !== undefined) {
-              const newReading = { ...reading };
-              newReading.envirReadExcursionId = envirReadExcursion.id;
-              availReadings.push(newReading);
-            }
+          envirReadExcursion.forEach((envirReadEx) => {
+            const selectedReading = readings.find((x) => envirReadEx.envirReadingId === x.id);
+            const newReading = { ...selectedReading };
+            newReading.envirReadExcursionId = envirReadEx.id;
+            availReadings.push(newReading);
+            resolve(availReadings);
           });
-          resolve(availReadings);
         });
     })
     .catch((err) => reject(err));
@@ -104,4 +119,5 @@ export default {
   getEnvirReadingInExcursion,
   getSpeciesinExcursion,
   getCrewInExcursion,
+  getAvailCrew,
 };
