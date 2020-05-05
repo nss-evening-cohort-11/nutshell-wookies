@@ -1,13 +1,13 @@
 import destinationData from '../../helpers/data/destinationsData';
 
-const viewExcursionDestination = (excursionId) => {
-  console.error('view excursion destination', excursionId);
+const viewExcursionDestination = (excursionDestination) => {
+  console.error('viewExcursionDestination', excursionDestination);
   destinationData.getDestinations()
     .then((destination) => {
       let domString = '';
       destination.forEach((location) => {
-        console.error(location.id);
-        if (location.excursionId === excursionId) {
+        console.error('locationId', location.id);
+        if (location.Id === excursionDestination) {
           domString += `<div class="card cardDisplay" id=${location.id}>`;
           domString += `<img src="${location.imageUrl}" class="card-img-top imageFit" alt="${destination.alt}">`;
           domString += '<div class="card-body">';

@@ -29,6 +29,7 @@ const closeSingleView = () => {
   $('#dashboard').addClass('hide');
 };
 
+
 // build single view excursion
 const buildSingleViewExcursion = (e) => {
   revealSingleView();
@@ -36,6 +37,7 @@ const buildSingleViewExcursion = (e) => {
   excursionData.getSingleExcursion(excursionId)
     .then((resp) => {
       const excursion = resp.data;
+      const excursionDestination = excursion.destinationId;
       let domString = '';
       domString += `<div class="pageDisplay" data-id="${excursionId}">`;
       domString += '<div class="row">';
@@ -43,7 +45,7 @@ const buildSingleViewExcursion = (e) => {
       domString += '<button type="button" class="btn-default btn-lg buttonHeadingDisplay glowing col-2" id="close-single-view-excursion"><i class="fas fa-window-close"></i></button>';
       domString += '</div>';
       domString += '<div id="singleViewDestination"></div>';
-      singleViewDestination.viewExcursionDestination(excursionId);
+      singleViewDestination.viewExcursionDestination(excursionDestination);
       domString += '<div id="single-view-crew"></div>';
       domString += singleViewExcursionCrew.buildCrewMemberExcursionCards(excursionId);
       domString += '<div id="build-the-dang-cards"></div>';
