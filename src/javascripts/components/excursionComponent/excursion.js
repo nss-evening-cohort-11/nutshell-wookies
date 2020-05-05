@@ -67,7 +67,7 @@ const saveCrewExcursion = (e) => {
     .then(() => {
       $('#add-crew-excursion-modal').modal('hide');
     })
-    .catch();
+    .catch((err) => console.error('save crew to excursion not working', err));
 };
 
 // add a new species to an excursion

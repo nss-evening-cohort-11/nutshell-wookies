@@ -30,13 +30,11 @@ const getCrewInExcursion = (excursionId) => new Promise((resolve, reject) => {
       crewExcursionData.getCrewByExcursionId(excursionId)
         .then((crewExcursion) => {
           const availCrewExcursion = [];
-          crew.forEach((person) => {
-            const exists = crewExcursion.find((x) => x.crewMembersId === person.id);
-            if (exists !== undefined) {
-              const newPerson = { ...person };
-              console.error('new person', newPerson);
-              availCrewExcursion.push(newPerson);
-            }
+          crewExcursion.forEach((crewEx) => {
+            const selectedCrew = crew.find((x) => crewEx.crewMembersId === x.id);
+            const newPerson = { ...selectedCrew };
+            newPerson.crewExcursionId = crewEx.id;
+            availCrewExcursion.push(newPerson);
           });
           resolve(availCrewExcursion);
         });

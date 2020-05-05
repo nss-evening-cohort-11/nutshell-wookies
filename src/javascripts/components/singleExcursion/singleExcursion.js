@@ -58,6 +58,7 @@ const buildSingleViewExcursion = (e) => {
 
 const singleExcursionEvents = () => {
   $('body').on('click', '.delete-species-excursion-btn', singleViewExcursionSpecies.removeSpeciesExcursion);
+  $('body').on('click', '.delete-crew-excursion-btn', singleViewExcursionCrew.removeCrewFromExcursion);
 };
 
 export default { buildSingleViewExcursion, closeSingleView, singleExcursionEvents };
