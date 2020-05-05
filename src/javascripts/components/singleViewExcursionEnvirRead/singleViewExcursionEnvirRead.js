@@ -1,6 +1,7 @@
 import smash from '../../helpers/data/smash';
 import envirReadingExcursionData from '../../helpers/data/envirReadingExcursionData';
 import envReadExcursionComponent from '../singleEnvirReadCard/singleEnvirReadCard';
+// import envReadingData from '../../helpers/data/envReadings/envReadings';
 import utils from '../../helpers/utils';
 import barChart from '../barChart/barChart';
 
@@ -55,10 +56,16 @@ const chartData = [{
   destination: 'Brazil',
   reading: 395,
 }];
-const createChart = (data, key) => {
-// loop over the data
-use key name data[key]
-};
+// const createChart = (data, key) => {
+//   envReadingData.getEnvironmentalData()
+//     .then(envReading) => {
+//       envReading.forEach(() => {
+//         use key name data[key]
+//       })
+//     }
+//     .catch((err) => console.error('cannot build chart', err));
+
+// };
 
 const buildAllEnvExcursionCards = (excursionId) => {
   smash.getEnvirReadingInExcursion(excursionId)
@@ -74,7 +81,8 @@ const buildAllEnvExcursionCards = (excursionId) => {
       domString += '<div id="chartCurrentDiv"></div>';
       domString += '</div>';
       utils.printToDom('single-view-excursion-envir-read', domString);
-      barChart.buildChart('chartDepthDiv', createChart(envReading, 'Depth'), 'Depth');
+      // barChart.buildChart('chartDepthDiv', createChart(envReading, 'Depth'), 'Depth');
+      barChart.buildChart('chartDepthDiv', chartData, 'Depth');
       barChart.buildChart('chartTempDiv', chartData, 'Temperature');
       barChart.buildChart('chartCurrentDiv', chartData, 'Current');
     })
