@@ -1,13 +1,14 @@
 import destinationData from '../../helpers/data/destinationsData';
+import utils from '../../helpers/utils';
 
 const viewExcursionDestination = (excursionDestination) => {
-  console.error('viewExcursionDestination', excursionDestination);
   destinationData.getDestinations()
     .then((destination) => {
+      const destinationId = excursionDestination;
       let domString = '';
+      domString += '<h2>Destination</h2>';
       destination.forEach((location) => {
-        console.error('locationId', location.id);
-        if (location.Id === excursionDestination) {
+        if (location.id === destinationId) {
           domString += `<div class="card cardDisplay" id=${location.id}>`;
           domString += `<img src="${location.imageUrl}" class="card-img-top imageFit" alt="${destination.alt}">`;
           domString += '<div class="card-body">';
@@ -16,7 +17,7 @@ const viewExcursionDestination = (excursionDestination) => {
           domString += '</div>';
           domString += '</div>';
         }
-        return domString;
+        utils.printToDom('singleViewDestination', domString);
       });
     })
     .catch((err) => console.error('could not display excrusion destination', err));
