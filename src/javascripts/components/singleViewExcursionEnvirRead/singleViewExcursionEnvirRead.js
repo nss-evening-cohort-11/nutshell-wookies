@@ -37,12 +37,14 @@ const buildAllEnvExcursionCards = (excursionId) => {
       envReading.forEach((reading) => {
         domString += envReadExcursionComponent.buildSingleEnvReadExcursionCard(reading);
       });
-      domString += '<h2> Depth Chart <span class="chart-unit"> (Feet) </span> </h2>';
-      domString += '<div class="cardDisplay" id="chartDepthDiv"></div>';
-      domString += '<h2> Temperature Chart <span class="chart-unit"> (Celsius) </span> </h2>';
-      domString += '<div class="cardDisplay" id="chartTempDiv"></div>';
-      domString += '<h2> Depth Current <span class="chart-unit"> (Kilometer Per Hour) </span> </h2>';
-      domString += '<div class="cardDisplay" id="chartCurrentDiv"></div>';
+      if (envReading.length > 0) {
+        domString += '<h2> Depth Chart <span class="chart-unit"> (Feet) </span> </h2>';
+        domString += '<div class="cardDisplay" id="chartDepthDiv"></div>';
+        domString += '<h2> Temperature Chart <span class="chart-unit"> (Celsius) </span> </h2>';
+        domString += '<div class="cardDisplay" id="chartTempDiv"></div>';
+        domString += '<h2> Depth Current <span class="chart-unit"> (Kilometer Per Hour) </span> </h2>';
+        domString += '<div class="cardDisplay" id="chartCurrentDiv"></div>';
+      }
       domString += '</div>';
       utils.printToDom('single-view-excursion-envir-read', domString);
       barChart.buildChart('chartDepthDiv', createChart(envReading, 'Depth'), 'Depth');
