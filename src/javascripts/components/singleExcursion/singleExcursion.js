@@ -46,7 +46,7 @@ const buildSingleViewExcursion = (e) => {
       domString += '<div id="singleViewDestination"></div>';
       singleViewDestination.viewExcursionDestination(excursionDestination);
       domString += '<div id="single-view-crew"></div>';
-      domString += singleViewExcursionCrew.buildCrewMemberExcursionCards(excursionId);
+      singleViewExcursionCrew.buildCrewMemberExcursionCards(excursionId);
       domString += '<div id="build-the-dang-cards"></div>';
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '<div id="single-view-excursion-envir-read"></div>';

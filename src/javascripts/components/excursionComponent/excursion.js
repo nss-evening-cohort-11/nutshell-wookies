@@ -42,6 +42,7 @@ const deleteExcursionEvent = (e) => {
 
 // Save a new Excursion
 const saveNewExcursion = (e) => {
+  e.stopImmediatePropagation();
   e.preventDefault();
   const newExcursion = {
     excursionName: $('#new-excursion-name').val(),
@@ -57,6 +58,7 @@ const saveNewExcursion = (e) => {
 };
 // save new crew to excursion
 const saveCrewExcursion = (e) => {
+  e.stopImmediatePropagation();
   e.preventDefault();
   const theExcursionId = $('#add-crew-excursion-form').data('excursion-id');
   const newCrewExcursion = {
@@ -72,6 +74,7 @@ const saveCrewExcursion = (e) => {
 
 // add a new species to an excursion
 const saveSpeciesExcursion = (e) => {
+  e.stopImmediatePropagation();
   e.preventDefault();
   const theExcursionId = $('.add-species-excursion-form-tag').data('excursion-id');
   const newSpeciesExcursion = {
@@ -82,10 +85,11 @@ const saveSpeciesExcursion = (e) => {
     .then(() => {
       $('#add-species-excursion-modal').modal('hide');
     })
-    .catch((err) => console.error('could not add species to excursion', err));
+    .catch();
 };
 // adds a new environmental reading to an excursion
 const saveEnvReadingsExcursion = (e) => {
+  e.stopImmediatePropagation();
   e.preventDefault();
   const theExcursionId = $('#add-envir-read-excursion-form').data('excursion-id');
   const newEnvReadingExcursion = {
@@ -96,7 +100,7 @@ const saveEnvReadingsExcursion = (e) => {
     .then(() => {
       $('#add-envir-read-excursion-modal').modal('hide');
     })
-    .catch((err) => console.error('could not add env read to excursion', err));
+    .catch();
 };
 
 // Build all Excursions

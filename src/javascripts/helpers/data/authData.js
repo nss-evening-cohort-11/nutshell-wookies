@@ -24,6 +24,9 @@ const checkLoginStatus = () => {
       loginButton.removeClass('hide');
       logoutButton.addClass('hide');
       excursionsInNavbar.addClass('hide');
+      $('#single-view-excursion').addClass('hide');
+      $('#excursion').addClass('hide');
+      $('#dashboard').removeClass('hide');
     }
     enviromentalContainer.enviroEvents();
     crewMemberContainer.crewEvents();
