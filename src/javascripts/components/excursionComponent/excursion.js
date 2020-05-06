@@ -82,7 +82,7 @@ const saveSpeciesExcursion = (e) => {
     .then(() => {
       $('#add-species-excursion-modal').modal('hide');
     })
-    .catch();
+    .catch((err) => console.error('could not add species to excursion', err));
 };
 // adds a new environmental reading to an excursion
 const saveEnvReadingsExcursion = (e) => {
@@ -96,7 +96,7 @@ const saveEnvReadingsExcursion = (e) => {
     .then(() => {
       $('#add-envir-read-excursion-modal').modal('hide');
     })
-    .catch();
+    .catch((err) => console.error('could not add env read to excursion', err));
 };
 
 // Build all Excursions

@@ -107,8 +107,8 @@ const getEnvirReadingInExcursion = (excursionId) => new Promise((resolve, reject
             const newReading = { ...selectedReading };
             newReading.envirReadExcursionId = envirReadEx.id;
             availReadings.push(newReading);
-            resolve(availReadings);
           });
+          resolve(availReadings);
         });
     })
     .catch((err) => reject(err));

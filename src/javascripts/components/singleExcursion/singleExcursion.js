@@ -6,7 +6,6 @@ import singleViewDestination from '../singleViewDestination/singleViewDestinatio
 import excursionData from '../../helpers/data/excursionData';
 import utils from '../../helpers/utils';
 
-
 // reveal single view excursion
 const revealSingleView = () => {
   $('#single-view-excursion').removeClass('hide');
@@ -52,10 +51,7 @@ const buildSingleViewExcursion = (e) => {
       singleViewExcursionSpecies.buildSpeciesExcursionView(excursionId);
       domString += '<div id="single-view-excursion-envir-read"></div>';
       singleViewExcursionEnvReading.buildAllEnvExcursionCards(excursionId);
-      domString += '<div id="chartdiv"></div>';
       domString += '</div>';
-
-
       utils.printToDom('single-view-excursion', domString);
     })
     .catch((err) => console.error('could not get single excursion', err));
@@ -63,6 +59,7 @@ const buildSingleViewExcursion = (e) => {
 
 const singleExcursionEvents = () => {
   $('body').on('click', '.delete-species-excursion-btn', singleViewExcursionSpecies.removeSpeciesExcursion);
+  $('body').on('click', '.delete-envir-read-excursion-btn', singleViewExcursionEnvReading.removeEnvirReadExcursion);
   $('body').on('click', '.delete-crew-excursion-btn', singleViewExcursionCrew.removeCrewFromExcursion);
 };
 
