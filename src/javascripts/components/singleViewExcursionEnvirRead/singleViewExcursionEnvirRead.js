@@ -16,56 +16,18 @@ const removeEnvirReadExcursion = (e) => {
     .catch((err) => console.error('cannot delete', err));
 };
 
-const chartData = [{
-  destination: 'USA',
-  reading: 2025,
-}, {
-  destination: 'China',
-  reading: 1882,
-}, {
-  destination: 'Japan',
-  reading: 1809,
-}, {
-  destination: 'Germany',
-  reading: 1322,
-}, {
-  destination: 'UK',
-  reading: 1122,
-}, {
-  destination: 'France',
-  reading: 1114,
-}, {
-  destination: 'India',
-  reading: 984,
-}, {
-  destination: 'Spain',
-  reading: 711,
-}, {
-  destination: 'Netherlands',
-  reading: 665,
-}, {
-  destination: 'Russia',
-  reading: 580,
-}, {
-  destination: 'South Korea',
-  reading: 443,
-}, {
-  destination: 'Canada',
-  reading: 441,
-}, {
-  destination: 'Brazil',
-  reading: 395,
-}];
-// const createChart = (data, key) => {
-//   envReadingData.getEnvironmentalData()
-//     .then(envReading) => {
-//       envReading.forEach(() => {
-//         use key name data[key]
-//       })
-//     }
-//     .catch((err) => console.error('cannot build chart', err));
-
-// };
+const createChart = (data, key) => {
+  const chartData = [];
+  data.forEach((dati) => {
+    const newDataPoint = {
+      destination: dati.destinationId,
+      reading: dati[key],
+    };
+    chartData.push(newDataPoint);
+  });
+  console.error('data', data);
+  return chartData;
+};
 
 const buildAllEnvExcursionCards = (excursionId) => {
   smash.getEnvirReadingInExcursion(excursionId)
@@ -76,15 +38,17 @@ const buildAllEnvExcursionCards = (excursionId) => {
       envReading.forEach((reading) => {
         domString += envReadExcursionComponent.buildSingleEnvReadExcursionCard(reading);
       });
+      domString += '<h2> Depth Chart <span class="chart-unit"> (Feet) </span> </h2>';
       domString += '<div id="chartDepthDiv"></div>';
+      domString += '<h2> Temperature Chart <span class="chart-unit"> (Celsius) </span> </h2>';
       domString += '<div id="chartTempDiv"></div>';
+      domString += '<h2> Depth Current <span class="chart-unit"> (Kilometer Per Hour) </span> </h2>';
       domString += '<div id="chartCurrentDiv"></div>';
       domString += '</div>';
       utils.printToDom('single-view-excursion-envir-read', domString);
-      // barChart.buildChart('chartDepthDiv', createChart(envReading, 'Depth'), 'Depth');
-      barChart.buildChart('chartDepthDiv', chartData, 'Depth');
-      barChart.buildChart('chartTempDiv', chartData, 'Temperature');
-      barChart.buildChart('chartCurrentDiv', chartData, 'Current');
+      barChart.buildChart('chartDepthDiv', createChart(envReading, 'Depth'), 'Depth');
+      barChart.buildChart('chartTempDiv', createChart(envReading, 'Temperature'), 'Temperature');
+      barChart.buildChart('chartCurrentDiv', createChart(envReading, 'Current'), 'Current');
     })
     .catch((err) => console.error('no env readings for you', err));
 };
