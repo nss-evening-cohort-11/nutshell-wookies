@@ -25,7 +25,6 @@ const createChart = (data, key) => {
     };
     chartData.push(newDataPoint);
   });
-  console.error('data', data);
   return chartData;
 };
 
